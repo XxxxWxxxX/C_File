@@ -1,3 +1,18 @@
 #这是一个新建的文档,直接推送到了GitHub,没有内容,
 现在,需要写一些东西,再下载至本地,
 为什么没有反应
+
+1.git bash
+2.git init
+3.touch tt.txt		//添加一个文档tt.txt
+4.git add tt.txt
+5.git commit -m '添加一个文档tt.txt'
+
+6.git push origin master	//提交至GitHub
+
+7.先在GitHub上修改文档
+8.git fetch origin		//获取更新,出现下面数字说明master分支已经被更新,使用merge更新同步至本地
+			出现:00202..febs8  master  -> origin/master
+9.git merge origin/master
+
+10.cat tt.txt 		//使用cat查看文档
