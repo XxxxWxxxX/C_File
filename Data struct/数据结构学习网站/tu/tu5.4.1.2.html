@@ -1,0 +1,202 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>普里姆（Prim）算法</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">图</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.1.1.html">图的基本概念和术语</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的存储结构</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.2.1.html">邻接矩阵</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.2.2.html">邻接表</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的遍历</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.3.1.html">图的深度优先遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.3.2.html">图的广度优先遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的最小生成树</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.4.1.html">图的最小生成树</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">最短路径</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.5.1.html">最短路径</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">拓扑排序与关键路径</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.6.1.html">拓扑排序与关键路径</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br>
+<b> 4、普里姆（Prim）算法</b><br>    
+              <font color="#0000FF">
+                  （1）算法思想</font><br> 
+                &nbsp;&nbsp;&nbsp; 　T=(U，TE)是存放MST的集合。<br>
+                　　①T的初值是({r}，￠)<br>
+                　　&nbsp; 即最小生成树初始时只有一个红点r，没有红边。<br>   
+                　　②T经过n-1次如下步骤操作，最后得到一棵含n个顶点，n-1条边的最小生成树<br>
+                &nbsp;&nbsp;&nbsp; 　⒈选择紫边集中一条轻边并扩充进T<br>
+                　　⒉将轻边连接的蓝点改红点<br>
+                　　⒊将轻边改红边<br>
+                &nbsp;&nbsp;&nbsp; 　⒋修改紫边集<br>
+                <br> 
+                <font color="#0000FF"> 
+                  （2）较小紫边集的构造</font><br> 
+                &nbsp;&nbsp;&nbsp; 　若当前形成的T中有k个顶点，|U|=k，|V-u|=n-k，故可能的紫边数目是k(n-k)。从如此大的紫边集中选择轻边是低效的。因此，必须构造较小的紫边集。<br> 
+                &nbsp;&nbsp;&nbsp; 　对于每个蓝点v ∈V-U，从v到各红点的紫边中，只有最短的那一条才有可能是轻边。因此，只须保留所有n-k个蓝点所关联的最短紫边作为轻边的候选集即可。<br>      
+                <font color="#0000FF"><br>     
+                  （3）候选紫边集合的修改</font><br>      
+                &nbsp;&nbsp;&nbsp; 　当把轻边(u，v)扩充到T时，因为v由蓝变红，故对每个剩余的蓝点j，边(v，j)就由非紫边变为紫边，这条新紫边的长度可能小于蓝点j原来所关联的最短紫边的长度。因此，用长度更小的新紫边取代那些原有的最短紫边。<br> <br>
+                具体算法演示请点击查看<a href="..\sf1\prim.html" target="_blank"><font size="2"color="#FF0000">【<strong>算法演示</strong>】</font></a><br><br>
+                <font color="#0000FF">（4） 算法的执行过程</font><br> 
+                  &nbsp;&nbsp;&nbsp; 　<br>
+                  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="516" height="329">
+                    <param name=movie value="tupian\t7.16.swf">
+                    <param name=quality value=high>
+                    <param name="wmode" value="transparent">
+                    <embed src="tupian\t7.16.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="516" height="329" wmode="transparent">                    </embed></object> <br>
+                <br> 
+                &nbsp;     
+ <font color="#FF0000">注意：<br>    
+                &nbsp;&nbsp;&nbsp; 　</font>若候选轻边集中的轻边不止一条，可任选其中的一条扩充到T中。<br>   
+                &nbsp;&nbsp;&nbsp; 　连通网的最小生成树不一定是惟一的，但它们的权相等。<br> 
+                【例】在上图(e)中，若选取的轻边是(2，4)而不是(2，1)时，则得到如图(h)所示的另一棵MST。<br>
+ &nbsp;&nbsp;&nbsp;&nbsp; <br>   
+                <font color="#0000FF">   
+                  （5）算法特点</font><br>   
+                &nbsp;&nbsp;&nbsp; 　该算法的特点是当前形成的集合T始终是一棵树。将T中U和TE分别看作红点和红边集，V-U看作蓝点集。算法的每一步均是在连接红、蓝点集的紫边中选择一条轻边扩充进T中。MST性质保证了此边是安全的。T从任意的根r开始，并逐渐生长直至U=V，即T包含了 C中所有的顶点为止。MST性质确保此时的T是G的一棵MST。因为每次添加的边是使树中的权尽可能小，因此这是一种"贪心"的策略。<br>      
+                <font color="#0000FF">      
+                  （7）算法分析</font><br>      
+                &nbsp;&nbsp;&nbsp; 　该算法的时间复杂度为O(n<sup>2</sup>)。与图中边数无关，该算法适合于稠密图。
+            <br><br> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tu5.4.1.html"><span style="text-decoration: underline;" ><font color="#0000FF">上一页</font></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tu5.4.1.3.html"><span style="text-decoration: underline;" ><font color="#0000FF">下一页</font></span></a>
+            </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

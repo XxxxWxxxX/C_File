@@ -1,0 +1,184 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>图的遍历</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">图</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.1.1.html">图的基本概念和术语</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的存储结构</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.2.1.html">邻接矩阵</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.2.2.html">邻接表</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的遍历</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.3.1.html">图的深度优先遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.3.2.html">图的广度优先遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的最小生成树</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.4.1.html">图的最小生成树</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">最短路径</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.5.1.html">最短路径</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">拓扑排序与关键路径</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.6.1.html">拓扑排序与关键路径</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br>
+            <b><font size="4">图的遍历</font><br></b><br>
+　　从图中某一顶点出发，按某种搜索方法访遍其余顶点，且使每一顶点仅被访问一次。这一过程称为图的遍历。<br>　　遍历图的基本搜索方法有两种：深度优先搜索DFS（Depth First Search）和广度优先搜索BFS（Broad First Search）。这两种方法都适用于有向图和无向图。<br>
+<b>图的遍历算法设计需要考虑3个问题：</b><br>
+&nbsp;&nbsp;（1）图的特点没有首尾之分，所以算法的参考要指定访问的第一个顶点。<br>
+&nbsp;&nbsp;（2）对图的遍历路径有可能构成一个回路，从而造成死循环，所以算法设计要考虑遍历路径可能的回路问题。<br>
+&nbsp;&nbsp;（3）一个顶点可能和若干个顶点都是想邻顶点，要使一个顶点的所有想邻顶点按照某种次序被访问。<br>
+ 　　对于连通图，从初始顶点出发一定存在路径和图中的所有其他顶点相连，所以对于连通图从初始顶点出发一定可以遍历该图。<br><br>
+ <b><font size="4">图的深度优先遍历</font><br></b><br>
+　　图的深度优先遍历DFS算法是每次在访问完当前顶点后，首先访问当前顶点的一个未被访问过的邻接顶点，然后去访问这个邻接点的一个未被访问过的邻接点，这样的算法是一个递归算法。
+ <br> 
+ <b>1.连通图的深度优先遍历算法思想。</b><br>
+ （1）访问初始顶点v并标记顶点v已访问。<br>
+ （2）查找顶点v的第一个邻接顶点w。<br>
+ （3）若顶点v的邻接顶点w存在，则继续执行；否则回溯到v，再找v的另外一个未访问过的邻接点。<br>
+ （4）若顶点w尚未被访问，则访问顶点w并标记顶点w为已访问。<br>
+	 （5）继续查找顶点w的下一个邻接顶点w<sub>i</sub>，如果v取值wi转到步骤（3）。直到连通图中所有顶点全部访问过为止。<br>
+	 
+【例】 现以图 7.9 （ a ）为例说明深度过优先搜索过程。假定 v 1 是出发点，首先访问 v 1 。因 v 1 有两个邻接点 v 2 、 v 3 均未被访问过，可以选择 v 2 作为新的出发点，访问 v 2 之后，再找 v 2 的未访问过的邻接点。同 v 2 邻接的有 v 1 、 v 4 、 v 5 ，其中 v 1 已被访问过，而 v 4 、 v 5 尚未被访问过，可以 v 4 选择作为新的出发点。重复上述搜索过程，继续依次访问 v 8 、 v 5 。访问 v 5 之后，由于与 v 5 相邻的顶点均已被访问过，搜索退回到 v 8 。由于 v 8 、 v 4 、 v 2 都是已被访问的邻接点，所以搜索过程连续地从 v 8 退回到 v 4 ， 再退回到 v 2 ，最后退回到 v 1 。这时选择 v 1 的未被访问过的邻接点 v 3 ，继续往下搜索，依次访问 v 3 、 v 6 、 v 7 ，从而遍历了图中全部顶点。在这个过程中得到的顶点的访问序列为：<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="tupian\7.9.gif" width="312" height="41" ><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="tupian\tupian7.9.gif" width="432" height="239" ><br>
+具体算法演示请点击查看<a href="..\sf1\sdyxbl.html" target="_blank"><font size="2" color="#FF0000">【<strong>算法演示</strong>】</font></a><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tu5.3.1.2.html"><span style="text-decoration: underline;" ><font color="#0000FF">下一页</font></span></a><br>
+
+            </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

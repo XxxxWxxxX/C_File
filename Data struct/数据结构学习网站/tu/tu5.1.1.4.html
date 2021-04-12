@@ -1,0 +1,174 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>连通图与连通分量</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">图</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.1.1.html">图的基本概念和术语</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的存储结构</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.2.1.html">邻接矩阵</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.2.2.html">邻接表</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的遍历</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.3.1.html">图的深度优先遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.3.2.html">图的广度优先遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的最小生成树</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.4.1.html">图的最小生成树</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">最短路径</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.5.1.html">最短路径</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">拓扑排序与关键路径</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.6.1.html">拓扑排序与关键路径</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br>
+            
+<font size="4"><b>连通图与连通分量</b><br>
+                  </font><br>　　若从顶点 v <sub>i</sub> 到顶点 v <sub>j</sub> (i ≠ j) 有路径，则 v <sub>i</sub> 和 v<sub> j</sub> 是<b>连通</b>的。<br> 
+
+如果无向图中任意两个顶点 v <sub>i</sub> 和 v<sub> j</sub> 都是连通的，则称无向图是<b>连通</b>的。无向图中极大连通子图称为<b>连通分量</b>。<br>
+【例】图 7.3 中的 G 3 有两个连通分量，见图 7.4(a) 。<br> 
+<img src="tupian\7.3.jpg" width="490" height="279"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图7.3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="tupian\7.4.gif" width="357" height="171" ><br>
+　　对于有向图来说，图中任意一对顶点 v <sub>i</sub> 和 v<sub> j</sub> (i ≠ j) 均有从 v<sub> i</sub> 到 v<sub> j </sub>及从 v<sub> j</sub> 到 v<sub> i</sub> 的有向路径，则称该有向图是<b>强连通</b>的。有向图中的极大强连通子图称为该有向图的<b>强 连通分 量</b>。图 7.1G 2 不是强连通的，但它有一个强连通分量，见图 7.4(b) 。<br>
+
+                  <br>       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tu5.1.1.3.html"><span style="text-decoration: underline;" ><font color="#0000FF">上一页</font></span></a><br>
+
+            </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

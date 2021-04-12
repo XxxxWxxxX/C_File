@@ -1,0 +1,181 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>冒泡排序</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="..\tu\tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">排序的基本概念</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.1.1.html">排序的基本概念</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">插入排序</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.2.1.html">直接插入排序和折半插入排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.2.2.html">希尔排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">交换排序</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.3.1.html">冒泡排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.3.2.html">快速排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">选择排序</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.4.1.html">简单选择排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.4.2.html">堆排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">归并排序</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.5.1.html">归并排序</a></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br>
+            <b><font  size="4">交换排序</font></b> <br>			　　交换排序主要是根据记录的关键字的大小，将记录交换来进行排序的。交换排序的特点是：将关键字值较大的记录向序列的后部移动，关键字较小的记录向前移动。这里介绍两种交换排序方法，它们是冒泡排序和快速排序。<br><br>
+			<b><font  size="4">冒泡排序</font></b> <br>	
+　　将被排序的记录数组R[1..n]垂直排列，每个记录R[i]看作是重量为R[i].key的气泡。根据轻气泡不能在重气泡之下的原则，从下往上扫描数组R：凡扫描到违反本原则的轻气泡，就使其向上"飘浮"。如此反复进行，直到最后任何两个气泡都是轻者在上，重者在下为止。<br>
+<b>1.算法思路</b><br>
+　　(1)让j取n至2，将r[j].key与r[j-1].key比较，如果r[j].key&lt;r[j-1].key，则把记录r[j]与r[j-1]交换位置，否则不进行交换。最后是r[2].key与r[1].key对比，关键字较小的记录就换到r[1]的位置上，到此第一趟结束。最小关键字的记录就象最轻的气泡冒到顶部一样换到了文件的前边。<br>
+　　(2)让j取n至3，重复上述的比较对换操作，最终r[2]之中存放的是剩余n-1个记录(r[1]除外)中关键字最小的记录。<br>
+　　(3) 让j取n至i+1，经过一系列对联对比交换之后，r[i]之中是剩余若干记录中关键字最小的记录。<br>
+　　(4) 让j取n至n-1，将r[n].key与r[n-1].key对比，把关键字较小的记录交换到r[n-1]之中。<br>
+【例】
+设有一组关键字序列｛ 55 ， 22 ， 44 ， 11 ， 33 ｝，这里 n=5 ，即有 5 个记录。请将其按由小到大的顺序排序。 如图9.3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="tupian\09-03.gif" width="296" height="331"><br>
+具体算法演示请点击查看<a href="..\sf1\mppx.html" target="_blank"><font size="2" color="#FF0000">【<strong>算法演示</strong>】</font></a><br>
+<b>2.具体算法</b><br>
+template&lt;class T><br>
+&nbsp;&nbsp;bubblesort(T r[],int n)<br>
+&nbsp;&nbsp;&nbsp;{ int t=1,tag,j;T x;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do{ tag=0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(j=n;j>=i;j--)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(r[j].key&lt;r[j-1].key){x=r[j];r[j]=r[j-1];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r[j-1]=x;tag=1;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++;<br>
+&nbsp;&nbsp;&nbsp;}while(tag==1&amp;&amp;i&lt;i&lt;=n);<br>
+&nbsp;}&nbsp;//bubblesort<br>
+<b>3.算法时间复杂度</b><br>
+　　该算法的时间复杂度为O(n2)。但是，当原始关键字序列已有序时，只进行一趟比较就结束，此时时间复杂度为O(n)。<br>
+      </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>二叉树的性质</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="..\tu\tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">树</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.1.1.html">树的基本概念和术语</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">二叉树</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.2.1.html">二叉树的定义和性质</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.2.2.html">二叉树的存储结构</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">二叉树的遍历</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.3.1.html">二叉树的遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">线索二叉树</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.4.1.html">线索二叉树</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">二叉树、树和森林</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.5.1.html">树的存储结构</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.5.2.html">树、森林和二叉树的转化</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.5.3.html">树和森林的遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">树的应用</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.6.1.html">二叉树排序树</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.6.2.html">哈夫曼树</a></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br>
+<b><font size="3">二叉树的性质</font></b><br>
+　　    二叉树具有以下重要性质：<br>
+            <b> 
+            性质1</b>   <font color="#0000FF">  二叉树第i层上的结点数目最多为2<sup>i-1</sup>(i≥1)。</font><br>        
+          <i>证明</i>：用数学归纳法证明：<br>        
+          　&nbsp;&nbsp;&nbsp; 归纳基础：i=1时，有2<sup>i-1</sup>=2<sup>0</sup>=1。因为第1层上只有一个根结点，所以命题成立。<br>        
+            &nbsp;&nbsp;&nbsp; 　归纳假设：假设对所有的j(1≤j&lt;i)命题成立，即第j层上至多有2<sup>j-1</sup>个结点，证明j=i时命题亦成立。<br>    
+            &nbsp;&nbsp;&nbsp; 　归纳步骤：根据归纳假设，第i-1层上至多有2<sup>i-2</sup>个结点。由于二叉树的每个结点至多有两个孩子，故第i层上的结点数至多是第i-1层上的最大结点数的2倍。即j=i时，该层上至多有2×2<sup>i-2</sup>=2<sup>i-1</sup>个结点，故命题成立。<br>    
+            <br>    
+            <b>    
+    性质2</b>   <font color="#0000FF">  深度为k的二叉树至多有2<sup>k</sup>-1个结点(k≥1)。</font><br>         
+          <i>证明</i>：由性质 (1) 可知各层结点最多数目之和为： 2 0 +2 1 +2 2 +.....+2 k-1 ；由二进制换算关系可知： 2 0 +2 1 +2 2 +.....+2 k-1 = 2 k -1 ；因此二叉树树中结点的最大数目为 2 k -1 。性质 2 证明完毕。<br>        
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+                 
+            <br>         
+            <b>         
+    性质3</b>   <font color="#0000FF">  在任意-棵二叉树中，若叶子结点（即度为0的结点）的个数为n<sub>0</sub>，度为1的结点数为n<sub>1</sub>，度为2的结点数为n<sub>2</sub>，则n<sub>o</sub>=n<sub>2</sub>+1。</font><br>         
+          <i>证明</i>：因为二叉树中所有结点的度数均不大于2，所以结点总数(记为n)应等于0度结点数、1度结点(记为n<sub>1</sub>)和2度结点数之和：<br>        
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+            n=n<sub>o</sub>+n<sub>1</sub>+n<sub>2</sub>     (6.1)<br>         
+          　&nbsp;&nbsp;&nbsp;<br>由于有n个结点的二叉树总边数为n-1条，于是得：<br> 
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; n-1=0*n<sub>0</sub>+1*n<sub>1</sub>+2*n<sub>2 </sub>      (6.2)       
+            <br> 
+			将（6.1）式代入（6.2）式得：n<sub>0</sub>=n<sub>2</sub>+1。性质3证明完毕<br> <br>       
+            <b>满二叉树和完全二叉树是二叉树的两种特殊情形。</b><br>         
+            <font color="#0000FF">        
+            1、满二叉树(FullBinaryTree)&nbsp;</font><br>       
+            &nbsp;&nbsp;&nbsp; 　一棵深度为k且有2<sup>k</sup>-1个结点的二又树称为满二叉树。<br>   
+            &nbsp;&nbsp;&nbsp; 　满二叉树的特点：<br>   
+          　　（1）	每一层上的结点数都达到最大值。即对给定的高度，它是具有最多结点数的二叉树。<br>          
+          　　（2）	满二叉树中不存在度数为1的结点，每个分支结点均有两棵高度相同的子树，且树叶都在最下一层上。<br>          
+          　　【例】图6.4(a)是一个深度为3的满二叉树。<br>    
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+            <br>
+            <img src="tupian\4.4.gif" width="458" height="175"><br>
+            <font color="#0000FF"><br>
+            2、完全二叉树(Complete BinaryTree)&nbsp;</font><br>       
+            &nbsp;&nbsp;&nbsp; 若一棵二叉树至多只有最下面的两层上结点的度数可以小于2，并且最下一层上的结点都集中在该层最左边的若干位置上，则此二叉树称为完全二叉树。<br>        
+            &nbsp; <b>特点：</b><br>       
+            &nbsp; （1）	满二叉树是完全二叉树，完全二叉树不一定是满二叉树。<br>          
+            &nbsp; （2）	在满二叉树的最下一层上，从最右边开始连续删去若干结点后得到的二叉树仍然是一棵完全二叉树。<br>          
+            &nbsp; （3）	在完全二叉树中，若某个结点没有左孩子，则它一定没有右孩子，即该结点必是叶结点。<br>          
+            【例】如图6.4(c)中，结点F没有左孩子而有右孩子L，故它不是一棵完全二叉树。<br>         
+            【例】图6.4(b)是一棵完全二叉树。<br>         
+            &nbsp;     
+            <br>     
+               
+<b>性质 4</b> <font color="#0000FF"> 具有 n 个结点的完全二叉树树深为 +1 （其中 表示不大于 x 的最大整数）。 </font> <br>
+<i>
+证明</i>：假设某完全二叉树的结点总数是 n ，它的值应该大于树深为 K-1 的满二叉树结点数 2 k-1 -1 ，小于等于树深为 K1 的满二叉树结点数 2 k -1 。  <br>
+
+2 k-1 -1 < n <= 2 k -1  <br>
+
+由于该不等式各项均为整数，当对两端两项各加 1 时不等式发生变化得：  <br>
+
+2 k-1 <= n < 2 k 
+ <br>
+再对其取对数得： k-1<= log 2 n < k  <br>
+
+如果对 log 2 n 取整显然等于 k-1 ：， 所以得：  <br>
+
+性质 4 证明完毕。<br> 
+ <br> 
+<b>性质 5</b> <font color="#0000FF"> 若对有 n 个结点的完全二叉树进行顺序编号 (1 ≤ i ≤ n)</font> ，那么： <br> 
+
+对于编号为 i(i ≥ 1) 结点 :  <br>
+
+当 i=1 时，该结点为根，它无双亲结点； <br> 
+
+当 i>1 时，该结点的双亲结点编号为 ；  <br>
+
+若 2i ≤ n ，它有编号为 2i 的左孩子，否则没有左孩子；  <br>
+
+若 2i+1 ≤ n ，则它有编号为 2i+1 的右孩子，否则没有右孩子。  <br>
+
+对照图 6.4(a) 或图 6.4(b) 读者可看到由性质 ( ５ ) 所描述的结点与编号的对应关系 。 <br>
+
+				<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="shu4.2.1.html"><span style="text-decoration: underline;" ><font color="#0000FF">上一页</font></span></a><br></td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

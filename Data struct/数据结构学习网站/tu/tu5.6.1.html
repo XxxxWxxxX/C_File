@@ -1,0 +1,175 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>拓扑排序与关键路径</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">图</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.1.1.html">图的基本概念和术语</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的存储结构</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.2.1.html">邻接矩阵</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.2.2.html">邻接表</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的遍历</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.3.1.html">图的深度优先遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.3.2.html">图的广度优先遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的最小生成树</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.4.1.html">图的最小生成树</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">最短路径</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.5.1.html">最短路径</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">拓扑排序与关键路径</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.6.1.html">拓扑排序与关键路径</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br><b><font size="4">    
+            拓扑排序<br></font></b>
+             　　一个无环的有向图称为无环图（Directed Acyclic Graph），简称<b>DAG图</b>。
+			 　　所有的工程或者某种流程都可以分为若干个小的工程或者阶段，称这些小的工程或阶段为“活动”。<br>
+			 　　这些子程序之间存在一定的约束，其中某种子工程的开始必须在另一些子工程完成之后。因此DAG图表示一个工程，其中有向边表示约束关系。这种有向图必须是无环的。如果出现了环（有向环），那么向前递推，环路上的任一子工程开始的先决条件必然是自己，显然矛盾的。如果设计出这样的工程图，工程无法进行。拓扑排序就是测试一个工程能否顺利进行。<br>
+			 【例】计算机专业的学生必须完成一系列规定的专业基础课和专业课才能毕业，这个过程就可以被看成是一个大的工程，而活动就是学习每一门课程。我们不妨把这些课程的名称与相应的代号列于表 7.2 。<br>
+			 &nbsp;&nbsp;&nbsp;<b>表 7.2 计算机专业的学生必须完成课程的名称与相应代号</b> <br>
+ 
+课程代号&nbsp;&nbsp;&nbsp;    课程名&nbsp;&nbsp;&nbsp;        先行课程名&nbsp;&nbsp;&nbsp;                 课程代号&nbsp;&nbsp;&nbsp;        课程名&nbsp;&nbsp;&nbsp;       先行课程名 <br>
+&nbsp; C 1&nbsp;&nbsp;&nbsp;&nbsp;程序设计导论&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;无&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C 9          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;算法分析         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C 3 <br>
+&nbsp;&nbsp;C 2        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数值分析&nbsp;&nbsp;       C 1 , C 14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C 10 &nbsp;&nbsp;&nbsp;&nbsp;高级语言 &nbsp;&nbsp;C 3 , C 4  <br>
+&nbsp;&nbsp;C 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数据结构 &nbsp;&nbsp;C 1 , C 14               &nbsp;&nbsp;&nbsp;&nbsp;C 11 &nbsp;&nbsp;&nbsp;&nbsp;编译系统 &nbsp;&nbsp;&nbsp;&nbsp;C 10 <br>
+&nbsp;&nbsp;C 4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;汇编语言 &nbsp;&nbsp;C 1 , C 13               &nbsp;&nbsp;&nbsp;&nbsp;C 12 &nbsp;&nbsp;&nbsp;&nbsp;操作系统 &nbsp;&nbsp;&nbsp;&nbsp;C 11<br>
+&nbsp;&nbsp;C 5 &nbsp;&nbsp;&nbsp;&nbsp;自动机理论 &nbsp;&nbsp;&nbsp;&nbsp;C 15                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C 13 &nbsp;&nbsp;&nbsp;&nbsp;解析几何 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;无<br>
+&nbsp;&nbsp;C 6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;人工智能 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C 3                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C 14&nbsp; &nbsp;&nbsp;&nbsp;微积分&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C 13 <br>
+&nbsp;&nbsp;C 7&nbsp;&nbsp; 计算机图形学 C 3 ,C 4 ,C 10&nbsp;      C 15 &nbsp;&nbsp;&nbsp;&nbsp;线性代数 &nbsp;&nbsp;&nbsp;&nbsp;C 14 <br>
+&nbsp;&nbsp;C 8&nbsp;&nbsp;&nbsp; 计算机原理&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C 4 
+ <Br>
+<br>　　若以图中的顶点来表示活动，有向边表示活动之间的优先关系，则这样的有向图称为 AOV(Activity On Vertex network) 网。在 AOV 网中，若从顶点 v i 到顶点 v j 之间存在一条有向路径，称顶点 v i 是顶点 v j 的前趋，或者称顶点 v j 是顶点 v i 的后继。若 <v i ,v j > 是图中的弧，则称顶点 v i 是顶点 v j 的直接前趋，顶点 v j 是顶点 v i 的直接后继。<br>
+　　这种优先关系可以用图 7.18 所示的有向图来表示。其中，顶点表示课程，有向边表示前提条件，若课程 v i 为课程 v j 的前行课，则必然存在有向边 &amp;v i ,v j > 。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="tupian\7.18.gif" width="432" height="239"><br> 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tu5.6.1.2.html"><span style="text-decoration: underline;" ><font color="#0000FF">下一页</font></span></a>
+            </p>            </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

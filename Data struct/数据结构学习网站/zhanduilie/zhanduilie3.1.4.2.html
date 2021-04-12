@@ -1,0 +1,161 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>递归方法思路</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="..\tu\tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">栈</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.1.html">栈的定义及其算法</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.2.html" >顺序栈</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.3.html" >链栈</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.4.html">栈的应用</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">队列</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.2.1.html">队列的定义及基本运算</a><a href="2.3.1.html"></a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.2.2.html">顺序队列</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.2.3.html">链队列</a></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><font size="4"><br></font>
+		      
+		      <font color="#0000FF"> （3） 递归调用</font><br>
+		      &nbsp;&nbsp;&nbsp; 　所谓<b>递归</b>是指：若在一个函数、过程或者数据结构定义的内部，直接（或间接）出现定义本身的应用，则称它们是递归的，或者是递归定义的。<br>
+                  &nbsp;&nbsp;&nbsp; 　递归是一种强有力的数学工具，它可使问题的描述和求解变得简洁和清晰。<br>
+                  &nbsp;&nbsp;&nbsp; 递归算法常常比非递归算法更易设计，尤其是当问题本身或所涉及的数据结构是递归定义的时候，使用递归算法特别合适。<br>  
+             <br><b>递归方法思路:</b><br>     <span style="line-height: 150%">&nbsp;&nbsp;&nbsp; <font color="#FF00FF">　</font><b>第一步骤（递归步骤）：</b>将规模较大的原问题分解为一个或多个规模更小、但具有类似于原问题特性的子问题。即较大的问题递归地用较小的子问题来描述，解原问题的方法同样可用来解这些子问题。<br>
+&nbsp;&nbsp;&nbsp; <font color="#FF00FF">　</font><b>第二步骤：</b>确定一个或多个无须分解、可直接求解的最小子问题（称为<b>递归的终止条件</b>）。<br>
+　　【例】非负整数n的阶乘可递归定义为：<br>
+&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+                  &nbsp; <span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size:      
+12.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:宋体;mso-font-kerning:      
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:      
+AR-SA"><span style="mso-text-raise:-9.0pt"> <img src="tupian\zhanhu1.gif" v:shapes="_x0000_i1025" width="100" height="29"></span>
+</span> </span><br>
+		      与之相应的Ｃ函数框架是：<br>
+    int fac(int n)<br>
+    { float p;<br>
+      if ( (n==0) || (n==1) )  p=1;<br>
+      else p=n*fac(n-1);<br>
+      return(p);<br>
+    }<br>
+　　在此函数中可理解为求n!用fac(n)来表示，那么fac(n-1)就表示求(n-1)!。图3.6(a)展示了递归调用中执行情况。从图3.6(a)可以看到fac函数共被调用5次，即fac(5)、fac(4)、fac(3)、fac(2)、fac(1)。其中fac(5)main函数调用的，其余4次是在fac函数中调用的。在某一层递归调用时，并未立即得到结果，而是进一步向深度递归调用。直到最内层函数执行n=1或n=0时，fac(n)才有结果。然后再一一返回时，不断得到中间结果，直到回到主程序就可得到n!的最终结果。<br>
+<img src="tupian\tupian3.6.jpg" width="490" height="118"><br>
+　　调用时把处在调用层的不同n值入栈，返回时再一一出栈参加计算。存放不同n值的栈如图3.6(b)所示。当然这里也用到了返回地址栈，在此不再重复。<br><br>			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="zhanduilie3.1.4.html"><span style="text-decoration: underline;" ><font color="#0000FF">上一页</font></span></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="zhanduilie3.1.4.3.html"><span style="text-decoration: underline;" ><font color="#0000FF">下一页</font></span></a><br>
+            </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

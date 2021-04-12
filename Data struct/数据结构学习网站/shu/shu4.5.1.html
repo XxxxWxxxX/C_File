@@ -1,0 +1,214 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>树的存储结构</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="..\tu\tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">树</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.1.1.html">树的基本概念和术语</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">二叉树</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.2.1.html">二叉树的定义和性质</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.2.2.html">二叉树的存储结构</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">二叉树的遍历</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.3.1.html">二叉树的遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">线索二叉树</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.4.1.html">线索二叉树</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">二叉树、树和森林</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.5.1.html">树的存储结构</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.5.2.html">树、森林和二叉树的转化</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.5.3.html">树和森林的遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">树的应用</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.6.1.html">二叉树排序树</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.6.2.html">哈夫曼树</a></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br>
+            <b><font  size="3">树的存储结构</font></b> <br><br>
+            树的存贮结构有多种表示方法，比较典型的乃是顺序结构和链表结构两类。 <br>	　　顺序存贮结构即向量，一般将树结点按自上而下，自左至右的顺序一一存放。如前文所介绍的完全二叉树就可以采用顺序存贮结构。<br>
+			  <b>1.双亲链表表示法</b><br>
+                &nbsp;&nbsp;&nbsp; 　顺序存储结构常用的有双亲表示法，这种方法在每个数组元素中存放某个结点信息和该结点的双亲下标值。<br>
+                <font color="#0000FF">（1）双亲链表表示法的实现</font><br>
+                &nbsp;方法① 用动态链表实现<br> 
+                &nbsp;方法② 用向量表示——更为方便<br>
+                <br>
+                <font color="#0000FF">（2）双亲链表表示实例</font><br>
+                &nbsp; 【例】如图6.13（a）所示这棵一般树，它的双亲数组表示法，如图6.13（b）所示。
+              <p style="line-height: 150%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="tupian\6.13.gif" width="167" height="219"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（a）<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="tupian\6.13b.gif" width="350" height="49"><br>
+                &nbsp;&nbsp;&nbsp;<br>
+                <font color="#FF0000">&nbsp; </font>分析：<br>
+                &nbsp;&nbsp;&nbsp; 　E和F所在结点的双亲域是3，它们的双亲结点在向量中的位置是3，即c是它们的双亲。<br>
+                &nbsp; <font color="#FF0000">注意：</font><br> 
+                &nbsp;&nbsp;&nbsp; 　① 根无双亲，其parent域为-1。<br> 
+                &nbsp;&nbsp;&nbsp; 　② 双亲链表表示法中指针parent向上链接，适合求指定结点的双亲或祖先(包括根)；求指定结点的孩子或其它后代时，可能要遍历整个数组。<br><br>
+				<b>2.多重链表的孩子表示法</b><br><br>
+               <font color="#0000FF">（1） 结点结构</font><br>
+                <b>① 定长结点</b><br>
+                &nbsp;&nbsp;&nbsp;&nbsp; 　即树中每个结点均按树的度k来设置指针。<br>
+                &nbsp;&nbsp;&nbsp; 　n个结点的树一共有n*k个指针域，而树中只有n-1条边，故树中的空指针数目为<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; kn-(n-1)=n(k-1)+1（k越大，浪费的空间越多）。<br> 
+                <br> 
+                <b>②不定长结点</b><br> 
+                &nbsp;&nbsp;&nbsp; 　即树中每个结点按本结点的度来设置指针数，并在结点中增设一个度数域degree指出该结点包含的指针数。<br>
+                &nbsp;&nbsp;&nbsp; 　各结点不等长，虽然节省了空间，但是给运算带来不便。<br>
+                <br>
+                <font color="#0000FF">（2）孩子链表表示法</font><br>
+                &nbsp;&nbsp;&nbsp; 　孩子链表表示法是为树中每个结点设置一个孩子链表，并将这些结点及相应的孩子链表的头指针存放在一个向量中。<br>
+                <br>
+                <font color="#0000FF">（3）孩子链表表示法实例</font> <br> 
+                【例】图 6.13 所示的树是一个三叉树，可用三重链表来存贮，其结点结构为：有一个数据域和三个指针域，指针域用于指向该结点的各个孩子。该树的三重链表如图 6.14 （   a ）所示。如果面对一棵分叉很多的树，这种方法就会更加复杂。<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              <img src="tupian\6.14.jpg" width="509" height="178">  
+              <p style="line-height: 150%">
+                &nbsp; <font color="#FF0000">注意：</font><br> 
+                &nbsp;&nbsp;&nbsp; 　① 孩子结点的数据域仅存放了它们在向量空间的序号。<br> 
+                &nbsp;&nbsp;&nbsp; 　② 与双亲链表表示法相反，孩子链表表示便于实现涉及孩子及其子孙的运算，但不便于实现与双亲有关的运算。<br> 
+                &nbsp;&nbsp;&nbsp; 　③ 将双亲链表表示法和孩子链表表示法结合起来，可形成双亲孩子链表表示法。<br><br> 
+                <b>3.孩子兄弟链表表示法&nbsp;</b><br><br>
+                 <font color="#0000FF">（1）表示方法</font><br>
+                  &nbsp;&nbsp;&nbsp;  树最常用的是孩子 - 兄弟二叉链表表示法，这种方法表示规范，不仅适用于多叉树的存储，也适用于森林的存储。构成孩子 - 兄弟二叉链表的结点结构是：一个数据域和两个指针域，一个指针指向它的长子，另一指针指向它的一个兄弟。<br>
+
+                  <font color="#FF0000"><br>
+                  </font><font color="#0000FF">（2）表示实例</font><br>
+            　　【例】图 6.13 中树的孩子 - 兄弟二叉链表结构如图 6.14(b) 所示。假设把图 6.14(b) 中指向兄弟的水平方向指针改为下斜 45 ℃ ，不难发现它与一棵二叉树十分相似。二叉树结构规范、简单并具有一些重的要性质，因此常将一般树结构转换为二叉树结构进行处理。 <br>
+                  
+                  &nbsp;&nbsp;&nbsp;&nbsp;<br>
+                  <font color="#FF0000">&nbsp; 注意：</font><br> 
+                  &nbsp;&nbsp;&nbsp; 　这种存储结构的最大优点是：它和二叉树的二叉链表表示完全一样。可利用二叉树的算法来实现对树的操作。          
+            <br> </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>快速排序</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="..\tu\tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">排序的基本概念</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.1.1.html">排序的基本概念</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">插入排序</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.2.1.html">直接插入排序和折半插入排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.2.2.html">希尔排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">交换排序</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.3.1.html">冒泡排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.3.2.html">快速排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">选择排序</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.4.1.html">简单选择排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.4.2.html">堆排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">归并排序</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.5.1.html">归并排序</a></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br>
+            <b><font  size="4">快速排序</font></b> <br>
+            　　快速排序由霍尔 (Hoare) 提出，它是一种对冒泡排序的改正。由于其排序速度快，故称快速排序 (quick sort) 。快速排序方法的实质是将一组关键字 [K 1 ,K 2 ,…,K n ] 进行分区交换排序。 <br>
+	
+    		<b>1.算法思路</b><br>
+　　①以第一个关键字 K 1 为控制字，将 [K 1 ,K 2 ,…,K n ] 分成两个子区，使左区所有关键字小于等于 K 1 ，右区所有关键字大于等于 K 1 ，最后控制字居两个子区中间的适当位置。在子区内数据尚处于无序状态。 <br> 
+
+　　②将右区首、尾指针 ( 记录的下标号 ) 保存入栈，对左区进行与第①步相类似的处理，又得到它的左子区和右子区，控制字居中。 <br> 
+
+　　③重复第①、②步，直到左区处理完毕。然后退栈对一个个右子区进行相类似的处理，直到栈空。  <br>
+
+　　由以上三步可以看出：快速排序算法总框架是进行多趟的分区处理；而对某一特定子区，则应把它看成又是一个待排序的文件，控制字总是取子区中第一个记录的关键字。现在设计一个函数 hoare ，它仅对某一待排序文件进行左、右子区的划分，使控制字居中；再设计一个主体框架函数 quicksort ，在这里多次调用 hoare 函数以实现对整个文件的排序。  <br>
+<b>2.快速排序算法分析</b><br>
+　　快速排序的非递归算法引用了辅助栈，它的深度为 log<sub>2</sub>n 。假设每一次分区处理所得的两个子区长度相近，那么可入栈的子区长度分别为：n/2<sup>1</sup>n/2<sup>2</sup>，n/2<sup>3</sup> ，n/2<sup>4</sup> , … ，n/2<sup>k</sup> ，又因为 n/2<sup>k</sup>=1, 所以 k= log<sub>2</sub>n 。分母中 2 的指数恰好反映出需要入栈的子区个数，它就是 log<sub>2</sub>n ，也即栈的深度。在最坏情况下，比如原文件关键字已经有序，每次分区处理仅能得到一个子区。可入的子区个数接近 n, 此时栈的最大深度为 n. <br>
+
+　　快速排序主体算法时间运算量约 O(log<sub>2</sub>n) ，划分子区函数运算量约 O(n) ，所以总的时间复杂度为 O(nlog<sub>2</sub>n) ，它显然优于冒泡排序 O(n<sup>2</sup>). 可是算法的优势并不是绝对的。试分析，当原文件关键字有序时，快速排序时间复杂度是 O(n<sup>2</sup>), 这种情况下快速排序不快。而这种情况的冒泡排序是 O(n), 反而很快。在原文件记录关键字无序时的多种排序方法中，快速排序被认为是最好的一种排序方法。<br>
+【例】: 试用 [6,7,5 1 ,2,5 2 ,8] 进行快速排序。<br> 
+
+排序过程简述如下：<br> 
+
+&nbsp;6 &nbsp;&nbsp;&nbsp;7 &nbsp;&nbsp;5<sup>1</sup>&nbsp;&nbsp; 2 &nbsp;&nbsp;5<sup>2</sup> &nbsp;8&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;初始状态<br> 
+
+[5<sup>2</sup> &nbsp;&nbsp;7 &nbsp;&nbsp;5<sup>1</sup>]&nbsp; 6 &nbsp;[7 &nbsp;&nbsp;8] <br>
+
+[2]&nbsp;&nbsp;5<sup>2</sup> &nbsp;[5<sup>1</sup>] &nbsp;6 &nbsp;&nbsp;7 &nbsp;[8] <br>
+
+[2&nbsp; &nbsp;5<sup>2</sup>&nbsp;&nbsp;&nbsp;5<sup>1</sup> &nbsp;&nbsp;6 &nbsp;&nbsp;7 &nbsp;&nbsp;8]&nbsp;&nbsp;&nbsp;&nbsp; 最后状态 <br>
+
+　　从这个例子可以分析出快速排序法的稳定性问题，其中5<sup>1</sup>和5<sup>2</sup>表示两个关键字的值相同，都是5。5<sup>1</sup>表示排序之前它位于 5<sup>2</sup>的前面。从结果中可以看出原先位于5<sup>1</sup>之后的5<sup>2</sup>在排序之后移到了5<sup>1</sup>的前面，所以说快速排序是不稳定的。<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="paixu6.3.2.1.html"><span style="text-decoration: underline;" ><font color="#0000FF">下一页</font></span></a><br>
+            </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

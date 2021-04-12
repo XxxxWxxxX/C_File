@@ -1,0 +1,220 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>邻接链表表示的图类</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">图</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.1.1.html">图的基本概念和术语</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的存储结构</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.2.1.html">邻接矩阵</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.2.2.html">邻接表</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的遍历</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.3.1.html">图的深度优先遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.3.2.html">图的广度优先遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的最小生成树</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.4.1.html">图的最小生成树</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">最短路径</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.5.1.html">最短路径</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">拓扑排序与关键路径</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.6.1.html">拓扑排序与关键路径</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br>
+            <b>邻接链表表示的图类</b> <br>
+            &nbsp;const    int   MaxVertices=100;<br>
+&nbsp;typedef  int  VerT;<br>
+&nbsp;typedef  int   DistT;<br> 
+&nbsp;struct Edge{  &nbsp;int dest;&nbsp;//邻接顶点下标<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DistT   weight;   //边的权值，或更多<br>
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Edge   *next;         //指针<br>
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};<br>
+&nbsp;struct item {  VerT    data;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//顶点数据<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Edge    *adj;&nbsp;&nbsp;&nbsp;&nbsp;//邻接边的指针<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};<br>
+&nbsp; item  Vertices[MaxVertices];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//顶点的数组    <br>
+            <br> 
+			<b>建立一个无向图的邻接链表:</b><br> 
+void  AdjTWGraph::CreatG(int n,int e)<br>   
+{ int vi,vj;  DistT w;<br> 
+  numE=e;   numV=n;<br> 
+   cout&lt;&lt;"\n  输入顶点的信息（整型）：" ;<br> 
+  for (int i=1; i&lt;=numV; i++ )    {  cout&lt;&lt;"\n "&lt;&lt;i&lt;&lt;": ";<br> 
+                                                   cin>>Vertices[i].data;<br> 
+                                               }<br> 
+for ( int i=1; i&lt;=numE; i++ )<br> 
+{ cout&lt;&lt;"\n  输入边的信息（顶点号vi  顶点号vj  边的权值W）：";<br>  
+   cin>>vi>>vj>>w;<br> 
+ //---------------------- 在第vi条链表上，链入边（vi,vj）的结点<br> 
+  Edge  *q=new Edge;<br> 
+  q->dest=vj;   q->weight=w; q->next=NULL; <br>   
+   //vj是vi的邻接顶点，w是权值<br> 
+if(Vertices[vi].adj==NULL) Vertices[vi].adj=q;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//第一次插入<br> 
+     else &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//非第一次插入<br> 
+          {  Edge  *curr=Vertices[vi].adj,   *pre=NULL;<br> 
+              while (curr!=NULL && curr->dest&lt;vj )<br> 
+                                  { pre=curr;   curr=curr->next;  }<br> 
+             if ( pre==NULL )&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//在第一个结点前插入<br> 
+                { q->next=Vertices[vi].adj;  Vertices[vi].adj=q;  }<br> 
+              else  {q->next=pre->next;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//在其他位置插入<br> 
+                       pre->next=q;<br> 
+                      }<br> 
+         }<br> 
+    //-------------------在第vj条链表上，链入边（vj,vi）的结点<br> 
+     Edge  *p=new Edge;<br> 
+     p->dest=vi; p->weight=w; p->next=NULL;<br> 
+     if(Vertices[vj].adj==NULL) Vertices[vj].adj=p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//第一次插入<br> 
+      else &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//非第一次插入<br> 
+        { Edge  *curr=Vertices[vj].adj, *pre=NULL;<br> 
+          while (curr!=NULL && curr->dest&lt;vi )<br> 
+                              { pre=curr;   curr=curr->next;  }<br> 
+         if ( pre==NULL )&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//在第一个结点前插入<br> 
+                    { p->next=Vertices[vj].adj;   Vertices[vj].adj=p;  }<br> 
+             else {  p->next=pre->next;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//在其他位置插入<br> 
+                      pre->next=p;<br> 
+                    }<br> 
+        }<br> 
+  }  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//for ( int i=1; i<=numE; i++ )<br> 
+
+} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//函数结束<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;该算法的时间复杂度是 O(n+2e) ，在上述算法中去掉黑体部分语句，就是有向图的建立算法，其时间复杂度为 O(n+e) 。<br><br> 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tu5.2.2.html"><span style="text-decoration: underline;" ><font color="#0000FF">上一页</font></span></a><br>
+
+            </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

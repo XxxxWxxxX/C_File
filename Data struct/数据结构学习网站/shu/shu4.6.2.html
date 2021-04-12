@@ -1,0 +1,200 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>哈夫曼树</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="..\tu\tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">树</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.1.1.html">树的基本概念和术语</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">二叉树</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.2.1.html">二叉树的定义和性质</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.2.2.html">二叉树的存储结构</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">二叉树的遍历</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.3.1.html">二叉树的遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">线索二叉树</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.4.1.html">线索二叉树</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">二叉树、树和森林</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.5.1.html">树的存储结构</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.5.2.html">树、森林和二叉树的转化</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.5.3.html">树和森林的遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">树的应用</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.6.1.html">二叉树排序树</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.6.2.html">哈夫曼树</a></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br>
+            <b><font  size="3">哈夫曼树</font></b> <br>
+      
+
+<b>1. 哈夫曼树的基本概念 </b><br>
+　　哈夫曼树（ Huffman ）又称最优二叉树，是一类带权路径长度最短的树，有着广泛的应用。<br>
+　　在讨论哈夫曼树之前首先需要弄清楚关于路径和路径长度的概念。树中两个结点之间的路径由一个结点到另一结点的分支构成。两结点之间的路径长度是路径上分支的数目。树的路径长度是从根结点到每一个结点的路径长度之和。 <br>
+
+　　设一棵二叉树有 n 个叶子结点，每个叶子结点拥有一个权值Ｗ 1 ，Ｗ 2 ， ...... Ｗ n ，从根结点到每个叶子结点的路径长度分别为 L1 ， L2......Ln ，那么树的带权路径长度为每个叶子的路径长度与该叶子权值乘积之各。通常记作 WPL ＝ Ｌ k. Ｗ k 。为了直观其见，在图中把带权的叶子结点画成方形，其他非叶子结点仍为圆形。请看图 6.21 中的三棵二叉树以及它们的带权路径长。<br> 
+<img src="tupian\tupian6.21.jpg" width="445" height="199"><br> 
+(a) wpl=38 (b) wpl=49 (c) wpl=36 
+
+图 6.21 具有不同带权路径长度的二叉树 <br>
+
+<font color="#FF0000">注意:</font><br>
+这三棵二叉树叶子结点数相同，它们的权值也相同，但是它们的 wpl 带权路径长各不相同。图 6.21(c)wpl 最小。它就是哈曼树，最优树。哈夫曼树是，在具有同一组权值的叶子结点的不同二叉树中，带权路径长度最短的树。也称最优树。 <br>
+<b>2. 哈夫曼树的构造</b> <br>
+
+<font color="#0000FF">构造哈夫曼树的方法 </font><br>
+
+对于已知的一组叶子的权值Ｗ 1 ，Ｗ 2...... ，Ｗ n <br>
+
+①首先把 n 个叶子结点看做 n 棵树（仅有一个结点的二叉树），把它们看做一个森林。 <br>
+
+②在森林中把权值最小和次小的两棵树合并成一棵树，该树根结点的权值是两棵子树权值之和。这时森林中还有 n-1 棵树。 <br>
+
+③重复第②步直到森林中只有一棵为止。此树就是哈夫曼树。现给一组 (n=4) 具体的权值 2 ， 4 ， 5 ， 8 ，下边是构造具体过程： <br>
+<img src="tupian\tupian6.22.jpg" width="520" height="203"><br>
+
+
+
+图 6.22 哈夫曼树构造过程 <br>
+
+图 6.22(a) 是一个拥有 4 棵小树的森林，图 6.22(b) 森林中还有 3 子棵树，图 6.22(c) 森林中剩下 2 棵树，图 6.22(d) 森林只有一棵树，这棵树就是哈夫曼树。这里或许会提出疑问， n 个叶子构成的哈夫曼树其带权路径长度唯一吗？确实唯一。树形唯一吗？不唯一。因为将森林中两棵权值最小和次小的子棵合并时，哪棵做左子树，哪棵做右子树并不严格限制。图 6.22 之中的做法是把权值较小的当做左子树 , 权值较大的当做右子树。如果反过来也可以，画出的树形有所不同，但 WPL 值相同。为了便于讨论交流在此提倡权值较小的做左子树 , 权值较大的做右子。<br>
+ <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="shu4.6.2.2.html"><span style="text-decoration: underline;" ><font color="#0000FF">下一页</font></span></a><br>
+
+            </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

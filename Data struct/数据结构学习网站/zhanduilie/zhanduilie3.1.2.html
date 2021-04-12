@@ -1,0 +1,201 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>顺序栈</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="..\tu\tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">栈</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.1.html">栈的定义及其算法</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.2.html" >顺序栈</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.3.html" >链栈</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.4.html">栈的应用</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">队列</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.2.1.html">队列的定义及基本运算</a><a href="2.3.1.html"></a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.2.2.html">顺序队列</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.2.3.html">链队列</a></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><font size="4"><br></font>
+		      <b><font size="3">顺序栈</font></b><br>
+		      <span style="line-height: 150%"><font size="4"><b><br>
+              </b></font><br>
+&nbsp;&nbsp;&nbsp;与线性表类似栈也有两种存储结构，即顺序存储结构和链表存储结构。栈的顺序存储结构亦称为<b>顺序栈</b>,它是运算受限的顺序表。<br>
+<b> 1、 顺序栈的类型定义</b><br>
+&nbsp; const int MAXSIZE=100; //假定预分配的栈空间最多为100个元素<br>
+&nbsp; typedef int ElemType;//假定栈元素的数据类型为整型<br>
+&nbsp; struct SqStack{ ElemType elem[MAXSIZE]; //一维数组<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int top;//指针top指向栈顶元素的当前位置<br>
+&nbsp;&nbsp;&nbsp;&nbsp; } <br>
+<font color="#FF0000">&nbsp; 注意：<br>
+　&nbsp;&nbsp;</font><font color="#FF0000">&nbsp; </font>①SqStack就是栈的顺序存储结构的类型标识符。<br>
+&nbsp;&nbsp;&nbsp; 　②顺序栈中元素用向量存放<br>
+&nbsp;&nbsp;&nbsp; 　③栈底位置是固定不变的，可设置在向量两端的任意一个端点<br>
+&nbsp;&nbsp;&nbsp; 　④栈顶位置是随着进栈和退栈操作而变化的，用一个整型量top（通常称top为栈顶指针）来指示当前栈顶位置<br>
+　　 <b>例:</b><br>
+ 　　假设MAXSIZE取值为６，图３.2展示了顺序栈S中数据元素和栈顶指针的关系。为了与前文所述top=0为空栈相一致，图中未画出S.elem[0]。逻辑上可利用有效空间为S.elem[1],...,S.elem[5]。<br>
+<img src="tupian\tupian3.2.jpg" width="490" height="176"><br><br>
+<b> 2、 顺序栈的基本操作</b> <font color="#FF0000"> <br>
+&nbsp; </font>前提条件：<br>
+&nbsp;&nbsp;&nbsp; 　设S是SeqStack类型的指针变量。若栈底位置在向量的低端，即S.elem[0]是栈底元素。<br>
+<font color="#0000FF"> （1） 进栈操作</font><br>
+&nbsp;&nbsp;&nbsp; 　进栈时，需要将top加1<br>
+<font color="#FF0000">&nbsp; 注意：</font><br>
+　&nbsp;&nbsp;&nbsp;①top==MAXSIZE-1表示栈满<br>
+　&nbsp;&nbsp;&nbsp;②"<b>上溢</b>"现象--当栈满时，再做进栈运算产生空间溢出的现象。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 上溢是一种出错状态，应设法避免。<br>
+【算法3.1】<br>
+void  SqStack::push( ElemType e) <br>    
+{ if(top= =MAXSIZE-1)<br>              
+            {cout&lt;&lt;"栈满溢出"&lt;&lt;endl;<br>
+             exit(1);<br>
+             }<br>
+           else {top++;<br>                    
+elem[top]=e;<br> 
+}<br>
+}<br>
+
+<br>
+<font color="#0000FF"> （2） 退栈操作</font><br>
+&nbsp;&nbsp;&nbsp; 　退栈时，需将top减1<br>
+<font color="#FF0000">&nbsp; 注意：<br>
+　&nbsp;&nbsp;&nbsp; </font>①top&lt;0表示空栈<br>
+&nbsp;&nbsp;&nbsp; 　②"<b>下溢</b>"现象——当栈空时，做退栈运算产生的溢出现象。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 下溢是正常现象，常用作程序控制转移的条件。<br>
+【算法3.2】<br>
+ElemType SqStack::pop()<br>
+ {ElemType x;<br>
+  if(top= =0)<br>
+        { cout&lt;&lt; " 栈为空，不能出栈操作"&lt;&lt;endl; exit(1);}<br>
+   else { x=elem[top];<br>
+        top--;<br>
+        return x;<br>
+}<br>
+}<br>
+顺序栈在进栈和退栈操作时的具体算法演示请点击查看<a href="..\sf1\czrz.swf" target="_blank"><font size="2"color="#FF0000">【<strong>算法演示</strong>】</font></a><br>
+
+<br>
+<b> 3、两个栈共享同一存储空间</b><br>
+&nbsp;&nbsp;&nbsp; 　<font color="#FF0000"><br>
+</font>　　顺序存储结构条件下的多栈操作也是数据结构课程所讨论的内容。在计算机系统软件中，诸如各种高级语言的编译软件都离不开栈的操作，且往往是同时使用和管理多个栈。若让多个栈共用一个向量，其管理和运算都很复杂，这里仅介绍两个栈共用一个向量的问题。两个栈共用一个向量又有不同的分配方法。如图3.3所示。<br>
+<img src="tupian\tupian3.3.jpg" width="450" height="157"><br>
+　　图3.3(a)的方法是将向量平均分配给两个栈（设向量有n个元素），它们的栈底分别在下标为0和下标为(n-1)/2+1处，栈顶指针在进栈时作加1操作。如果其中一个栈已满，若还要进此栈，则此栈产生溢出，即使另一个栈仍有空间，也不能利用，这是它的局限性。如果让第二个栈底可以浮动，则实现的算法太麻烦。<br>
+　　图3.3(b)所示的方法是两个栈底安排在向量的两端，一个在下标为0 处，另一个在下标为n-1处。两个栈顶指针可以向中间浮动，左栈进栈时，栈顶指针加1，右栈进栈时，栈顶指针减1。显然，这种方法向量空间利用率高。<br></span>
+              
+            </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

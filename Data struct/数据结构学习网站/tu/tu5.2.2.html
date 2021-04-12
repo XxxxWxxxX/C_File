@@ -1,0 +1,198 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>图的邻接链表</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">图</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.1.1.html">图的基本概念和术语</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的存储结构</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.2.1.html">邻接矩阵</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.2.2.html">邻接表</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的遍历</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.3.1.html">图的深度优先遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.3.2.html">图的广度优先遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的最小生成树</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.4.1.html">图的最小生成树</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">最短路径</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.5.1.html">最短路径</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">拓扑排序与关键路径</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.6.1.html">拓扑排序与关键路径</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br>
+           
+            <b>
+                <font size="4">图的邻接链表</font><br></b><br>
+&nbsp;&nbsp;&nbsp; 邻接链表（Adjacency List）是图的一种链式存储结构，与树型结构中的孩子链表相似。通常邻接链表也称邻接表。<br>  
+                  <font color="#FF0000"> <br>  
+                  </font><b> 1． 邻接表的结点结构</b><br>  
+                  <b>边结点结构</b><br>
+                  <img src="tupian\tjd.jpg" width="150" height="38" ><br>  
+                  &nbsp;&nbsp;&nbsp; 　邻接表中每个表结点均有两个域:<br>
+              　① 邻接点域adjvex<br>  
+              　　存放与vi相邻接的顶点v<sub>j</sub>的序号j。<br>
+              　② 链域next<br>  
+              　　将邻接表的所有表结点链在一起。<br>
+                  &nbsp; <font color="#FF0000">注意：</font><br>  
+              　&nbsp;&nbsp;&nbsp; 如果带权图，则在表结点中还应增加一个保存权值等相关信息info。<br>  
+                  <img src="tupian\tjd1.jpg" width="180" height="43" ><br>  
+                  
+                  </b><b>2．邻接表的表示</b><br>  
+                  &nbsp;&nbsp;&nbsp; 　对于无向图，v<sub>i</sub>的邻接表中每个表结点都对应于与v<sub>i</sub>相关联的一条边。因此，将邻接表的表头向量称为顶点表。将无向图的邻接表称为边表。<br>
+                  &nbsp; <font color="#FF0000">注意：<br>  
+                  &nbsp;&nbsp;&nbsp; </font>n个顶点e条边的无向图的邻接表表示中有n个顶点表结点和2e个边表结点。<br>  
+                   
+                  &nbsp;&nbsp;&nbsp; 　对于有向图，v<sub>i</sub>的邻接表中每个表结点都对应于以v<sub>i</sub>为始点射出的一条边。因此，将有向图的邻接表称为出边表。<br>
+                 
+                  &nbsp; <font color="#FF0000">注意：<br>
+&nbsp;&nbsp;&nbsp; </font>n个顶点e条边的有向图，它的邻接表表示中有n个顶点表结点和e个边表结点。<br> 
+                  <img src="tupian\7.5.gif" width="504" height="243"><br> 
+                  <b>4．有向图的逆邻接表</b><br>
+&nbsp;&nbsp;&nbsp; 在有向图中，为图中每个顶点v<sub>i</sub>建立一个入边表的方法称逆邻接表表示法。<br>
+&nbsp;&nbsp;&nbsp; 入边表中的每个表结点均对应一条以v<sub>i</sub>为终点(即射入v<sub>i</sub>)的边。<br> 
+                  【例】<br> 
+                  <img src="tupian\nlj1.jpg" width="267" height="177"><img src="tupian\g2.jpg" width="196" height="200" ><br> 
+                  &nbsp;<br> 
+                  &nbsp; <font color="#FF0000">注意：</font><br>
+&nbsp;&nbsp;&nbsp; 　n个顶点e条边的有向图，它的接表表示中有n个顶点表结点和e个边表结点。<br>
+                <br>       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tu5.2.2.2.html"><span style="text-decoration: underline;" ><font color="#0000FF">下一页</font></span></a><br>
+            
+                </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

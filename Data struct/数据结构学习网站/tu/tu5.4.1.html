@@ -1,0 +1,200 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>图的最小生成树</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">图</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.1.1.html">图的基本概念和术语</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的存储结构</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.2.1.html">邻接矩阵</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.2.2.html">邻接表</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的遍历</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.3.1.html">图的深度优先遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.3.2.html">图的广度优先遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的最小生成树</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.4.1.html">图的最小生成树</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">最短路径</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.5.1.html">最短路径</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">拓扑排序与关键路径</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.6.1.html">拓扑排序与关键路径</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br>
+             <b><font size="4">图的最小生成树</font><br></b><br>
+			<b> 1、生成树的定义</b><br>    
+              &nbsp;&nbsp;&nbsp; 若从图的某顶点出发，可以系统地访问到图中所有顶点，则遍历时经过的边和图的所有顶点所构成的子图，称作该图的生成树。（此定义不仅仅适用于无向图，对有向图同样适用。）<br>    
+                （1）若G是强连通的有向图，则从其中任一顶点v出发，都可以访问遍G中的所有顶点，从而得到以v为根的生成树。<br>     
+                （2）若G是有根的有向图，设根为v，则从根v出发可以完成对G的遍历，得到G的以v为根的生成树。<br>     
+              【例】下图中(a)图是以v<sub>0</sub>为根的有向图，它的DFS生成树和BPS生成树分别如图(b)和(c)所示。<br>   
+              &nbsp;&nbsp;&nbsp;&nbsp;<br>  
+                <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="463" height="166">  
+                  <param name=movie value="tupian\t7.13.swf">  
+                  <param name=quality value=high>  
+                  <param name="wmode" value="transparent">  
+                  <embed src="tupian\t7.13.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="463" height="166" wmode="transparent">                  </embed></object><br>   
+                （3）若G是非连通的无向图，则要若干次从外部调用DFS(或BFS)算法，才能完成对G的遍历。每一次外部调用，只能访问到G的一个连通分量的顶点集，这些顶点和遍历时所经过的边构成了该连通分量的一棵DFS(或BPS)生成树。G的各个连通分量的DFS(或BFS)生成树组成了G的DFS(或BFS)生成森林。<br>     
+                （4）若G是非强连通的有向图，且源点又不是有向图的根，则遍历时一般也只能得到该有向图的生成森林。<br>     
+              【例】对图 7.9 中的图 G ，当按深度和广度优先搜索法进行遍历就可以得到图 7.10 所示的两种不同的生成树，并分别称为深度优先生成树 和广度优 先生成树。</p>    
+              <p style="line-height: 150%">　　<img src="tupian\7.11.gif" width="391" height="203" ><br>
+            <br>
+
+<b>2.最小生成树</b><br>
+　　如果连通图是一个网络，称该网络中所有生成树中权值总和最小的生成树为最小生成树 ( 也称最小代价生成树 ) 。 <br>
+
+　　图 7.12 给出图 7.11(a) 的几棵生成树。其中 (a) 的权为 26 ， (b) 的权为 16 ， (c) 的权为 15 ，可以证明 (c) 为一棵最小生成树。<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="tupian\7.12.gif" width="456" height="228" ><br>
+<b>3、最小生成树性质（MST性质）</b><br>   
+            <font color="#0000FF">   
+            （1）MST性质<br>   
+            &nbsp;&nbsp;&nbsp; </font><font color="#0000FF">　</font>最小生成树性质：设G=(V，E)是一个连通网络，U是顶点集V的一个真子集。若(u，v)是G中所有的一个端点在U(u∈U)里、另一个端点不在U(即v∈V-U)里的边中，具有最小权值的一条边，则一定存在G的一棵最小生成树包括此边(u，v)。<br>   
+            <font color="#0000FF"><br>
+            （2）MST性质的证明</font><br>   
+            &nbsp;&nbsp;&nbsp; 　为方便说明，先作以下约定：<br>
+            　　①将集合U中的顶点看作是红色顶点，②而V-U中的顶点看作是蓝色顶点，③连接红点和蓝点的边看作是紫色边，④权最小的紫边称为轻边(即权重最"轻"的边)。于是，MST性质中所述的边(u，v)就可简称为轻边。<br>   
+            　　用反证法证明MST性质：<br>   
+            　　假设G中任何一棵MST都不含轻边(u，v)。则若T是G的一棵MST，则它不含此轻边。<br>   
+            &nbsp;&nbsp;&nbsp; 由于T是包含了G中所有顶点的连通图，所以T中必有一条从红点u到蓝点v的路径P，且P上必有一条紫边(u'，v')连接红点集和蓝点集，否则u和v不连通。当把轻边(u，v)加入树T时，该轻边和P必构成了一个回路。删去紫边(u'，v')后回路亦消除，由此可得另一生成树T'。<br>   
+            &nbsp;&nbsp;&nbsp;　 T'和T的差别仅在于T'用轻边(u，v)取代了T中权重可能更大的紫边(u'，v')。因为w(u，v)≤w(u'，v')，所以<br>    
+            &nbsp;&nbsp;&nbsp; w(T')=w(T)+w(u，v)-w(u'，v')≤w(T)<br>    
+            故T'亦是G的MST，它包含边(u，v)，这与假设矛盾。<br>       
+            &nbsp;&nbsp;&nbsp; 　所以，MST性质成立。<br>
+            <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tu5.4.1.2.html"><span style="text-decoration: underline;" ><font color="#0000FF">下一页</font></span></a>
+<br>
+            </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

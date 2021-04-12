@@ -1,0 +1,178 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>栈的定义及其运算</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="..\tu\tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">栈</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.1.html">栈的定义及其算法</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.2.html" >顺序栈</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.3.html" >链栈</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.4.html">栈的应用</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">队列</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.2.1.html">队列的定义及基本运算</a><a href="2.3.1.html"></a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.2.2.html">顺序队列</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.2.3.html">链队列</a></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><font size="4"><br></font>
+		      <b><font size="3">栈的定义及其运算</font></b><br>
+		      <font color="#FF0000"><br>
+              </font><b> 1、栈的定义</b><br>
+&nbsp;&nbsp;&nbsp; 　堆栈（Stack）可以看成是一种“特殊的”线性表，这种线性表上的插入和删除运算限定在表的某一端进行的。<br>
+　　(1)通常称插入、删除的这一端为<b>栈顶</b>（Top），另一端称为<b>栈底</b>（Bottom）。<br>
+　　(2)当表中没有元素时称为<b>空栈</b>。<br>
+　　(3)栈为后进先出（Last In First Out）的线性表，简称为<b>LIFO表</b>。<br>
+&nbsp;&nbsp;&nbsp; 
+              　栈的修改是按后进先出的原则进行。每次删除（<b>退栈</b>）的总是当前栈中&quot;最新&quot;的元素，即最后插入（<b>进栈</b>）的元素，而最先插入的是被放在栈的底部，要到最后才能删除。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="297" height="263">
+  <param name=movie value="tupian\t3.1.swf">
+  <param name=quality value=high>
+  <param name="wmode" value="transparent">
+  <embed src="tupian\t3.1.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="297" height="263" wmode="transparent"> </embed>
+</object>
+<br>
+<br>
+　　图中元素是以a<sub>1</sub>，a<sub>2</sub>，…，a<sub>n</sub>的顺序进栈，退栈的次序却是a<sub>n</sub>，a<sub>n-1</sub>，…，a<sub>1</sub>。<br><br>
+　　具体算法演示请点击查看<a href="..\sf1\czrz.html" target="_blank"><font size="2"color="#FF0000">【<strong>算法演示</strong>】</font></a><br><br>
+<b> 2、栈的基本运算</b><br>
+<font color="#0000FF"> （1）InitStack（S）</font><br>
+&nbsp;&nbsp;&nbsp; 　初始化操作，设定一个空栈S。<br>
+<font color="#0000FF"> （2）EmptyStack（S）</font><br>
+&nbsp;&nbsp;&nbsp; 　判空栈操作，若S为空栈，则返回TRUE，否则返回FALSE。<br>
+<font color="#0000FF"> （3）FullStack（S）</font><br>
+&nbsp;&nbsp;&nbsp; 　判栈满。若S为满栈，则返回TRUE，否则返回FALSE。<br>
+<font color="#FF0000">注意：<br>
+　&nbsp;&nbsp;&nbsp; </font>该运算只适用于栈的顺序存储结构。<br>
+<font color="#0000FF"> （4）Push（S，e）</font><br>
+&nbsp;&nbsp;&nbsp; 　进栈。若栈S不满，在S栈顶插入一个元素e，栈顶位置由top指针指出。<br>
+<font color="#0000FF"> （5）Pop（S）</font><br>
+&nbsp;&nbsp;&nbsp; 　退栈。若栈S非空，则将S的栈顶元素删去，并返回该元素。<br>
+<font color="#0000FF"> （6）GetTop（S）</font><br>
+&nbsp;&nbsp;&nbsp; 　取栈顶元素。若栈S非空，则返回栈顶元素，但不改变栈的状态。<br>
+<font color="#0000FF"> （7）ClearStack（S）</font><br>
+&nbsp;&nbsp;&nbsp; 　置栈空操作，已知S为栈，不论操作之前的栈是否为空栈，本操作的结果都是将S置为空栈。<br>
+<font color="#0000FF"> （8）CurrentStack（S）</font><br>
+&nbsp;&nbsp;&nbsp; 　求当前栈中元素的个数。<br>
+<font color="#0000FF"> （9）DestroyStack（S）</font><br>
+&nbsp;&nbsp;&nbsp; 　销毁S栈。<br></span><br>
+              
+            </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

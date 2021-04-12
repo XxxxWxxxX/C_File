@@ -1,0 +1,206 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>链队列</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="..\tu\tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">栈</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.1.html">栈的定义及其算法</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.2.html" >顺序栈</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.3.html" >链栈</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.4.html">栈的应用</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">队列</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.2.1.html">队列的定义及基本运算</a><a href="2.3.1.html"></a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.2.2.html">顺序队列</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.2.3.html">链队列</a></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br>
+<b><font size="3">链队列</font></b><br>
+<b> 1、 链队列的定义</b> <font color="#FF0000"> <br>
+</font>&nbsp; 　用链表表示的队列简称为链队列.如图3.16所示。一个链队列显然需要两个指针才能唯一确定，它们分别指示队头和队尾（分别称为头指针和尾指针）。与线性表的单链表一样,为了操作方便起见,我们也给链队列添加了一个头结点,并令头指针指向头结点.由此,空的链队列的判别条件为头指针和尾指针均指向头结点,如图3.17(a)所示。<font color="#FF00FF"><br>
+</font>&nbsp;&nbsp;&nbsp;<img src="tupian\tupian3.11.jpg" width="444" height="263"><br>
+<b> 2、 链队列的类定义</b><br>
+队列采用链表存储结构时，需要两个指针才能唯一确定，它们分别指示队头和队尾（分别称为头指针和尾指针）。同时，我们把头、尾指针作为类的私有成员来处理。链队列的各种操作设计为类的函数成员。<br>
+
+class LsQueue<br>
+{&nbsp;&nbsp;private:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quenode  *front, *rear;<br>
+&nbsp;&nbsp;&nbsp;public:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LsQueue();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~LsQueue();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;void Display();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;void AddQ(ElemType x);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ElemType DelQ();<br>
+};
+<br>
+<br>
+<b> 3、 链队列的基本运算</b><br>
+ <font color="#0000FF">(1)判队列是否为空</font><br>
+int LsQueue::Empty()<br>
+ {<br>
+         &nbsp;&nbsp;&nbsp;if(front==rear) return(1);<br>
+         &nbsp;&nbsp;&nbsp;else  return(0);<br>
+        }<br>
+<font color="#0000FF">(2)在队尾结点之后插入一个元素</font><br>
+void LsQueue::AddQ(ElemType x)      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//值为x 的结点入队<br>
+         {  quenode *s;<br>
+            &nbsp;&nbsp;s=new quenode;<br>
+            &nbsp;&nbsp;s->data=x;  <br>       
+            &nbsp;&nbsp;s->next=NULL;<br>
+            &nbsp;&nbsp;rear->next=s;  <br>
+&nbsp;&nbsp;rear=s;<br>
+         }<br>
+    <font color="#0000FF">(3)删除队头元素</font><br>
+
+     ElemType LsQueue::DelQ()           //出队一个元素<br>
+       { ElemType  x; quenode *p;<br>
+               &nbsp;&nbsp;if ( front==rear) {cout&lt;&lt;"\n  队列为空。"&lt;&lt;endl; x=0;}<br>
+	           &nbsp;&nbsp;else {  p=front->next;<br>
+	                &nbsp;&nbsp;front->next=p->next;<br>
+	                &nbsp;&nbsp;if(p->next==NULL) rear=front; // 防止尾指针丢失<br>
+	                &nbsp;&nbsp;x=p->data;   free(p);<br>
+	               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+               &nbsp;&nbsp;return x;<br>
+       }<br>
+<font color="#0000FF">(4)取队列首元素</font><br>
+        ElemType LsQueue::Front()<br>
+         {&nbsp;ElemType x;<br>
+                &nbsp;&nbsp;NodeType *p;<br>
+                &nbsp;&nbsp;if(Empty())<br>
+             &nbsp;&nbsp;cout&lt;&lt;"QUEUE IS EMPTY!"&lt;&lt;endl;<br>
+          &nbsp;&nbsp;else{<br>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p=front->next;<br>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x=p->data;<br>
+             &nbsp;&nbsp;return (x);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+   }<br>
+　　链式队列的优点是便于实现存储空间的共享.在同时存在多个队列的情况下,采用链式存崐储结构是比较理想的。<br>
+<span style="line-height: 150%">&nbsp; <font color="#FF0000"> 注意：</font><br>
+&nbsp;&nbsp;&nbsp; 　①和链栈类似，无须考虑判队满的运算及上溢。<br>
+&nbsp;&nbsp;&nbsp; 　②在出队算法中，一般只需修改队头指针。但当原队中只有一个结点时，该结点既是队头也是队尾，故删去此结点时亦需修改尾指针，且删去此结点后队列变空。<br>
+&nbsp;&nbsp;&nbsp; 　③以上讨论的是无头结点链队列的基本运算。和单链表类似，为了简化边界条件的处理，在队头结点前也可附加一个头结点，增加头结点的链队列的基本运算</span></td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

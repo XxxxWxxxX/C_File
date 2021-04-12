@@ -1,0 +1,207 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>树的基本概念和术语</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="..\tu\tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">树</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.1.1.html">树的基本概念和术语</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">二叉树</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.2.1.html">二叉树的定义和性质</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.2.2.html">二叉树的存储结构</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">二叉树的遍历</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.3.1.html">二叉树的遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">线索二叉树</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.4.1.html">线索二叉树</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">二叉树、树和森林</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.5.1.html">树的存储结构</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.5.2.html">树、森林和二叉树的转化</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.5.3.html">树和森林的遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">树的应用</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.6.1.html">二叉树排序树</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.6.2.html">哈夫曼树</a></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br>
+<b><font size="4">树</font></b><br>
+　　树型结构是以分支关系定义的层次结构，它是一种重要的非线性结构。<br>　　树形结构在客观世界中广泛存在，例如人类的家庭族谱以及各种社会组织机构都可以用树形结构来表示，又如在计算机文件管理和信息组织方面也用到树形结构。<br>
+                  <br>
+                <b>
+                <font size="3">树的概念</font> <br>               </b><br>
+                <b>树（ tree ）</b>是由一个或多个结点组成的有限集合 T 。 其中：<br> 
+
+（ 1 ）一个特定的结点称为该树的根（ root ）结点 ; <br>
+
+（ 2 ）结点之外的其余结点可分为 m （ m ≥ 0 ）个互不相交的有限集合 T 1 ,T 2 ,......,T m ，且其中每一个集合本身又是一棵树，称之为根的子树（ subtree ）。<br> 
+&nbsp; <font color="#FF0000">注意：</font>          
+                  <br>          
+                &nbsp;&nbsp;&nbsp; 　树的递归定义刻画了树的固有特性：一棵非空树是由若干棵子树构成的，而子树又可由若干棵更小的子树构成。<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="tupian\tupian4.1.jpg" width="390" height="198"><BR>　　在图 6.1 中是一棵由 11 个结点组成树 T 。其中 A 是根结点，其余结点分为三个互不相交的子集： T 1 ={B,E,F} ， T 2 ={C,G} ， T 3 ={D,H,I,J,K} 。 T 1 ,T 2 ,T 3 都是树根Ａ的子树，这三棵子树的根结点分别是 B,C,D 。每棵子树本身也是一棵树，可继续划分。例如子树 T 3 以 D 为根结点，它的其余结点又可分为三个互相交的子集 T 31 ={H} ， T 32 ={I,K} ， T 33 ={J} ，而其中 T 31 ， T 33 可都认为是仅有一个根结点的子树。
+<br><br><b>
+                <font size="3">树的表示</font> <br>               </b><br>
+				<font color="#0000FF"> （1）树形图表示</font><br>
+                  &nbsp;&nbsp;&nbsp; 树形图表示是树结构的主要表示方法。<br>
+                  &nbsp;&nbsp;&nbsp; 树的树形图表示中：结点用圆圈表示，结点的名字写在圆圈旁边（有时亦可写在圆圈内）。<br>
+                  &nbsp;<font color="#00FF00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="tupian\tupian4.2.jpg" width="231" height="147">&nbsp;&nbsp;&nbsp;<br>
+                  </font>用该定义来分析上图所示的树：<font color="#00FF00"> 
+                  <br>
+                  &nbsp; </font>图中的树由结点的有限集T={A，B，C，D，E，F，C，H，I，J}所构成，其中A是根结点，T中其余结点可分成三个互不相交的子集：<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; T<sub>1</sub>={B，E，F，I，J}，<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; T<sub>2</sub>={C}，<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; T<sub>3</sub>={D，G，H}。<br>
+                  &nbsp;&nbsp;&nbsp; T<sub>1</sub>、T<sub>2</sub>和T<sub>3</sub>是根A的三棵子树，且本身又都是一棵树。例如T<sub>1</sub>，其根为B，其余结点可分为两个互不相交的的子集T<sub>11</sub>={E}和T<sub>12</sub>={F，I，J}，它们都是B的子树。显然T<sub>11</sub>是只含一个根结点E的树，而T<sub>12</sub>的根F又有两棵互不相交的子树{I}和{J}，其本身又都是只含一个根结点的树。<br>
+                  　　<br>
+                  <font color="#0000FF">（2）树的其他表示法</font><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<img src="tupian\4.2.gif" width="434" height="250"><br>
+                  <b>① 集合包含关系文氏图法</b><br>
+                  &nbsp;&nbsp;&nbsp; 　是用集合的包含关系来描述树结构。<br>
+                  &nbsp; 上图树的嵌套集合表示法如图(a)
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#00FF00"> &nbsp;</font><br>
+                  <b>② 凹入表表示法</b><br>
+                  &nbsp;&nbsp;&nbsp; 　类似于书的目录，上图树的凹入表示法如图(b)<br>
+                
+                  <b>③ 广义表表示法</b><br>
+                  &nbsp;&nbsp;&nbsp; 　用广义表的形式表示的。上图树的广义表表示法<br>
+                  　　（A（B（E，F（I，J）），C，D（G，H）））
+				  <br><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="shu4.1.1.2.html"><span style="text-decoration: underline;" ><font color="#0000FF">下一页</font></span></a>
+            </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

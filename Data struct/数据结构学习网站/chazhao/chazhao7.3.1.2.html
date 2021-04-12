@@ -1,0 +1,173 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>二叉排序树</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="..\tu\tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">查找</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="chazhao7.1.1.html">查找的基本概念</a></td>
+          </tr>
+          
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">静态查找表</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="chazhao7.2.1.html">顺序表查找</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="chazhao7.2.2.html">有序表查找</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">动态查找表</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="chazhao7.3.1.html">二叉排序树查找</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="chazhao7.3.2.html">平衡二叉树及动态平衡技术</a></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br>
+            
+		<font color="#0000FF">（1）二叉排序树结点插入的查找算法。</font><br>
+　　在二叉排序树中插入一个具有给定关键字值 K 的新结点，先要查找树中是否已有关键字值为 K 的结点。只有当查找失败时，才将新结点插入到树中“适当位置”，使之仍然构成一棵二叉排序树。这个“适当位置”在查找算法中已被保留，因此很容易写出如下算法：<br> 
+①在二叉树中查找所要插入的结点的关键字，若查找到，则不需插入。<br> 
+② 若查找不成功，即 q ＝ NULL 时做：<br>  
+　　　Ⅰ . 动态生成一具有关键字值为 K 的新结点 r ； <br>  
+　　　Ⅱ . 若 root 为 NULL ，则 root ＝ r ；<br>  
+　　　Ⅲ . 若 K ＜ p －＞ key ，则 p －＞ lc ＝ r ；<br>  
+　　　Ⅳ . 若 K ＞ p －＞ key ，则 p －＞ rc ＝ r ；<br>  
+③ 算法结束。 <br> 
+对应的函数定义如下：<br>
+
+算法：<br>
+void Bstree::insert(KeyType K)<br>
+&nbsp;{&nbsp;int flag=0;<br>
+&nbsp;&nbsp;&nbsp;BstNode*q=root,*p,*r;<br>
+&nbsp;&nbsp;&nbsp;while(&nbsp;if(q->key==K){&nbsp;cout&lt;&lt;"查找成功，不再插入。";<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flag=1;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else if(K&lt;q->key){&nbsp;p=q;&nbsp;q=q->lch;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else{&nbsp;p=q;&nbsp;q=q->rch;&nbsp;}<br>
+&nbsp;}<br>
+&nbsp;if(flag==0){&nbsp;cout&lt;&lt;"查找，无此结点，进行插入! \n";<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r=new BstNode;r->key=K;r->lch=0;r->rch=0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(K&nbsp;p->key)p->lch=r;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else p->rch=r;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+}<br>
+在此算法中，先进行查找操作，在查找过程中，指针q保留所查找的点，当查找到该点时，q指向所找到的点。同时，用指针p指向q结点的父结点，当没有找到时，则q指向空，而p指向相应的叶子结点，此时，就在此叶子结点处进行插入，将新结点插入到相应位置（即作为p结点的左孩子或右孩子）。<br>
+<b>3. 二叉排序树查找算法分析</b><br>
+　　不难看出，对二叉排序树进行查找，若查找成功，则是从根结点出发走了一条从根到某个叶子的路径。因此，与折半查找类似，和关键字比较次数不超过该二叉树的深度。深度为 i 的结点，查找成功时所需比较次数为 i 。因此，对于深度为 d 的二叉排序树，若设第 i 层有 n<sub>i</sub> 个结点 (1 ≤ i ≤ d) ，则在同等查找概率的情况下，其平均查找长度为：<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="tupian\7.3.1.2.gif" width="152" height="48"><br>
+　　在二叉排序树上进行查找时，平均查找长度和二叉树的形态有关。在最坏的情况下，二叉排序树是通过把一个有序表的 n 个结点，依次插入而生成的，此时所得到的二叉排序树蜕化为一棵深度为 n 的单支树，它的平均查找长度和单链表上的顺序查找相同，亦是 (n ＋ 1)/2 。在最好的情况下，二叉排序树在生成的过程中，树的形状比较匀称，最终得到的是一棵形态与折半查找的判定树相似的二叉排序树，此时它的平均查找长度大约为 log<sub>2</sub> n 。若考虑把 n 个结点按各种可能的次序插入到二叉排序树中，则有 n! 棵二叉排序树 ( 其中有的形态相同 ) ，可以证明，对这些二叉排序树进行平均，得到的平均查找长度仍然是 O (log<sub>2</sub> n ) 。<br><br >		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="chazhao7.3.1.html"><span style="text-decoration: underline;" ><font color="#0000FF">上一页</font></span></a><br> 
+ </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

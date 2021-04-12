@@ -1,0 +1,168 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>查找的基本概念</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="..\tu\tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">查找</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="chazhao7.1.1.html">查找的基本概念</a></td>
+          </tr>
+          
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">静态查找表</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="chazhao7.2.1.html">顺序表查找</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="chazhao7.2.2.html">有序表查找</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">动态查找表</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="chazhao7.3.1.html">二叉排序树查找</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="chazhao7.3.2.html">平衡二叉树及动态平衡技术</a></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br>
+            <b><font  size="4">查找的基本概念</font></b> <br>
+			<b>1.定义</b><br>
+        　　简单地说，查找 (Search) 就是确定一个已给的数据是否出现在某个数据元素集合中。<br>　　查找(Searching)的定义是：给定一个值K，在含有n个结点的表中找出关键字等于给定值K的结点。若找到，则查找成功，返回该结点的信息或该结点在表中的位置；否则查找失败，返回相关的指示信息。<br>
+		<b>2.查找的结果</b><br>	　　一种是查到该记录，即查找成功，此时查找的结果为给出整个记录的信息，或指出该记录在查找表中的位置；<br>
+　　另一种是查不到该记录，即查找失败，此时查找的结果可给出查找不成功的信息，或者给出一个“空”记录或“空”指针。 <br>
+<b>3.查找的方法</b><br>
+按查找表的结构可将查找表分为静态查找表和动态查找表两类。<br>
+<font color="#0000FF">（1）静态查找</font><br>
+　　静态查找表是指在查找过程中其结构始终不发生变化的查找表。<br>
+　　按查找表的存储方式，静态查找表分为顺序表和静态树表，顺序表又可以分为无序表和有序表两种。<br>
+<font color="#0000FF">（2）动态查找</font><br>
+　　动态查找表是指其结构在查找过程中要发生变化的查找表。<br>
+　　动态查找表则由于其结构在查找过程中要发生变化，一般都采用树表的形式。<br>
+<b>4.平均查找长度</b><br>
+　　讨论各种查找算法时，常以算法的效率和存贮开销来衡量查找算法的优劣。然而，效率和存贮开销常常是相互制约的，很难两者兼顾。<br>
+　　效率只是相对的，通常把对关键字的最多比较次数和平均比较次数作为两个基本的技术指标，前者叫做<b>最大查找长度</b> (Maximum Search Length ， MSL), 后者叫做<b>平均查找长度</b> (Average Search Length ， ASL) 。<br>
+对 n 个记录进行查找时，平均查找长度为：<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="tupian\8.1.1.gif" width="120" height="49" ><br>
+&nbsp; 其中：<br>     
+              &nbsp;&nbsp;&nbsp; 　①n是结点的个数；<br>    
+              &nbsp;&nbsp;&nbsp;　 ②P<sub>i</sub>是查找第i个结点的概率。若不特别声明，认为每个结点的查找概率相等，即<br>   
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p<sub>l</sub>=p<sub>2</sub>…=p<sub>n</sub>=1/n<br>   
+              &nbsp;&nbsp;&nbsp;　 ③c<sub>i</sub>是找到第i个结点所需进行的比较次数。<br>      
+              &nbsp; <font color="#FF0000">注意：</font>       
+              <br>       
+              &nbsp;&nbsp;&nbsp;　 为了简单起见，假定表中关键字的类型为整数：<br>       
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; typedef int KeyType；  //KeyType应由用户定义<br>
+ </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>队列的定义及其运算</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="..\tu\tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">栈</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.1.html">栈的定义及其算法</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.2.html" >顺序栈</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.3.html" >链栈</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.4.html">栈的应用</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">队列</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.2.1.html">队列的定义及基本运算</a><a href="2.3.1.html"></a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.2.2.html">顺序队列</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.2.3.html">链队列</a></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><font size="4"><br></font>
+		      <b><font size="3">队列的定义及其运算</font></b><br>
+		      <span style="line-height: 150%"><font color="#FF0000"><br>
+              </font><b> 1、定义</b><br>
+&nbsp;&nbsp;&nbsp; 　队列（Queue）是只允许在一端进行插入，而在另一端进行删除的运算受限的线性表。<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="tupian\tupian3.9.jpg" width="371" height="162"><br>
+<br>
+　　（1）允许删除的一端称为<b>队头（Front）</b>。<br>
+　　（2）允许插入的一端称为<b>队尾（Rear）</b>。<br>
+　　（3）当队列中没有元素时称为<b>空队列</b>。<br>
+　　（4）队列亦称作先进先出（First In First Out）的线性表，简称为<b>FIFO表</b>。<br>
+具体算法演示请点击查看<a href="..\sf1\cdrd.html" target="_blank"><font size="2"color="#FF0000">【<strong>算法演示</strong>】</font></a><br>
+<br>
+　　队列的结构特点是先进队的元素先出队。假设有队列Q=(a1,a2,...,an),则队列Q中的元素是按a1,a2,...,an的次序进队,而第一个出队的应该是a1,第二个出队的应该是a2,只有在ai-1出队后, ai才可以出队(1≤i≤n),如图3.9所示。<br>
+&nbsp;&nbsp;&nbsp; 
+　队列的修改是依先进先出的原则进行的。新来的成员总是加入队尾（即不允许"加塞"），每次离开的成员总是队列头上的（不允许中途离队），即当前"最老的"成员离队。<br>
+　<font color="#FF0000"> <br>
+</font><b> 2、队列的基本逻辑运算</b><br>
+		      </span>与栈类似,队列的运算可以归纳为以下几种:<br>
+
+	<font color="#0000FF">1. AddQ(ElemType x)</font><br>——在队列的尾部插入一个新的元素x。队尾的位置由rear指出。<br>
+    <font color="#0000FF">2. DelQ(Q)</font><br> ——删除队列的队头的元素。队头的位置由front指出。<br>
+    <font color="#0000FF">3. EmptyQ(Q)</font><br>——测试队列Q是否为空队。当队列为空时返回一个真值,否则返回一个假值。<br>
+    <font color="#0000FF">4. FrontQ(Q)</font><br>——取得队列Q的队头元素。该运算与DelQ(Q)不同,后者要修改队头元素指针。<br>
+    <font color="#0000FF">5. SetNULL(Q)</font><br>——创建一个空队Q,这个运算与线性表置空表类似。<br>
+</td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

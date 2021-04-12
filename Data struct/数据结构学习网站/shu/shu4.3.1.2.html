@@ -1,0 +1,215 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>中根遍历二叉树，后根遍历二叉树</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="..\tu\tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">树</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.1.1.html">树的基本概念和术语</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">二叉树</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.2.1.html">二叉树的定义和性质</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.2.2.html">二叉树的存储结构</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">二叉树的遍历</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.3.1.html">二叉树的遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">线索二叉树</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.4.1.html">线索二叉树</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">二叉树、树和森林</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.5.1.html">树的存储结构</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.5.2.html">树、森林和二叉树的转化</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.5.3.html">树和森林的遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">树的应用</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.6.1.html">二叉树排序树</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="shu4.6.2.html">哈夫曼树</a></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br>
+            <b><font color="#0000FF" size="2">(2)中根遍历二叉树：</font></b> <br>
+LNR：中序遍历(InorderTraversal)<br>     
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ——访问结点的操作发生在遍历其左右子树之中(间)。<br>
+	<b>中根遍历可以递归的描述如下：</b><br> 
+ &nbsp;&nbsp;&nbsp;如果根不空 : (1) 按中根次序遍历左子树；<br> 
+ &nbsp;&nbsp;&nbsp;(2) 访问根结点；<br> 
+ &nbsp;&nbsp;&nbsp;(3) 按中根次序遍历右子树；；<br> 
+ &nbsp;&nbsp;&nbsp;否则返回。 <br>
+中根遍历的递归算法如下：<br> 
+【算法6.3】<br>
+void BiTree::Preorder(NodeType*p)<br>
+{if(p!=NULL)<br>
+ &nbsp;{&nbsp;preorder(p->lch);<br>
+ &nbsp;&nbsp; cout&lt;&lt;p->data&lt;&lt;" ";<br>
+ &nbsp;&nbsp; preorder(p->rch);<br>
+ &nbsp;}<br>
+}<br>
+<b>中序序列</b><br>
+ &nbsp;&nbsp;&nbsp; 中序遍历二叉树时，对结点的访问次序为中序序列<br>
+            　【例】中序遍历上图所示的二叉树时，得到的中序序列为：<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+                D B A E C F<br>
+                具体算法演示请点击查看<a href="..\sf1\blrcs.html" target="_blank"><font size="2"color="#FF0000">【<strong>算法演示</strong>】</font></a><br> <br>			  <b><font color="#0000FF" size="2">(3)后根遍历二叉树：</font></b> <br>       
+LRN：后序遍历(PostorderTraversal)<br>     
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ——访问结点的操作发生在遍历其左右子树之后。<br>
+	<b>后根遍历可以递归的描述如下：</b><br> 
+ 如果根不空 : (1) 按后根次序遍历左子树；<br> 
+ &nbsp;&nbsp;&nbsp;(2) 按后根次序遍历右子树；<br> 
+ &nbsp;&nbsp;&nbsp;(3) 访问根结点；<br> 
+ &nbsp;&nbsp;&nbsp;否则返回。 <br>
+后根遍历的递归算法如下：<br> 
+【算法6.4】<br>
+void BiTree::Preorder(NodeType*p)<br>
+{&nbsp;if(p!=NULL)<br>
+&nbsp;{&nbsp;preorder(p->lch);<br>
+&nbsp;&nbsp;preorder(p->rch);<br>
+&nbsp;&nbsp;cout&lt;&lt;p->data&lt;&lt;" ";<br>
+&nbsp;&nbsp;}<br>
+}<br>
+<b>后序序列</b><br>
+&nbsp;&nbsp;后序遍历二叉树时，对结点的访问次序为后序序列<br>
+&nbsp;&nbsp;&nbsp;&nbsp;【例】后序遍历上图所示的二叉树时，得到的后序序列为：<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D B E F C A<br>
+具体算法演示请点击查看<a href="..\sf1\blrcs.html" target="_blank"><font size="2"color="#FF0000">【<strong>算法演示</strong>】</font></a><br> 			
+<font color="#FF0000">&nbsp; 注意：</font><br> 
+            　　（1） 在搜索路线中，若访问结点均是第一次经过结点时进行的，则是前序遍历；若访问结点均是在第二次(或第三次)经过结点时进行的，则是中序遍历(或后序遍历)。只要将搜索路线上所有在第一次、第二次和第三次经过的结点分别列表，即可分别得到该二叉树的前序序列、中序序列和后序序列。<br> 
+            　　（2） 上述三种序列都是线性序列，有且仅有一个开始结点和一个终端结点，其余结点都有且仅有一个前趋结点和一个后继结点。为了区别于树形结构中前趋(即双亲)结点和后继(即孩子)结点的概念，对上述三种线性序列，要在某结点的前趋和后继之前冠以其遍历次序名称。<br> 
+            【例】上图所示的二叉树中结点C，其前序前趋结点是D，前序后继结点是E；中序前趋结点是E，中序后继结点是F；后序前趋结点是F，后序后继结点是A。但是就该树的逻辑结构而言，C的前趋结点是A，后继结点是E和F。<br>
+                <br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="shu4.3.1.html"><span style="text-decoration: underline;" ><font color="#0000FF">上一页</font></span></a><br>
+</td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

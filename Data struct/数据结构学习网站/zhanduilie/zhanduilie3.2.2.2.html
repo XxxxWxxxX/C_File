@@ -1,0 +1,217 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>循环队列</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="..\tu\tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">栈</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.1.html">栈的定义及其算法</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.2.html" >顺序栈</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.3.html" >链栈</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.1.4.html">栈的应用</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">队列</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.2.1.html">队列的定义及基本运算</a><a href="2.3.1.html"></a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.2.2.html">顺序队列</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="zhanduilie3.2.3.html">链队列</a></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br>
+<b><font size="3">循环队列</font></b><br>
+&nbsp;&nbsp;&nbsp; 　为充分利用向量空间，克服"假上溢"现象的方法是：将向量空间想象为一个首尾相接的圆环，并称这种向量为循环向量。存储在其中的队列称为循环队列（Circular 
+                  Queue）。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="356" height="278">
+  <param name=movie value="tupian\t3.7.swf">
+  <param name=quality value=high>
+  <param name="wmode" value="transparent">
+  <embed src="tupian\t3.7.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="356" height="278" wmode="transparent"> </embed>
+</object>
+<br>
+<br>　
+　在循环队列中只凭等式rear==front无法判别队空还是队满。因此,可再设置一个布尔变量来区分队空和队满,或者不设布尔变量,而把尾指针加1后等于头指针作为队满的标志。这意味着损失一个空间,或者反过来说,拥有MAXSIZE个数组元素的数组仅能表示一个长度为MAXSIZE-1的循环队列。
+<br>
+<br>
+<b><font size="2">循环队列的类定义</font></b><br>
+</font><p style="line-height: 150%">
+循环队列实质上仍然还是顺序存储结构，只是形式上有所改变而已。现在用面向对象的方法来设计循环队列的类。
+<br><b>1.循环队列的类定义：</b><br>
+class SeQueue<br>
+    {  private:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ElemType elem[MAXSIZE];<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int front,rear;<br>
+     &nbsp;&nbsp;public:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SeQueue();<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~SeQueue();<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;void Display();<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;void AddQ(ElemType x);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ElemType DelQ();<br>
+};
+<br>
+<b>2.下面给出循环队列的运算算法:</b><br>
+    <font color="#0000FF">(1)将循环队列置为空</font><br>
+        //将队列初始化<br>
+      SeQueue::SeQueue()<br>
+       {&nbsp;&nbsp;front=0;<br>
+         &nbsp;&nbsp;&nbsp;rear=0;<br>
+         &nbsp;&nbsp;&nbsp;cout&lt;&lt;"init!"&lt;&lt;endl;<br>
+        }<br>
+<font color="#0000FF">(2)判断循环队列是否为空</font><br>
+int SeQueue::Empty()<br>
+ {&nbsp;&nbsp;if(rear==front) return(1);<br>
+&nbsp;&nbsp;&nbsp;else  return(0);<br>
+ }
+<br>
+<font color="#0000FF">(3)在循环队列中插入新的元素x</font><br>
+void SeQueue::AddQ(ElemType x)<br>
+  {&nbsp;if((rear+1) % MAXSIZE==front) cout&lt;&lt;"  QUEUE IS FULL!  "&lt;&lt;endl;<br>
+&nbsp;&nbsp;else{ rear=(rear+1) % MAXSIZE;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elem[rear]=x;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&lt;&lt;" OK!";<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+   }<br>
+<font color="#0000FF">(4)删除队列中队首元素</font><br>
+ElemType SeQueue::DelQ() <br>
+{&nbsp;if(front==rear)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ cout&lt;&lt;" QUEUE IS EMPTY! "&lt;&lt;endl; return -1;}<br>
+&nbsp;&nbsp;else{ front=(front+1) % MAXSIZE;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return(elem[front]);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+       }
+<br><font color="#0000FF">(5)取队列中的队首元素</font><br>
+       ElemType SeQueue::Front() <br>
+        {&nbsp;&nbsp;ElemType x;<br>
+         &nbsp;&nbsp;&nbsp;if(front== rear)<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&lt;&lt;"QUEUE IS EMPTY "&lt;&lt;endl;<br>
+          &nbsp;&nbsp;&nbsp;else  x= elem[(front+1)%MAXSIZE];<br>
+         &nbsp;&nbsp;&nbsp;return (x);<br>
+}
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="zhanduilie3.2.2.html"><span style="text-decoration: underline;" ><font color="#0000FF">上一页</font></span></a><br>
+              </font><br>
+		      </span><br>
+              
+            </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

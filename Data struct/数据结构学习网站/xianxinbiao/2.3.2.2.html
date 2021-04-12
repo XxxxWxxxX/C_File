@@ -1,0 +1,188 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>单链表的删除</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="..\tu\tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left">
+              <img src="..\images\book2 .jpg" width="30" height="18">线性表的定义及其运算</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="2.1.html">定义及其算法</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">线性表的顺序存储结构</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="2.2.1.html" >顺序表</a></td>
+          </tr>
+         <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="2.2.2.html">顺序的插入和删除</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">链式存储结构</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="2.3.1.html">单链表</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="2.3.2.html">单链表的插入和删除</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="2.3.3.html">循环链表和双向链表</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><font size="4"><br></font>
+		      <b><font size="3">单链表的删除</font></b><br>
+		      <span style="line-height: 200%"><font color="#0000FF">（1）思想方法</font><br>
+ <b>删除操作大致分为如下三种：</b><br>
+　　①删除p所指向结点的后继结点（假设存在）<br>
+　　②删除p所指向的结点。<br>
+　　③删除线性表中值为x的数据元素。<br>
+&nbsp;&nbsp;&nbsp; 　大致算法思想：删除运算是将表的第i个结点删去。<br>
+具体步骤： <font color="#FF0000"><br>
+&nbsp;&nbsp; </font><font color="#FF0000">　</font>（1）找到a<sub>i-1</sub>的存储位置p（因为在单链表中结点a<sub>i</sub>的存储地址是在其直接前趋结点a<sub>i-1</sub>的指针域next中）<br>
+&nbsp;&nbsp; 　（2）令p-＞next指向a<sub>i</sub>的直接后继结点（即把a<sub>i</sub>从链上摘下）<br>
+&nbsp;&nbsp; 　（3）释放结点a<sub>i</sub>的空间，将其归还给"存储池"。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#00FF00"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="480" height="148">
+  <param name=movie value="tupian\t2.11.swf">
+  <param name=quality value=high>
+  <param name="wmode" value="transparent">
+  <embed src="tupian\t2.11.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="480" height="148" wmode="transparent"> </embed>
+</object>
+</font><br>
+具体算法演示请点击查看<a href="..\sf1\lbsc.html" target="_blank"><font size="2"color="#FF0000">【<strong>算法演示</strong>】</font></a><br>
+<font color="#0000FF"><br>
+（2）具体算法实现</font><br><p style="line-height: 150%">
+①删除p所指向结点的后继结点（假设存在）<br>
+{&nbsp;q=p->next;<br>
+&nbsp;&nbsp;p->next=q->next;<br>
+&nbsp;&nbsp;delete q;<br>
+}<br>
+②删除p所指向的结点。<br>
+{&nbsp;q=head<br>
+&nbsp;&nbsp;while(q->next!=p)<br>
+&nbsp;&nbsp;q++;<br>
+&nbsp;&nbsp;q->next=p->next;<br>
+&nbsp;&nbsp;delete p;<br>
+}<br>
+③删除线性表中值为x的数据元素<br>
+{q=head;p=q->next;<br>
+ while((p!=NULL)&amp;&amp;(p->data!=x)<br>
+ { q=p;<br>
+   p++;}<br>
+ q->next=p->next;<br>
+ delete p;<br>
+}<br>
+<font color="#FF0000">注意：</font><br>
+&nbsp;&nbsp;&nbsp; 　设单链表的长度为n，则删去第i个结点仅当1≤i≤n时是合法的。<br>
+&nbsp;&nbsp;&nbsp;　 当i=n+1时，虽然被删结点不存在，但其前趋结点却存在，它是终端结点。因此被删结点的直接前趋*p存在并不意味着被删结点就一定存在，仅当*p存在（即p！=NULL）且*p不是终端结点（即p-＞next！=NULL）时，才能确定被删结点存在。</p>
+<font color="#0000FF">
+（3）算法分析</font><br>
+&nbsp;&nbsp;&nbsp; 　算法的时间复杂度也是O（n）。<br>
+&nbsp;&nbsp;&nbsp; 　链表上实现的插入和删除运算，无须移动结点，仅需修改指针。 </span>
+            <p style="line-height: 200%"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="2.3.2.html"><span style="text-decoration: underline;" ><font color="#0000FF">上一页</font></span></a><br>
+			  </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

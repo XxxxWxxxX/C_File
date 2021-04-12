@@ -1,0 +1,164 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>数据结构算法描述与分析</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Arial;
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.style20 {color: #0000FF}
+.style21 {font-family: "新宋体"; font-size: 14; }
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="..\tu\tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left">
+              <img src="..\images\book2 .jpg" width="30" height="18">绪论</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="xulun1.1.html">引言</a></td>
+          </tr>
+          <tr>
+            <td><div align="left"><img src="..\images\book1.jpg" width="50" height="18"><a href="xulun1.2.html">有关概念与术语</a></div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="xulun1.3.html">数据类型</a></td>
+          </tr>
+         <tr>
+            <td><div align="left"><img src="..\images\book1.jpg" width="50" height="18"><a href="xulun1.4.html">算法的描述与分析</a></div></td>
+          </tr>
+          <tr>
+            <td><div align="center"></div></td>
+          </tr>
+          <tr>
+            <td><div align="center"> </div></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><font size="4"><br></font>
+		      <b><font size="3">算法(Algorithm)</font><font size="4"><br></font></b>
+			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>算法</b>是对特定问题求解步骤的一种描述，是指令的有限序列。描述算法需要一种语言，可以是自然语言、数学语言或者是某种计算机语言。<br><br>
+			 <b> 算法一般具有下列5个重要特性：</b><br>
+			 <span style="font-family:宋体"><font color="#0000FF">（</font><span lang="EN-US"><font color="#0000FF">1）输入。&nbsp;&nbsp;</font></span></span>一个算法应该有一个或多个输入。<br>
+			 <span style="font-family:宋体"><font color="#0000FF">（<span lang="EN-US">2）有穷性。</span></font></span>一个算法必须在执行有穷步骤之后正常结束，而不能形成无穷循环。<br>
+			 <span style="font-family:宋体"><font color="#0000FF">（<span lang="EN-US">3）确定性。</span></font></span>算法中的每一条指令必须有确切的含义，不能产生多义性。<br>
+			 <span style="font-family:宋体"><font color="#0000FF">（<span lang="EN-US">4）可行性。</span></font></span>算法中的每一条指令必须是切实可执行的，即原则上可以通过已经实<br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;现的基本运算执行有限次来实现。<br>
+			 <span style="font-family:宋体"><font color="#0000FF">（<span lang="EN-US">5）输出。&nbsp;&nbsp;</span></font></span>一个算法应有零个或多个输出，这些输出是同输入有某个特定关系的<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量。<br>
+			 <font size="4"><br></font>
+		      <b><font size="3">算法的描述</font><font size="4"><br></font></b>
+			  　　一个算法可以用自然语言、计算机程序语言或其它语言来说明，惟一的要求是该说明必须精确地描述计算过程。<br>   
+            　　一般而言，描述算法最合适的语言是介于自然语言和程序语言之间的伪语言。它的控制结构往往类似于Pascal、borland C++、visual C++等程序语言，但其中可使用任何表达能力强的方法使算法表达更加清晰和简洁，而不至于陷入具体的程序语言的某些细节。<br>
+            <font size="4"><br></font>
+		      <b><font size="3">算法分析技术</font><font size="4"><br></font></b> 
+			  <b>1．评价算法好坏的标准</b><br> 
+            　　评价一个算法好坏算法首先应该是"正确"的,另外，主要还要看这个算法所要占用机器资源的多少。而在这些资源中时间空间是两个最主要的方面。<br>
+              <br>
+            ① <b>问题的规模</b>。所谓问题的规模是指算法中数据元素的数量。下文常用小写字母n来表示。假设某问题只有一个数据元素(n=1)，算法的时间、空间占用无论如何也不会很大，可以忽略不予考虑。但是，某问题有成千上万个数据元素时，即问题的规模n很大时，算法的时间、空间占用就不可忽略。<br>   
+            ② <b>空间</b>。所谓算法的空间代价（或称空间复杂性）指的是：当问题的规模以某种单位由1增至n时，解决该问题的算法实际所占用的空间也以某种单位由1增至f（n）。则称该算法的空间代价是f（n）。<br>   
+            ③<b>时间</b>。算法的时间代价（或称时间复杂性）。<br> 
+             <br>           
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="xulun1.4.1.html"><span style="text-decoration: underline;" ><font color="#0000FF">下一页</font></span></a><br>   
+                  
+            </td>
+          </tr>
+        </table>
+      
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

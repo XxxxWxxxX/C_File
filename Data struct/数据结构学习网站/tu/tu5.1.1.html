@@ -1,0 +1,217 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>图的基本概念</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">图</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.1.1.html">图的基本概念和术语</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的存储结构</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.2.1.html">邻接矩阵</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.2.2.html">邻接表</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的遍历</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.3.1.html">图的深度优先遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.3.2.html">图的广度优先遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的最小生成树</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.4.1.html">图的最小生成树</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">最短路径</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.5.1.html">最短路径</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">拓扑排序与关键路径</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.6.1.html">拓扑排序与关键路径</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br>
+            <b><font  size="3">图的基本概念</font></b> <br>
+            <br><b>图的定义</b><br>
+			图（ Graph ）是由一个用线或边连接在一起的顶点或节点的集合。是一种比线性表和树更为复杂的非线性数据结构，可称为图状结构或网状结构，前面讨论的线性表和树都可以看成是图的简单情况。<br>
+			 &nbsp;&nbsp;&nbsp; 　图G由两个集合V和E组成，记为：<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; G=(V，E)<br> 
+              　　其中：<br>
+              　　V是顶点的有穷非空集合，<br>
+              　　E是V中顶点偶对(称为边)的有穷集。<br>
+                  &nbsp;&nbsp;&nbsp; 　通常，也将图G的顶点集和边集分别记为V(G)和E(G)。E(G)可以是空集。若E(G)为空，则图G只有顶点而没有边。<br>
+<br> 
+    <b> <font size="4">有向图和无向图<br>
+                  </font><br>
+                  1．有向图</b><br>
+                  &nbsp;&nbsp;&nbsp; 　如图7.1 G<sub>2</sub>所示每条边都是有方向的，则称G为有向图(Digraph)。<br>
+                  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <img src="tupian\7.1.gif" width="296" height="226"><br>
+                  <font color="#0000FF">（1）有向边的表示</font><br>
+                  &nbsp;&nbsp;&nbsp; 　有向边又称为弧，通常用尖括弧表示一条有向边， &lt;v,w> 表示从顶点 v 到 w 的一段弧， v 称为边的始点 ( 或尾顶点 ) ， w 称为边的终点， ( 或头顶点 )， &lt;v,w> 和 &lt;w,v> 代表两条不同的弧。 
+ <br>
+                  &nbsp; 【例】&lt;v<sub>i</sub>，v<sub>j</sub>&gt;表示一条有向边，v<sub>i</sub>是边的始点(起点)，v<sub>j</sub>是边的终点。<br>
+				  <font color="#FF0000">注意:</font>
+				  &lt;v<sub>i</sub>，v<sub>j</sub>&gt;和&lt;v<sub>j</sub>，v<sub>i</sub>&gt;是两条不同的有向边。<br> 
+                  <br> 
+                  <font color="#0000FF"> （2）有向图的表示</font><br> 
+                  &nbsp; 【例】上面7.1图中G<sub>2</sub>是一个有向图。图中边的方向是用从始点指向终点的箭头表示的，该图的顶点集和边集分别为：<br>
+                 顶点集V={v 1 ,v 2 ,v 3 }<br>弧集E={&lt; v 1 ,v 2 >,&lt;v 1 ,v 3 >,&lt; v 2 ,v 3 >,&lt;v 3 ,v 2 >} 。<br>
+				 <font color="#FF0000">注意:</font><br> &lt;v 3 ,v 2 > 与&lt;v 3 ,v 2 > 表示两条不同的边。
+                  <br> 
+                  <b> 2．无向图</b><br> 
+                  &nbsp;&nbsp;&nbsp; 　如图7.1G<sub>1</sub>中所示的每条边都是没有方向的，则称G为无向图(Undigraph)。<br>
+                  <font color="#0000FF">（1）无向边的表示</font><br>
+                  &nbsp;&nbsp;&nbsp; 　通常用圆括号表示无向边， (v,w) 表示顶点 v 和 w 间相连的边。在无向图中 (v,w) 和 (w,v) 表示同一条边，如果顶点 v,w 之间有边 (v,w) ，则 v,w 互称为邻接点。 
+<br>
+                  &nbsp; 【例】无序对(v<sub>i</sub>，v<sub>j</sub>)和(v<sub>j</sub>，v<sub>i</sub>)表示同一条边。<br> 
+                  <br> 
+                  <font color="#0000FF">（2）无向图的表示<br> 
+                  &nbsp; </font>【例】上面7.1图中的G<sub>1</sub>是无向图，它们的顶点集和边集分别为：<br> 
+                  顶点集：V={v 1 ,v 2 ,v 3 ,v 4 }<br>
+				  边集：E={(v 1 ,v 2 ), (v 1 ,v 3 ), (v 1 ,v 4 ), (v 2 ,v 3 ), (v 3 ,v 4 )} <br>
+				  <font color="#FF0000">注意:</font><br>(v 2 ,v 1 ) 与（ v 1 ,v 2 ）表示同一条边， (v 2 ,v 3 ) 与 (v 3 ,v 2 ) 也表示同一条边，等等。 <br> 
+                  &nbsp;&nbsp;&nbsp;<br> 
+                   
+                  
+                  </font><b> 3．图G的顶点数n和边数e的关系</b><br> 
+                  <font color="#0000FF"> （1）若G是无向图，则0≤e≤n(n-1)/2</font><br> 
+                  &nbsp;&nbsp;&nbsp; 　恰有n(n-1)/2条边的无向图称无向完全图(Undireet-ed Complete  
+                  Graph)<br> 
+                  <br> 
+                  <font color="#0000FF"> （2）若G是有向图，则0≤e≤n(n-1)。</font><br> 
+                  &nbsp;&nbsp;&nbsp; 　恰有n(n-1)条边的有向图称为有向完全图(Directed Complete  
+                  Graph)。<br> 
+                  &nbsp; <font color="#FF0000">注意：</font><br> 
+                  &nbsp;&nbsp;&nbsp; 　完全图具有最多的边数。任意一对顶点间均有边相连。<br><br>
+                  <b>4.对图的讨论中我们对图作一些限制：</b><br>
+				  第一，图中不能有从顶点自身到自身的边（即自身环），就是说不应有形如（v<sub>x</sub>,v<sub>x</sub>)的边或 &lt;v<sub>x</sub>,v<sub>x</sub>> 的弧。<br>
+				  第二，两个顶点v<sub>t</sub>和v<sub>u</sub>之相关联的边不能多于一条。<br><br>       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tu5.1.1.2.html"><span style="text-decoration: underline;" ><font color="#0000FF">下一页</font></span></a><br>
+
+            </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

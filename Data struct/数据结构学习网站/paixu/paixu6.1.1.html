@@ -1,0 +1,193 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>排序的基本概念</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="..\tu\tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">排序的基本概念</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.1.1.html">排序的基本概念</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">插入排序</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.2.1.html">直接插入排序和折半插入排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.2.2.html">希尔排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">交换排序</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.3.1.html">冒泡排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.3.2.html">快速排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">选择排序</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.4.1.html">简单选择排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.4.2.html">堆排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">归并排序</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.5.1.html">归并排序</a></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br>
+            <b><font  size="4">排序的基本概念</font></b> <br>
+         &nbsp;&nbsp;&nbsp; 　所谓排序，就是要整理文件中的记录，使之按关键字递增(或递减)次序排列起来。其确切定义如下：<br>  
+              　　输入：n个记录R<sub>1</sub>，R<sub>2</sub>，…，R<sub>n</sub>，其相应的关键字分别为K<sub>1</sub>，K<sub>2</sub>，…，K<sub>n</sub>。<br>  
+              　　输出：R<sub>il</sub>，R<sub>i2</sub>，…，R<sub>in</sub>，使得K<sub>i1</sub>≤K<sub>i2</sub>≤…≤K<sub>in</sub>。(或K<sub>i1</sub>≥K<sub>i2</sub>≥…≥K<sub>in</sub>)。<br><br>
+			<font color="#0000FF"><b>（1）排序的分类</b><br>  
+              </font>      
+             <b> 1．按是否涉及数据的内、外存交换分</b><br>     
+              &nbsp;&nbsp;&nbsp; 
+              　在排序过程中，若整个文件都是放在内存中处理，排序时不涉及数据的内、外存交换，则称之为<b>内部排序</b>(简称内排序)；反之，若排序过程中要进行数据的内、外存交换，则称之为<b>外部排序</b>。<br> 
+              &nbsp;     
+ <font color="#FF0000">注意：</font><br>     
+              　&nbsp;&nbsp;&nbsp; ①	内排序适用于记录个数不很多的小文件<br>        
+              &nbsp;&nbsp;&nbsp; 　②	外排序则适用于记录个数太多，不能一次将其全部记录放人内存的大文件。<br>        
+              <b>      
+              2．按策略划分内部排序方法</b><br>       
+              &nbsp;&nbsp;&nbsp; 　可以分为五类：插入排序、选择排序、交换排序、归并排序和分配排序。<br><br>
+			  <font color="#0000FF"><b>（2）排序算法的基本操作</b><br></font>
+			   &nbsp;&nbsp;&nbsp; 　大多数排序算法都有两个基本的操作：<br>
+              　　(1)	比较两个关键字的大小；<br>       
+              　　(2)	改变指向记录的指针或移动记录本身。<br>       
+              &nbsp;       
+ <font color="#FF0000">注意：</font><br>    
+              　&nbsp;&nbsp;&nbsp; 第(2)种基本操作的实现依赖于待排序记录的存储方式。<br> <br> 
+			  <b>
+              <font color="#0000FF">（3）排序算法性能评价</font></b><br> 
+              <b> 
+              1.评价排序算法好坏的标准</b><br>   
+              　　评价排序算法好坏的标准主要有两条：<br>  
+              &nbsp;&nbsp;&nbsp; 　①	执行时间和所需的辅助空间<br>       
+              &nbsp;&nbsp;&nbsp; 　②	算法本身的复杂程度<br>       
+                   
+              <b>      
+              2.排序算法的空间复杂度</b><br>       
+              　　若排序算法所需的辅助空间并不依赖于问题的规模n，即辅助空间是O(1)，则称之为就地排序(In-PlaceSou)。<br>  
+              　　非就地排序一般要求的辅助空间为O(n)。<br>  
+              <b>  
+              3.排序算法的时间开销<br>   
+              </b>　　大多数排序算法的时间开销主要是关键字之间的比较和记录的移动。有的排序算法其执行时间不仅依赖于问题的规模，还取决于输入实例中数据的状态。<br>        
+            </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

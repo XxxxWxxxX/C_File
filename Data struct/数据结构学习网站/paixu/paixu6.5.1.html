@@ -1,0 +1,200 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>归并排序</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="..\tu\tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">排序的基本概念</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.1.1.html">排序的基本概念</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">插入排序</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.2.1.html">直接插入排序和折半插入排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.2.2.html">希尔排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">交换排序</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.3.1.html">冒泡排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.3.2.html">快速排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">选择排序</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.4.1.html">简单选择排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.4.2.html">堆排序</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">归并排序</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="paixu6.5.1.html">归并排序</a></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p style="line-height: 200%"><br>
+            <b><font  size="4">归并排序</font></b> <br>
+　　归并排序 (merge sort) 是一类与插入排序、交换排序、选择排序不同的另一种排序方法。归并的含义是将两个或两个以上的有序表合并成一个新的有序表。归并排序有多路归并排序、两路归并排序 , 可用于内排序，也可以用于外排序。这里仅对内排序的两路归并方法进行讨论。
+<br>
+<b>1.两路归并排序算法思路</b><br>
+①把 n 个记录看成 n 个长度为 l 的有序子表；<br> 
+②进行两两归并使记录关键字有序，得到 n/2 个长度为 2 的有序子表； <br>
+③重复第②步直到所有记录归并成一个长度为 n 的有序表为止。<br>
+【例】 有一组关键字 {4,7,5,3,2,8,6,1},n=8, 将其按由小到大的顺序排序。 
+
+两路归并排序操作过程如图 9.12 所示，其中 l 为子表长度。<br>
+<img src="tupian\09-12.gif" width="490" height="167"><br>
+<b>2.算法实现</b><br>
+　　此算法的实现不像图示那样简单，现分三步来讨论。首先从宏观上分析，首先让子表表长 L=1 进行处理；不断地使 L=2*L ，进行子表处理，直到 L>=n 为止，把这一过程写成一个主体框架函数 mergesort 。然后对于某确定的子表表长 L ，将 n 个记录分成若干组子表，两两归并，这里显然要循环若干次，把这一步写成一个函数 mergepass ，可由 mergesort 调用。最后再看每一组（一对）子表的归并，其原理是相同的，只是子表表长不同，换句话说，是子表的首记录号与尾记录号不同，把这个归并操作作为核心算法写成函数 merge ，由 mergepass 来调用。<br>
+<b>3.具体算法</b><br>
+template&lt;class T><br>
+&nbsp;&nbsp;void merge(&nbsp;T r[],T r2[],int s,int mid,int t)<br>
+&nbsp;&nbsp;//s为第一个子表首元素的下标，mid为第一个子表末元素的下标<br>
+&nbsp;&nbsp;//t为第二个子表末元素的下标<br>
+&nbsp;&nbsp;&nbsp;{ int i,j,k;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i=s;j=mid+1;k=s-1;&nbsp;&nbsp;&nbsp;//k是r2的初始指针<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while((i&lt;=mid)&amp;&amp;(j&lt;=t))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;k=k+1;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(r[i].key&lt;=r[j].key){r2[k]=r[i];i++;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else{r2[k]=r[j];j++;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while(i&lt;=mid){k++;r2[k]=r[i];i++;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while(j&lt;=t){k++;r2[k]=r[j];j++;}<br>
+&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;//merge<br>
+<b>3.算法分析</b><br>
+<font color="#0033FF"><b>（1）稳定性</b></font><br>     
+            &nbsp;&nbsp;&nbsp;&nbsp; 　归并排序是一种稳定的排序。<br>  
+            
+<font color="#0033FF"><b>（2）存储结构要求</b></font><br>   
+            &nbsp;&nbsp;&nbsp; 　可用顺序存储结构。也易于在链表上实现。<br>   
+        
+<font color="#0033FF"><b>（3）时间复杂度</b></font><br>   
+            &nbsp;&nbsp;&nbsp; 　对长度为n的文件，需进行<span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size: 
+10.0pt;font-family:&quot;Times New Roman&quot;;mso-fareast-font-family:宋体;mso-font-kerning: 
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language: 
+AR-SA"><span style="mso-text-raise:-5.0pt"><img src="tupian\paixu85.gif" v:shapes="_x0000_i1025" width="27" height="16"></span>
+            </span>趟二路归并，每趟归并的时间为O(n)，故其时间复杂度无论是在最好情况下还是在最坏情况下均是O(nlgn)。<br><font color="#0033FF"><b>（4）空间复杂度</b></font><br>   
+            &nbsp;&nbsp;&nbsp;　       
+            需要一个辅助向量来暂存两有序子文件归并的结果，故其辅助空间复杂度为O(n)，显然它不是就地排序。<br>        
+            &nbsp;        
+ <font color="#FF0000">注意：</font><br>      
+            &nbsp;&nbsp;&nbsp; 　若用单链表做存储结构，很容易给出就地的归并排序。
+
+</td></tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

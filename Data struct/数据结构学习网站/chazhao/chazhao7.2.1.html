@@ -1,0 +1,169 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>顺序表查找</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="..\tu\tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">查找</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="chazhao7.1.1.html">查找的基本概念</a></td>
+          </tr>
+          
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">静态查找表</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="chazhao7.2.1.html">顺序表查找</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="chazhao7.2.2.html">有序表查找</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">动态查找表</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="chazhao7.3.1.html">二叉排序树查找</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="chazhao7.3.2.html">平衡二叉树及动态平衡技术</a></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br>
+            <b><font  size="4">顺序表的查找</font></b> <br>
+			记录的逻辑顺序与其在计算机存贮器中存储顺序一致的表，称为<b>顺序表</b>。<br>
+			<b>顺序查找的基本思想:</b><br>
+                  &nbsp;&nbsp;&nbsp; 从表的一端开始，顺序扫描线性表，依次将扫描到的结点关键宇和给定值K相比较。若当前扫描到的结点关键字与K相等，则查找成功；若扫描结束后，仍未找到关键字等于K的结点，则查找失败。a<br>
+			<font color="#0000FF"> （1）类型说明</font><br>	
+			int maxsize ＝ 100 ； &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//数据表的最大长度<br> 
+typedef int KeyType &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//关键字的类型<br>
+struct datalist<br>
+&nbsp;｛&nbsp;KeyType key ；<br> 
+&nbsp;&nbsp;char ch ；<br> 
+&nbsp;&nbsp;//…&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//其他域 <br>
+&nbsp;｝；<br> 
+datalist[maxsize] ；<br> 
+<font color="#0000FF"> （2）具体算法</font><br> 
+void sequence_search(KeyType K,datalist r[],int n)<br>
+&nbsp;{ int i=0;<br>
+&nbsp;&nbsp;r[n].key=K;<br>
+&nbsp;&nbsp;while(r[i].key!=K)i++;<br>
+&nbsp;&nbsp;if(i&lt;n)cout&lt;&lt;"查找成功，该记录对应的下标为："&lt;&lt;i&lt;&lt;endl;<br>
+&nbsp;&nbsp;else cout&lt;&lt;"查找失败！"&lt;&lt;endl;<br>
+&nbsp;}<br>
+<b>算法分析：</b><br> 
+(1) 在最坏的情况下，顺序查找需要比较 n 次，即 MSL ＝ n 。<br>
+(2) 假定各记录的查找机会均等，即 P i ＝ 1/n ，由于查找第 i 个记录需要比较 i 次，即 C i ＝ i ，于是有：<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="tupian\8.2.1.gif" width="373" height="45"><br>
+　　这样，最大查找长度和平均查找长度的数量级 ( 即算法的时间复杂度 ) 均为 O(n) 。<br>
+<b> 顺序查找的优点和缺点</b><br>
+　　优点：算法简单，且对表的结构无任何要求，无论是用向量还是用链表来存放结点，也无论结点之间是否按关键字有序，它都同样适用。<br>
+　　缺点：查找效率低，因此，当n较大时不宜采用顺序查找。<br>
+ </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

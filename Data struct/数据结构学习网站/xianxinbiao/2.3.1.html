@@ -1,0 +1,165 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>单链表</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Arial;
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="..\tu\tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left">
+              <img src="..\images\book2 .jpg" width="30" height="18">线性表的定义及其运算</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="2.1.html">定义及其算法</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">线性表的顺序存储结构</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="2.2.1.html" >顺序表</a></td>
+          </tr>
+         <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="2.2.2.html">顺序的插入和删除</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">链式存储结构</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="2.3.1.html">单链表</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="2.3.2.html">单链表的插入和删除</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="2.3.3.html">循环链表和双向链表</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><font size="4"><br></font>
+		      <b><font size="3">单链表</font><font size="4"><br></font></b>
+			   　　为了将存储表元素的所有单元用指针串联起来，我们让每个单元包含一个元素域和一个指针域，其中的指针指向表中下一个元素所在的单元。例如，如果表是a1,a2,…,an ，那么含有元素ai的那个单元中的指针应指向含有元素ai+1的单元(i=1,2,…,n-1)。含有an的那个单元中的指针是空指针null。此外，通常我们还为每一个表设置一个表头单元head，其中的指针指向开始元素中所在的单元，但表头单元head中不含任何元素。设置表头单元的目的是为了使表运算中的一些边界条件更容易处理。这一点我们在后面可以看到。如果我们愿意单独地处理诸如在表的第一个位置上进行插人与删除操作等边界情况，也可以简单地用一个指向表的第一个单元的指针来代替表头单元。<br>
+			  　　上述这种用指针来表示表的结构通常称为单链接表，或简称为<b>单链表</b>或<b>链表</b>。单链表的逻辑结构如图2.1所示。表示空表的单链表只有一个单元，即表头单元head，其中的指针是空指针null。<br> 　　<img src="tupian\img3.gif" width="439" height="121"><br> 
+			  <p style="line-height: 200%"><font size="4"><br></font>
+		      <b><font size="3">单链表的类定义</font><font size="4"><br>
+		      </font></b>
+			  typedef int ElemType;　　　//假设结点的数据类型为整型<br>
+			  struct NodeType　　　　　//结点类型定义<br>
+			  { ElemType data;　　　　 //结点的数据域<br>
+			    NodeType*next;　　　　　//结点的指针域<br>
+				};<br>
+			  【算法2.1】<br>
+			  void LinkList::creat()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//初建一个非空链表<br>
+			  {&nbsp;&nbsp;NodeType*s;<br>
+			  &nbsp;&nbsp;&nbsp;ElemType x;<br>
+			  &nbsp;&nbsp;&nbsp;cout&lt;&lt;"请按倒序输入数据，以-999为结束。"&lt;&lt;endl;<br>
+			  &nbsp;&nbsp;&nbsp;cout&lt;&lt;"data=?"; cin&gt;&gt;x;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//输入第一个数据元素：a<sub>n-1</sub><br>
+			  &nbsp;&nbsp;&nbsp;while(x!=-999)<br>
+			  &nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;s=new NodeType;<br>
+			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s-&gt;data=x;<br>
+			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s-&gt;next=Head-&gt;next;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Head为头结点的指针<br>
+			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Head-&gt;next=s;<br>
+			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&lt;&lt;"data=?"; cin&gt;&gt;x;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//逐个输入其他元素a<sub>n-2</sub>，<span class="style11">…</span>，a<sub>0</sub><br>
+			  &nbsp;&nbsp;&nbsp;}<br>
+			  &nbsp;&nbsp;&nbsp;cout&lt;&lt;"插入结束。链表建成。"&lt;&lt;endl;<br>
+			  }<br>
+			  　　算法2.1可以建立链表。在空链表的基础上，即将线性表的数据元素一一输入，不断产生各结点并建立起前后相链的关系。在这个算法中从表的最后一个数据元素开始输入，然后按顺序逐一输入，最后以-999为结束标志。由上述算法可见，建立线性表的链式存储结构的过程是一个动态生成链表的过程，即从“空表”的初始状态起，依次建立各元素结点，并逐个插入链表，其时间复杂度为O(n)。
+            </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>最短路径</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">图</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.1.1.html">图的基本概念和术语</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的存储结构</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.2.1.html">邻接矩阵</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.2.2.html">邻接表</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的遍历</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.3.1.html">图的深度优先遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.3.2.html">图的广度优先遍历</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">图的最小生成树</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.4.1.html">图的最小生成树</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">最短路径</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.5.1.html">最短路径</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">拓扑排序与关键路径</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="tu5.6.1.html">拓扑排序与关键路径</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br>
+              <font color="#0000FF">（2）具体做法</font><br>
+			  　　一开始第一组只包括顶点 v 1 ，第二组包括其他所有顶点， v 1 对应的距离值为 0 ，第二组的顶点对应的距离值是这样确定的：若图中有边 &lt;v 1 , v j >, 则 v j 的距离为此边所带的权值，否则 v j 的距离值为一个很大的数 ( 大于所有顶点间的路径长度 ) ，然后每次从第二组的顶点中选一个其距离值为最小的 v m 加入到第一组中。每往第一组加入一个顶点 v m ，就要对第二组的各个顶点的距离值进行一次修正。若加进 v m 做中间顶点，使从 v 1 到 v j 的最短路径比不加 v m 的路径为短，则要修改 v j 的距离值。修改后再选距离最小的顶点加入到第一组中。如此进行下去，直到图中所有顶点都包括在第一组中，或再也没有可加入到第一组中的顶点存在为止。<br> 
+
+　　假设有向图 G 的 n 个顶点为 1 到 n, 并用邻接矩阵 cost 表示 , 若 &lt; v i , v j > 是图 G 中的边，则 cost[i][j] 的值等于边所带的权 ; 若 &lt;v i , v j > 不是图 G 中的边，则 cost[i][j] 等于一个很大的数；若 i=j, 则 cost[i][j]=0 。另外 , 设置三个数组 S[n] 、 dist[n] 、 pre[n] 。 S 用以标记那些已经找到最短路径的顶点，若 S[i-1]=1, 则表示已经找到源点到顶点 i 的最短路径 , 若 S[i-1]=0, 则表示从源点到顶点 i 的最短路径尚未求得。 dist[i-1] 用来记录源点到顶点 i 的最短路径。 pre[i-1] 表示从源点到顶点 i 的最短路径上该点的前趋顶点，若从源点到该顶点无路径，则用 0 作为其前一个顶点序号。<br><br>
+<font color="#0000FF">（3）迪杰斯特拉算法</font><br>
+voi DijGraph::ShorttestPath_Dijkstra(int v)<br>
+&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp; //G是一个具有n个顶点的带权有向图，求从源点v到其余各顶点的最短路径长度<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for(int i=0;i&lt;n;i++)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//dist，path，S的初始化<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;dist[i]=Edge[v][i];S[i]=0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(i!=v&amp;&amp;dist[i]&lt;MAXNUM)path[i]=v;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else path[i]=-1;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//顶点i无前顶点<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;S[v]=1;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//顶点v加入已求出的最短路径的顶点集合<br>
+&nbsp;&nbsp;&nbsp;dist[v]=0;<br>
+&nbsp;&nbsp;&nbsp;for(i=0;i&lt;n;i++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//求其余n-1个顶点的最短路径<br>
+&nbsp;&nbsp;&nbsp;{float min=MAXNUM;<br>
+&nbsp;&nbsp;&nbsp;int u=v;<br>
+&nbsp;&nbsp;&nbsp;for(int j=0;j&lt;n;j++)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//选择当前不在集合S中具有最短路径的顶点u<br>
+&nbsp;&nbsp;&nbsp;if(!S[j]&amp;&amp;dist[j]&lt;min){u=j;min=dist[j];}<br>
+&nbsp;&nbsp;&nbsp;S[u]=1;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//顶点u加入到已求出最短路径的顶点集合<br>
+&nbsp;&nbsp;&nbsp;for(int w=0;w&lt;n;w++)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//修改期于顶点的当前最短路径<br>
+&nbsp;&nbsp;&nbsp;if(!S[w]&amp;&amp;Edge[u][w]&lt;MAXNUM&amp;&amp;dist[u]+Edge[u][w]&lt;dist[w])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;dist[w]=dist[u]+Edge[u][w];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;path[w]=u;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;}<br>
+
+<b><font size="4">    
+            其他最短路径问题<br>
+            </font></b>    
+            &nbsp;&nbsp;&nbsp; 　最短路径问题的提法很多，其它的最短路径问题均可用单源最短路径算法予以解决：<br>    
+            　　①<b>单目标最短路径问题</b>(Single-Destination Shortest-Paths Problem)：找出图中每一顶点v到某指定顶点u的最短路径。只需将图中每条边反向，就可将这一问题变为单源最短路径问题，单目标u变为单源点u。<br>         
+            　　②<b>单顶点对间最短路径问题</b>(Single-Pair Shortest-Path Problem)：对于某对顶点u和v，找出从u到v的一条最短路径。显然，若解决了以u为源点的单源最短路径问题，则上述问题亦迎刃而解。而且从数量级来说，两问题的时间复杂度相同。<br>         
+            　　③<b>所有顶点对间最短路径问题</b>(All-Pairs Shortest-Paths Problem)：对图中每对顶点u和v，找出u到v的最短路径问题。这一问题可用每个顶点作为源点调用一次单源最短路径问题算法予以解决。<br><Br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tu5.5.1.html"><span style="text-decoration: underline;" ><font color="#0000FF">上一页</font></span></a>
+<br>
+            </p>   
+            </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

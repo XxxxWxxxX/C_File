@@ -1,0 +1,169 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>有序表查找</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="..\tu\tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="..\sanlie\sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">查找</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="chazhao7.1.1.html">查找的基本概念</a></td>
+          </tr>
+          
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">静态查找表</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="chazhao7.2.1.html">顺序表查找</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="chazhao7.2.2.html">有序表查找</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book2 .jpg" width="30" height="18">动态查找表</td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="chazhao7.3.1.html">二叉排序树查找</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="chazhao7.3.2.html">平衡二叉树及动态平衡技术</a></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br>
+            <b><font  size="4">有序表的查找</font></b> <br>
+　　对于以数组方式存贮的记录，如果数组中各个记录的次序是按其关键字值的大小顺序排列的，则称为<b>有序数组</b>或<b>有序表。</b><Br>
+<b><font  size="2">折半查找</font></b><br>
+　　对顺序分配的有序表可以采用折半查找 (Binary Search) ，又称二分查找。<br>
+<b>1.基本思想</b><br>
+　　从第 1 个记录开始逐个顺序搜索，而是每次把要找的给定值 K ，与在中间位置的记录的关键字值进行比较。设有序记录数组 r 中每个记录的关键字值按升序排列为：<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r <sub>0</sub>. key ， r<sub> 1</sub>.key ， r<sub> 2</sub>.key ，…， r<sub> m</sub>.key ，…,r <sub>n-1</sub>.key <br>
+　　其中， n 为记录个数。当 i ＜ j 时，有 r<sub> i</sub>.key ≤ r<sub> j</sub>.key 。开始时，中间位置记录的序号为 m ＝ [(n ＋ 1)/2] ，相应的关键字值为 r<sub> m</sub>.key 。将给定值 K 与 r<sub> m</sub>.key 比较，有三种可能的结果：<br>
+<font color="#0000FF">(1) K ＝ r<sub> m</sub>.key</font><br>
+　　查找成功，结束查找。 <br>
+<font color="#0000FF">(2) K ＜ r <sub>m</sub>.key</font><br> 　　由于各记录的关键字值是由小到大排列的，因此，如果要查找的记录存在，必定在有序表的左半部分。于是，对左半部分继续使用折半查找进行搜索，但搜索区间缩小了一半。<br> 
+<font color="#0000FF">(3) K ＞ r <sub>m</sub>.key。</font><br>　　如果要查找的记录存在，则必定在有序表的右半部分于是，对右半部分继续使用折半查找进行搜索，但搜索区间缩小了一半。<br>
+　　这样在查找过程中，搜索区间不断对分并成指数地缩小，因而查找速度明显地快于顺序查找。当最后只剩下一个记录，而且此记录不是要找的记录，则宣告查找失败。<br>
+<b>2.折半查找的算法</b><br>
+void binary_search(KeyType K,datalist r[],int n,)<br>
+&nbsp;{&nbsp;int m,low ,high,find;<br>
+&nbsp;&nbsp;low=0;high=n-1;find=0;<br>
+&nbsp;&nbsp;do{&nbsp;m=(low+high)/2;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(K==r[m].key)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;cout&lt;&lt;"查找成功，该记录对应的下标为："&lt;&lt;m&lt;&lt;endl;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;find=1;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else if(K&lt;r[m].key)high=m-1;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else low=m+1;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}while((find==0)&amp;&amp;(low<=high));<br>
+&nbsp;&nbsp;if(find==0)cout&lt;&lt;"查找失败！\n";<br>
+&nbsp;}<br>
+<br>
+			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="chazhao7.2.2.2.html"><span style="text-decoration: underline;" ><font color="#0000FF">下一页</font></span></a><br> 
+ </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>

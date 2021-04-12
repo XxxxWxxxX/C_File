@@ -1,0 +1,164 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>哈希表与哈希函数</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 10pt;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style3 {
+	font-family: "宋体";
+	font-size: 10pt;
+}
+.style9 {
+	font-family: "黑体";
+	font-size: 16px; 
+}
+body {
+	background-image: url(images\\bg.gif);
+}
+.style10 {font-family: "宋体"; }
+.style11 {font-family: "宋体"}
+.STYLE25 {font-size: 12pt}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0">
+<table width="692" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="685"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="780" height="180">
+      <param name="movie" value="..\images\top.swf">
+      <param name="quality" value="high">
+      <embed src="..\images\top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780 height="180"></embed>
+    </object></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr >
+    <td height="25" colspan="2" background="..\images\upper_cellback.gif"><table border="0" cellPadding="0" cellSpacing="0" width="638">
+      <tr>
+        <td align="center" width="21">&nbsp;</td>
+        <td align="center" width="56"><a href="..\index.html" class="STYLE25"><b><font color="#FF0000">首页</font></b></a></td>
+        <td align="center" width="13">&nbsp;</td>
+        <td align="center" width="71"><a href="..\sf1\sfys.html">算法演示</a></td>
+        <td align="center" width="46"><a href="..\xulun\xulun1.1.html">绪论</a></td>
+        <td align="center" width="50"><a href="..\xianxinbiao\2.1.html">线性表</a></td>
+        <td align="center" width="65"><a href="..\zhanduilie\zhanduilie3.1.1.html">栈和队列</a></td>
+        <td align="center" width="75"><a href="..\shu\shu4.1.1.html">树与二叉树</a></td>
+        <td align="center" width="39"><a href="..\tu\tu5.1.1.html">图</a></td>
+        <td align="center" width="50"><a href="..\paixu\paixu6.1.1.html">排序</a></td>
+        <td align="center" width="47"><a href="..\chazhao\chazhao7.1.1.html">查找</a></td>
+        <td align="center" width="105"><a href="sanlie8.1.1.html">索引结构与散列</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+   <table width="100%" border="0" cellpadding="0" cellspacing="0"  bordercolor="#111111" background="..\images\bg.gif" bgcolor="#FFFFFF" id="2">
+      <tr>
+        <td width="8%" valign="top"><table width="180"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="100%" ><div align="left"> <img src="..\images\book2 .jpg" width="30" height="18">散列表及其查找</div></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="sanlie8.1.1.html">哈希表与哈希函数</a></td>
+          </tr>
+          
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="sanlie8.1.2.html">构造哈希函数的常用方法</a></td>
+          </tr>
+          <tr>
+            <td><img src="..\images\book1.jpg" width="50" height="18"><a href="sanlie8.1.3.html">解决冲突的主要方法</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+        <td width="0" valign="top" background="..\images\line.jpg">
+		<img name="line" src="..\images\line.jpg" width="6" height="169" ></td>
+        <td width="92%" valign="top" ><table width="490"  border="0" align="center" cellpadding="0" cellspacing="0">
+          
+          <tr>
+            <td width="490" ><center></center>
+            <p><p style="line-height: 200%"><br>
+            <b><font  size="4">哈希表与哈希函数</font></b> <br>
+        　　哈希查找因使用哈希 (Hash) 函数而得名，<b>哈希函数</b>又叫<b>散列函数</b>，它是一种能把关键字映射成记录存贮地址的函数。 <br>
+		<b>1.哈希表</b><br>
+		①它是一种能把关键字映射成记录存贮地址的函数。<br>
+		②假定数组 HT[0 ～ m-1] 为存贮记录的地址空间， m 为表长，哈希函数 H 以记录的关键字 K 为自变量，计算出对应的函数值 H(K) ，并以它作为关键字 K 所标识的记录在表 HT 中的 ( 相对 ) 地址或索引号，这样产生的记录表 HT 叫做对应于哈希函数 H 的<b>哈希表</b>。<br>
+		③简言之，在哈希表中，关键字为 K 的记录，存贮在 HT[H(K)] 位置。<br>
+		④哈希函数值 H(K) 称为 K 的哈希地址或散列地址。<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;
+		<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="436" height="281">
+          <param name="movie" value="tupian\t9.16.swf">
+          <param name="quality" value="high">
+          <embed src="tupian\t9.16.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="436" height="281"></embed>
+		  </object>
+		<br>
+		<b> 3、哈希表的冲突现象</b><br>
+                <font color="#0000FF"> （1）冲突</font><br>
+                &nbsp;&nbsp;&nbsp; 　不同的关键字值，具有相同的哈希地址，因而被映射到同一表位置上。该现象称为冲突(Collision)或碰撞。<br>
+                &nbsp; 　【例】上图中的k<sub>2</sub>≠k<sub>5</sub>，但h(k<sub>2</sub>)=h(k<sub>5</sub>)，故k<sub>2</sub>和K<sub>5</sub>所在的结点的存储地址相同。<br>
+                <br>
+                <font color="#0000FF">（2）安全避免冲突的条件</font><br>
+                &nbsp;&nbsp;&nbsp; 如何避免冲突发生，则取决于哈希函数的构造。 <br>
+                &nbsp;&nbsp;&nbsp; 使散列地址均匀地分布在哈希表的整个地址区间内，这样可以避免或减少发生冲突。<br> 
+&nbsp;&nbsp;&nbsp; 				哈希函数的构造，与关键字的长度、哈希表的大小、关键字的实际取值状况等许多因素有关，而且有的因素事前不能确定。所以，避免冲突这并非是件容易做到的事。<br> <br> 
+                <font color="#0000FF"> （3）冲突不可能完全避免</font><br> 
+                &nbsp;&nbsp;&nbsp; 　由于关键字的值域往往比哈希表的个数大的多，所以哈希函数是一种压缩映射，碰撞是难免的。<br>
+				&nbsp;&nbsp;&nbsp;【例】存贮 100 个学生记录，尽管安排 120 个地址空间，但由于学生名 ( 假设不超过 10 个英文字母 ) 的理论个数超过 2610 ，要找到一个哈希函数把 100 个任意的学生名映射成 [0 ， 119] 内的不同整数，实际上是不可能的。<br>
+				<b>&nbsp;&nbsp;&nbsp;<font color="#FF0000">注意：</font>问题在于一旦发生了冲突应如何处理。</b><br>
+     
+                
+            </td> 
+          </tr>
+        </table>
+        
+          <p align="center">&nbsp;</p></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr >
+    <td height="20" colspan="2" background="..\images\upper_cellback.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="26" colspan="2">
+	<p align="center" class="style3">《数据结构学习系统》</td>
+  </tr>
+</table>
+</body>
+</html>
