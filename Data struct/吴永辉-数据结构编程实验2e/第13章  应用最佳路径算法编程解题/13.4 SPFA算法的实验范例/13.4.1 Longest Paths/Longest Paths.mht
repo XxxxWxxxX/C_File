@@ -1,0 +1,208 @@
+From: =?gb2312?B?08kgV2luZG93cyBJbnRlcm5ldCBFeHBsb3JlciA4ILGjtOY=?=
+Subject: Longest Paths
+Date: Sat, 17 Sep 2011 18:04:58 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_000A_01CC7564.50025010"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.17609
+
+这是 MIME 格式的多方邮件。
+
+------=_NextPart_000_000A_01CC7564.50025010
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://C:\Users\WU YONGHUI\AppData\Local\Temp\Rar$EX00.137\10000.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--Converted with LaTeX2HTML 98.1 release (February 19th, 1998)=0A=
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of =
+Leeds=0A=
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan=0A=
+* with significant contributions from:=0A=
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others =
+--><HTML><HEAD><TITLE>Longest Paths</TITLE>
+<META name=3Ddescription content=3D"Problem A: Longest Paths">
+<META name=3Dkeywords content=3Dhtmlatex>
+<META name=3Dresource-type content=3Ddocument>
+<META name=3Ddistribution content=3Dglobal>
+<META content=3D"text/html; charset=3Diso-8859-1" =
+http-equiv=3DContent-Type>
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7601.17655"></HEAD>
+<BODY lang=3DEN bgColor=3D#ffffff>
+<H1><BR clear=3Dall>
+<CENTER>
+<TABLE bgColor=3D#0060f0>
+  <TBODY>
+  <TR>
+    <TD><B><FONT color=3D#c0ffff size=3D5>&nbsp;<A=20
+      name=3DSECTION0001000000000000000000> Longest=20
+  Paths</A>&nbsp;</FONT></B></TR></TBODY></TABLE></CENTER></H1>
+<P>It is a well known fact that some people do not have their social =
+abilities=20
+completely enabled. One example is the lack of talent for calculating =
+distances=20
+and intervals of time. This causes some people to always choose the =
+longest way=20
+to go from one place to another, with the consequence that they are late =
+to=20
+whatever appointments they have, including weddings and programming =
+contests.=20
+This can be highly annoying for their friends.=20
+<P>C=E9sar has this kind of problem. When he has to go from one point to =
+another=20
+he realizes that he has to visit many people, and thus always chooses =
+the=20
+longest path. One of C=E9sar's friends, Felipe, has understood the =
+nature of the=20
+problem. Felipe thinks that with the help of a computer he might be able =
+to=20
+calculate the time that C=E9sar is going to need to arrive to his =
+destination.=20
+That way he could spend his time in something more enjoyable than =
+waiting for=20
+C=E9sar.=20
+<P>
+<P><BR>Your goal is to help Felipe developing a program that computes =
+the length=20
+of the longest path that can be constructed in a given graph from a =
+given=20
+starting point (C=E9sar's residence). You can assume that the graph has =
+no cycles=20
+(there is no path from any node to itself), so C=E9sar will reach his =
+destination=20
+in a finite time. In the same line of reasoning, nodes are not =
+considered=20
+directly connected to themselves.=20
+<P>
+<H2><FONT color=3D#0070e8><A=20
+name=3DSECTION0001001000000000000000>Input</A>&nbsp;</FONT> </H2>The =
+input=20
+consists of a number of cases. The first line on each case contains a =
+positive=20
+number <I>n</I> ( <!-- MATH: $1 < n \le 100$ --><IMG border=3D0=20
+alt=3D"$1 < n \le 100$" align=3Dmiddle=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.137/1000=
+0img1.gif"=20
+width=3D96 height=3D30>) that specifies the number of points that =
+C=E9sar might visit=20
+(i.e., the number of nodes in the graph).=20
+<P>A value of <I>n</I> =3D 0 indicates the end of the input.=20
+<P>
+<P><BR>After this, a second number <I>s</I> is provided, indicating the =
+starting=20
+point in C=E9sar's journey ( <!-- MATH: $1 \le s \le n$ --><IMG =
+border=3D0=20
+alt=3D"$1 \le s \le n$" align=3Dmiddle=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.137/1000=
+0img2.gif"=20
+width=3D78 height=3D30>). Then, you are given a list of pairs of places =
+<I>p</I> and=20
+<I>q</I>, one pair per line, with the places on each line separated by=20
+white-space. The pair ``<IMG border=3D0 alt=3D"$p \ q$" align=3Dmiddle=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.137/1000=
+0img3.gif"=20
+width=3D27 height=3D30>" indicates that C=E9sar can visit <I>q</I> after =
+<I>p</I>.=20
+<P>A pair of zeros (``<TT>0 0</TT>") indicates the end of the case.=20
+<P>
+<P><BR>As mentioned before, you can assume that the graphs provided will =
+not be=20
+cyclic.=20
+<P>
+<H2><FONT color=3D#0070e8><A=20
+name=3DSECTION0001002000000000000000>Output</A>&nbsp;</FONT> </H2>For =
+each test=20
+case you have to find the length of the longest path that begins at the =
+starting=20
+place. You also have to print the number of the final place of such =
+longest=20
+path. If there are several paths of maximum length, print the final =
+place with=20
+smallest number.=20
+<P>
+<P><BR>Print a new line after each test case.=20
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001003000000000000000>Sample =
+
+Input</A>&nbsp;</FONT> </H2><PRE>2
+1
+1 2
+0 0
+5
+3
+1 2
+3 5
+3 1
+2 4
+4 5
+0 0
+5
+5
+5 1
+5 2
+5 3
+5 4
+4 1
+4 2
+0 0
+0
+</PRE>
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001004000000000000000>Sample =
+
+Output</A>&nbsp;</FONT> </H2><PRE>Case 1: The longest path from 1 has =
+length 1, finishing at 2.
+
+Case 2: The longest path from 3 has length 4, finishing at 5.
+
+Case 3: The longest path from 5 has length 2, finishing at 1.
+</PRE>
+<P>
+<P><BR>
+<HR>
+
+<ADDRESS><I>Miguel Revilla</I> <BR><I>2000-08-21</I> =
+</ADDRESS></BODY></HTML>
+
+------=_NextPart_000_000A_01CC7564.50025010
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.137/10000img1.gif
+
+R0lGODlhYAAeAOMAAAAAAJmZmXd3d1VVVe7u7jMzM8zMzBEREaqqqoiIiGZmZv///0RERN3d3SIi
+Iru7uyH5BAEAAAsALAAAAABgAB4AQAT+cMlJq7046837FgBnMAWyEcoDMM1SBFczOKa3gBT4TEyo
+8yGbcEghPI5IpIHIbDqf0M1D4QhGr9PCZVqtIAqERYAx+YbHGZyGkDgIWhsDYLdgKBaJU8Lx1qgl
+DQB5Egd3gYMLhVeLjI2Oj5CRkpM3Vh0GAyWMMgWIaZZyNS4DC6ETBaQXfxYBAKIiBAJaC4F0Fwmo
+cByrPxI9lba/FQ+yAAp9HHvIFgpkhAIDYTZLFsQFxsgNDg8oAhPa3MeU4+Tl5ufo6erpDXfrGLoW
+7dUCAgnSEsT2+BarHg+pGGE68KqfpUTeJLh6NmGhqoMZvjAoWCFBigYJ6vGrMOKFh1V8rYI5EDOH
+x8iHGgBq2hVABbUCCYcVirfLUq86Pkr6gijBXxEBfDZqcDAIAQCa/RxEq0khpEmSIjH4vMDGDVIK
+RqW5MuDuRABFUg/ykUBA59gFZW1dgYaBgC4jQh0RCCCA2oS5dd9pQMCgr1+/AfUKHky4sOHDiBMr
+Xqw3AgA7
+
+------=_NextPart_000_000A_01CC7564.50025010
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.137/10000img2.gif
+
+R0lGODlhTgAeAOMAAAAAAJmZmXd3d1VVVe7u7jMzM8zMzBEREaqqqoiIiGZmZv///0RERN3d3SIi
+Iru7uyH5BAEAAAsALAAAAABOAB4AQAT+cMlJq704682tAFozOEgnIcpCHIYlkh2hPADTLEVgXsTj
+/7/WjtIDAoXDpHLJxDwUDlDyWWheqFbJZ0dIOAS3y0ySYHC637DFAHhIGKlEdk6v2+/4fH7bERXk
+dX6AdHwaCQUDahoKBwwChoiKFwYEAlULDW1XlgAKYElIFAMBDwkpoGJmEgcCAwR6sLGys7S1trcV
+DadKknS9SoUdBgMHJXXDxYRSGgYMOSYPAgLGk846G6YPDQnSrxjBFg8HCr8YAyUGDt4U4uQdAqQA
+QgWP38sbAg6uGzIMnfj61mFwAAgBgHILwJ0JMC4cgGvcTBBguIuCQW8AEBioOKvBA4EhWQio6QFy
+CAIGKFOmHMDkpEqVLHHJnEmzps2bOHPqxBUBADs=
+
+------=_NextPart_000_000A_01CC7564.50025010
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.137/10000img3.gif
+
+R0lGODlhGwAeAOMAAAAAAJmZmXd3d1VVVe7u7jMzM8zMzBEREaqqqoiIiGZmZv///0RERN3d3SIi
+Iru7uyH5BAEAAAsALAAAAAAbAB4AQASVcMlJq72yiXfUQkBjEYrXHEMFipjFMG0sz/S1SoVDVEIo
+DZ6acEgsGmsGgkMgeQASFQKAuZA+LI6CIFC4XrQBBsA7CQjOtMd5c2y73/D4JSEwGAQKctQs0PAQ
+Ag4SBgABFgoHOwuFFoReCWMVAU8SAQcXCgA7jhYgmwdUFU8NBjJ2CZcVBgMOei0EDw4DLHK1tre4
+bxEAOw==
+
+------=_NextPart_000_000A_01CC7564.50025010--

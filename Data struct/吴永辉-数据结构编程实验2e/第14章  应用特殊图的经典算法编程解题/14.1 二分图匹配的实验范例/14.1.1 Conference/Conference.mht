@@ -1,0 +1,1016 @@
+From: =?gb2312?B?08kgV2luZG93cyBJbnRlcm5ldCBFeHBsb3JlciA4ILGjtOY=?=
+Subject: Timus Online Judge
+Date: Sat, 17 Sep 2011 18:11:50 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CC7565.4567D0C0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.17609
+
+这是 MIME 格式的多方邮件。
+
+------=_NextPart_000_0000_01CC7565.4567D0C0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://acm.timus.ru/print.aspx?space=1&num=1109
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Timus Online Judge</TITLE>
+<META content=3D"text/html; charset=3Dutf-8" =
+http-equiv=3DContent-Type><LINK=20
+rel=3Dstylesheet type=3Dtext/css =
+href=3D"http://acm.timus.ru/style9.css"><LINK=20
+rel=3D"shortcut icon" type=3Dimage/x-icon href=3D"/favicon.ico">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7601.17655"></HEAD>
+<BODY aLink=3D#1a5cc8 link=3D#1a5cc8 vLink=3D#1a5cc8>
+<DIV class=3Dprnver>
+<H2 class=3Dproblem_title>1109. Conference</H2>
+<DIV class=3Dproblem_limits>Time Limit: 0.5 second<BR>Memory Limit: 16=20
+MB<BR></DIV>
+<DIV id=3Dproblem_text>
+<DIV class=3Dproblem_par>
+<DIV class=3Dproblem_par_normal>On the upcoming conference were sent =
+<I>M</I>=20
+representatives of country <I>A</I> and <I>N</I> representatives of =
+country=20
+<I>B</I> (<I>M</I> and <I>N</I>&nbsp;=E2=89=A4&nbsp;1000). The =
+representatives were=20
+identified with 1, 2, =E2=80=A6, <I>M</I> for country A and 1, 2, =
+=E2=80=A6, <I>N</I> for=20
+country <I>B</I>. Before the conference <I>K</I> pairs of =
+representatives were=20
+chosen. Every such pair consists of one member of delegation <I>A</I> =
+and one of=20
+delegation <I>B</I>. If there exists a pair in which both member =
+#<I>i</I> of=20
+<I>A</I> and member #<I>j</I> of <I>B</I> are included then #<I>i</I> =
+and=20
+#<I>j</I> can negotiate. Everyone attending the conference was included =
+in at=20
+least one pair. The CEO of the congress center wants to build direct =
+telephone=20
+connections between the rooms of the delegates, so that everyone is =
+connected=20
+with at least one representative of the other side, and every connection =
+is made=20
+between people that can negotiate. The CEO also wants to minimize the =
+amount of=20
+telephone connections. Write a program which given <I>M</I>, <I>N</I>, =
+<I>K</I>=20
+and <I>K</I> pairs of representatives, finds the minimum number of =
+needed=20
+connections.</DIV></DIV>
+<H3 class=3Dproblem_subtitle>Input</H3>
+<DIV class=3Dproblem_par>
+<DIV class=3Dproblem_par_normal>The first line of the input contains =
+<I>M</I>,=20
+<I>N</I> and <I>K</I>. The following <I>K</I> lines contain the choosen =
+pairs in=20
+the form of two integers <I>p</I><SUB>1</SUB> and <I>p</I><SUB>2</SUB>,=20
+<I>p</I><SUB>1</SUB> is member of <I>A</I> and <I>p</I><SUB>2</SUB> is =
+member of=20
+<I>B</I>.</DIV></DIV>
+<H3 class=3Dproblem_subtitle>Output</H3>
+<DIV class=3Dproblem_par>
+<DIV class=3Dproblem_par_normal>The output should contain the minimum =
+number of=20
+needed telephone connections.</DIV></DIV>
+<H3 class=3Dproblem_subtitle>Sample</H3>
+<TABLE class=3Dsample>
+  <COLGROUP>
+  <COL width=3D350>
+  <COL width=3D350>
+  <TBODY>
+  <TR>
+    <TH>input</TH>
+    <TH>output</TH></TR>
+  <TR>
+    <TD><PRE class=3Dintable>3 2 4
+1 1
+2 1
+3 1
+3 2
+</PRE></TD>
+    <TD><PRE class=3Dintable>3</PRE></TD></TR></TBODY></TABLE>
+<DIV class=3Dproblem_source><B>Problem Source: </B>Bulgarian National =
+Olympiad Day=20
+#1<BR></DIV></DIV></DIV></BODY></HTML>
+
+------=_NextPart_000_0000_01CC7565.4567D0C0
+Content-Type: text/css;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://acm.timus.ru/style9.css
+
+CODE {
+	FONT-FAMILY: monospace, "monospace for firefox"; FONT-SIZE: 0.81em
+}
+TT {
+	FONT-FAMILY: monospace, "monospace for firefox"; FONT-SIZE: 0.81em
+}
+PRE {
+	FONT-FAMILY: monospace, "monospace for firefox"; FONT-SIZE: 0.81em
+}
+SUP {
+	POSITION: relative; VERTICAL-ALIGN: baseline; TOP: -0.4em
+}
+SUB {
+	POSITION: relative; BOTTOM: -0.4em; VERTICAL-ALIGN: baseline
+}
+PRE.intable {
+	MARGIN: 0px
+}
+TABLE.strict A {
+	COLOR: #000000
+}
+TABLE.strict A:hover {
+	COLOR: #000000
+}
+TABLE.strict A:visited {
+	COLOR: #000000
+}
+DIV#help_text CODE {
+	FONT-SIZE: 0.81em
+}
+DIV#help_text PRE.code {
+	PADDING-BOTTOM: 4px; BACKGROUND-COLOR: #f0f0f0; PADDING-LEFT: 4px; =
+PADDING-RIGHT: 4px; PADDING-TOP: 4px
+}
+H1.title {
+	TEXT-ALIGN: center; COLOR: #1a5cc8
+}
+H2.title {
+	TEXT-ALIGN: center; COLOR: #1a5cc8
+}
+H2.subtitle {
+	TEXT-ALIGN: left; COLOR: #1a5cc8
+}
+H3.subtitle {
+	TEXT-ALIGN: left; COLOR: #1a5cc8
+}
+TABLE.body TR TD.caption {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #1a5cc8; =
+PADDING-LEFT: 1px; PADDING-RIGHT: 1px; PADDING-TOP: 1px
+}
+TABLE.body TR TD.title {
+	TEXT-ALIGN: center; COLOR: white; FONT-SIZE: 1.5em
+}
+TABLE.body TR TD.locale {
+	TEXT-ALIGN: center; FONT: bold 0.75em sans-serif; VERTICAL-ALIGN: =
+middle
+}
+TABLE.body TR TD.locale A {
+	COLOR: white
+}
+TABLE.body TR TD.panel {
+	BORDER-BOTTOM: #1a5cc8 1px solid; BORDER-LEFT: #1a5cc8 1px solid; =
+PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BORDER-TOP: =
+#1a5cc8 1px solid; BORDER-RIGHT: #1a5cc8 1px solid; PADDING-TOP: 1px
+}
+TABLE.body TR TD.footer {
+	BORDER-BOTTOM: #1a5cc8 1px solid; TEXT-ALIGN: right; BORDER-LEFT: =
+#1a5cc8 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; =
+PADDING-RIGHT: 1px; BORDER-TOP: #1a5cc8 1px solid; BORDER-RIGHT: #1a5cc8 =
+1px solid; PADDING-TOP: 1px
+}
+TABLE.panel TR TH {
+	PADDING-RIGHT: 15px; PADDING-TOP: 5px
+}
+TABLE.panel TR TD {
+	PADDING-RIGHT: 15px; PADDING-TOP: 5px
+}
+TABLE.panel TR TH DIV {
+	BORDER-BOTTOM: #1a5cc8 1px solid; TEXT-ALIGN: left; FONT-FAMILY: =
+sans-serif; FONT-SIZE: 1.13em; FONT-WEIGHT: normal
+}
+TABLE.panel A {
+	COLOR: #1a5cc8
+}
+TABLE.panel A:link {
+	COLOR: #1a5cc8
+}
+TABLE.panel A:hover {
+	COLOR: #1a5cc8
+}
+TABLE.status {
+	BACKGROUND-COLOR: #ffffff; FONT: 14px Arial, Helvetica, sans-serif; =
+COLOR: #000000
+}
+TABLE.status {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; =
+PADDING-RIGHT: 0px; MARGIN-BOTTOM: 10px; PADDING-TOP: 0px
+}
+TABLE.status_nofilter {
+	BORDER-TOP: #808080 1px solid
+}
+TABLE.status TR.header {
+	BACKGROUND-COLOR: #eeeeee; HEIGHT: 36px; FONT-SIZE: 13px; FONT-WEIGHT: =
+bold
+}
+TABLE.status TR.even {
+	HEIGHT: 37px
+}
+TABLE.status TR.odd {
+	BACKGROUND-COLOR: #f4f4f4; HEIGHT: 37px
+}
+TABLE.status TD {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 6px; PADDING-RIGHT: 6px; =
+PADDING-TOP: 2px
+}
+TABLE.status TH {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 6px; PADDING-RIGHT: 6px; =
+PADDING-TOP: 2px
+}
+TABLE.status TD {
+	BORDER-TOP: #dddddd 1px solid
+}
+TABLE.status .id {
+	BORDER-LEFT: #dddddd 1px solid; WIDTH: 64px; BORDER-RIGHT: #dddddd 1px =
+solid
+}
+TABLE.status .date {
+	WIDTH: 86px; WHITE-SPACE: nowrap; BORDER-RIGHT: #dddddd 1px solid
+}
+TABLE.status .coder {
+	WIDTH: 248px; BORDER-RIGHT: #dddddd 1px solid
+}
+TABLE.status TD.coder {
+	TEXT-ALIGN: left
+}
+TABLE.status .problem {
+	WIDTH: 268px; BORDER-RIGHT: #dddddd 1px solid
+}
+TABLE.status TD.problem {
+	TEXT-ALIGN: left
+}
+TABLE.status .language {
+	WIDTH: 76px; BORDER-RIGHT: #dddddd 1px solid
+}
+TABLE.status .result {
+	MIN-WIDTH: 125px; WIDTH: 160px; BORDER-RIGHT: #dddddd 1px solid
+}
+TABLE.status .verdict_wt {
+	MIN-WIDTH: 125px; WIDTH: 160px; BORDER-RIGHT: #dddddd 1px solid
+}
+TABLE.status .verdict_ac {
+	MIN-WIDTH: 125px; WIDTH: 160px; BORDER-RIGHT: #dddddd 1px solid
+}
+TABLE.status .verdict_rj {
+	MIN-WIDTH: 125px; WIDTH: 160px; BORDER-RIGHT: #dddddd 1px solid
+}
+TABLE.status .verdict_ac {
+	COLOR: #006600
+}
+TABLE.status .verdict_rj {
+	COLOR: #800000
+}
+TABLE.status .verdict_rj A {
+	COLOR: #800000
+}
+TABLE.status .verdict_rj A:hover {
+	COLOR: #800000
+}
+TABLE.status .verdict_rj A:visited {
+	COLOR: #800000
+}
+TABLE.status .test {
+	WIDTH: 52px; BORDER-RIGHT: #dddddd 1px solid
+}
+TABLE.status .runtime {
+	WIDTH: 68px; BORDER-RIGHT: #dddddd 1px solid
+}
+TABLE.status .memory {
+	WIDTH: 76px; BORDER-RIGHT: #dddddd 1px solid
+}
+TABLE.status TD.status_footer {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: =
+#808080 1px solid; PADDING-TOP: 10px
+}
+TABLE.status_footer {
+	WIDTH: 100%; FONT: 14px Arial, Helvetica, sans-serif; COLOR: #000000
+}
+TABLE.status_footer TD {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-BOTTOM: =
+0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; VERTICAL-ALIGN: top; =
+BORDER-TOP: medium none; BORDER-RIGHT: medium none; PADDING-TOP: 0px
+}
+TABLE.status_footer TD.footer_left {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 32px; =
+PADDING-TOP: 0px
+}
+TABLE.status_footer TD.footer_right {
+	TEXT-ALIGN: right; VERTICAL-ALIGN: top
+}
+P.status_filter {
+	BORDER-BOTTOM: 0px; TEXT-ALIGN: right; BORDER-LEFT: 0px; =
+PADDING-BOTTOM: 4px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; =
+FONT: 12px Arial, Helvetica, sans-serif; COLOR: #000000; BORDER-TOP: =
+0px; BORDER-RIGHT: 0px; PADDING-TOP: 0px
+}
+TABLE.status A {
+	COLOR: #0044cc; TEXT-DECORATION: underline
+}
+TABLE.status_footer A {
+	COLOR: #0044cc; TEXT-DECORATION: underline
+}
+P.status_filter A {
+	COLOR: #0044cc; TEXT-DECORATION: underline
+}
+TABLE.status TD.status_filter {
+	BORDER-BOTTOM: #808080 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: =
+0px; PADDING-RIGHT: 0px; BORDER-TOP: medium none; PADDING-TOP: 0px
+}
+TABLE.rating {
+	BACKGROUND-COLOR: #ffffff; FONT: 14px Arial, Helvetica, sans-serif; =
+COLOR: #000000
+}
+TABLE.rating {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; =
+PADDING-RIGHT: 0px; MARGIN-BOTTOM: 10px; BORDER-TOP: #808080 1px solid; =
+PADDING-TOP: 0px
+}
+TABLE.rating TR.header {
+	BACKGROUND-COLOR: #eeeeee; HEIGHT: 36px; FONT-SIZE: 13px; FONT-WEIGHT: =
+bold
+}
+TABLE.rating TR.even {
+	HEIGHT: 37px
+}
+TABLE.rating TR.odd {
+	HEIGHT: 37px
+}
+TABLE.rating TR.odd {
+	BACKGROUND-COLOR: #f4f4f4
+}
+TABLE.rating TH {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 6px; PADDING-RIGHT: 6px; =
+BORDER-RIGHT: #dddddd 1px solid; PADDING-TOP: 2px
+}
+TABLE.rating TD {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 6px; PADDING-RIGHT: 6px; =
+BORDER-RIGHT: #dddddd 1px solid; PADDING-TOP: 2px
+}
+TABLE.rating TD {
+	BORDER-TOP: #dddddd 1px solid
+}
+TABLE.rating .rank {
+	BORDER-LEFT: #dddddd 1px solid; WIDTH: 52px
+}
+TABLE.rating .id {
+	WIDTH: 64px
+}
+TABLE.rating .date {
+	WIDTH: 86px; WHITE-SPACE: nowrap
+}
+TABLE.rating .coder {
+	WIDTH: 248px
+}
+TABLE.rating TD.coder {
+	TEXT-ALIGN: left
+}
+TABLE.rating .language {
+	WIDTH: 76px
+}
+TABLE.rating .runtime {
+	WIDTH: 68px
+}
+TABLE.rating .memory {
+	WIDTH: 76px
+}
+TABLE.rating TD.rating_footer {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: =
+#808080 1px solid; BORDER-RIGHT: medium none; PADDING-TOP: 10px
+}
+TABLE.rating_footer {
+	WIDTH: 100%; FONT: 14px Arial, Helvetica, sans-serif; COLOR: #000000
+}
+TABLE.rating_footer TD {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-BOTTOM: =
+0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; VERTICAL-ALIGN: top; =
+BORDER-TOP: medium none; BORDER-RIGHT: medium none; PADDING-TOP: 0px
+}
+TABLE.rating_footer TD.footer_left {
+	TEXT-ALIGN: left; PADDING-RIGHT: 32px
+}
+TABLE.rating_footer TD.footer_right {
+	TEXT-ALIGN: right
+}
+TABLE.rating A {
+	COLOR: #0044cc; TEXT-DECORATION: underline
+}
+TABLE.sample {
+	BORDER-BOTTOM: #1a5cc8 1px solid; BORDER-LEFT: #1a5cc8 1px solid; =
+BORDER-COLLAPSE: collapse; BORDER-TOP: #1a5cc8 1px solid; BORDER-RIGHT: =
+#1a5cc8 1px solid
+}
+TABLE.sample TR TD {
+	BORDER-BOTTOM: #1a5cc8 1px solid; BORDER-LEFT: #1a5cc8 1px solid; =
+PADDING-BOTTOM: 3px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; =
+VERTICAL-ALIGN: top; BORDER-TOP: #1a5cc8 1px solid; BORDER-RIGHT: =
+#1a5cc8 1px solid; PADDING-TOP: 3px
+}
+TABLE.sample TR TH {
+	BORDER-BOTTOM: #1a5cc8 1px solid; BORDER-LEFT: #1a5cc8 1px solid; =
+PADDING-BOTTOM: 3px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; =
+VERTICAL-ALIGN: top; BORDER-TOP: #1a5cc8 1px solid; BORDER-RIGHT: =
+#1a5cc8 1px solid; PADDING-TOP: 3px
+}
+TABLE.sample TR TH {
+	COLOR: #1a5cc8
+}
+H2.problem_title {
+	TEXT-ALIGN: center; MARGIN: 0px; COLOR: #1a5cc8; FONT-SIZE: 2em; =
+FONT-WEIGHT: normal
+}
+H3.problem_subtitle {
+	MARGIN: 14px 0px 4px; COLOR: #1a5cc8
+}
+DIV.problem_limits {
+	TEXT-ALIGN: center; LINE-HEIGHT: 1.4em; MARGIN: 0px 0px 14px
+}
+DIV.problem_source {
+	LINE-HEIGHT: 1.4em; MARGIN: 10px 0px 0px
+}
+DIV.problem_links {
+	LINE-HEIGHT: 1.4em; MARGIN: 14px 0px 6px; FONT-SIZE: 1.15em
+}
+DIV.problem_centered_picture {
+	TEXT-ALIGN: center; MARGIN: 12px 0px
+}
+IMG.problem_laimage {
+	MARGIN: 4px 15px 6px 0px
+}
+IMG.problem_raimage {
+	MARGIN: 4px 0px 6px 15px
+}
+DIV.problem_par {
+	MARGIN: 0px 0px 10px
+}
+DIV.problem_par_pre {
+	MARGIN: 0px 0px 10px
+}
+DIV.problem_par {
+	LINE-HEIGHT: 1.4em
+}
+DIV.problem_par_normal {
+	TEXT-ALIGN: justify
+}
+DIV.problem_par_center {
+	TEXT-ALIGN: center
+}
+DIV.problem_par_right {
+	TEXT-ALIGN: right; FONT-STYLE: italic; PADDING-LEFT: 60px
+}
+DIV.problem_par UL {
+	MARGIN-TOP: 4px; MARGIN-BOTTOM: 10px
+}
+DIV.problem_par OL {
+	MARGIN-TOP: 4px; MARGIN-BOTTOM: 10px
+}
+DIV.problem_par TABLE {
+	BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid; =
+BORDER-COLLAPSE: collapse; BORDER-TOP: black 1px solid; BORDER-RIGHT: =
+black 1px solid
+}
+DIV.problem_par TABLE TR TH {
+	BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid; =
+PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BORDER-TOP: =
+black 1px solid; BORDER-RIGHT: black 1px solid; PADDING-TOP: 4px
+}
+DIV.problem_par TABLE TR TD {
+	BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid; =
+PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BORDER-TOP: =
+black 1px solid; BORDER-RIGHT: black 1px solid; PADDING-TOP: 4px
+}
+DIV.problem_par TABLE PRE {
+	MARGIN: 0px
+}
+SPAN.problem_tags_toggle {
+	COLOR: gray
+}
+SPAN.problem_tags_toggle A {
+	COLOR: gray
+}
+.myac {
+	PADDING-LEFT: 23px; BACKGROUND: url(images/ok2.png) no-repeat left 50%
+}
+.prnver TABLE.sample {
+	BORDER-BOTTOM-COLOR: black; BORDER-TOP-COLOR: black; =
+BORDER-RIGHT-COLOR: black; BORDER-LEFT-COLOR: black
+}
+.prnver TABLE.sample TR TD {
+	BORDER-BOTTOM-COLOR: black; BORDER-TOP-COLOR: black; =
+BORDER-RIGHT-COLOR: black; BORDER-LEFT-COLOR: black
+}
+.prnver TABLE.sample TR TH {
+	BORDER-BOTTOM-COLOR: black; BORDER-TOP-COLOR: black; =
+BORDER-RIGHT-COLOR: black; BORDER-LEFT-COLOR: black
+}
+.prnver TABLE.sample TR TH {
+	COLOR: black
+}
+.prnver H2.problem_title {
+	COLOR: black
+}
+.prnver H3.problem_subtitle {
+	COLOR: black
+}
+.prnver A {
+	COLOR: black
+}
+.prnver A:hover {
+	COLOR: black
+}
+.prnver A:visited {
+	COLOR: black
+}
+TABLE.problemset {
+	BORDER-BOTTOM: #999 1px solid; BORDER-LEFT: #999 1px solid; =
+BORDER-COLLAPSE: collapse; BORDER-TOP: #999 1px solid; BORDER-RIGHT: =
+#999 1px solid
+}
+TABLE.problemset TR TH {
+	BORDER-BOTTOM: #999 1px solid; BORDER-LEFT: #999 1px solid; =
+PADDING-BOTTOM: 3px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; BORDER-TOP: =
+#999 1px solid; BORDER-RIGHT: #999 1px solid; PADDING-TOP: 3px
+}
+TABLE.problemset TR TD {
+	BORDER-BOTTOM: #999 1px solid; BORDER-LEFT: #999 1px solid; =
+PADDING-BOTTOM: 3px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; BORDER-TOP: =
+#999 1px solid; BORDER-RIGHT: #999 1px solid; PADDING-TOP: 3px
+}
+TABLE.problemset TR TH {
+	TEXT-ALIGN: center; BACKGROUND-COLOR: #a4c6ff; COLOR: black
+}
+TABLE.problemset TR TD {
+	TEXT-ALIGN: center; BACKGROUND-COLOR: #c6c6c6; COLOR: black
+}
+TABLE.problemset TR TD.name {
+	TEXT-ALIGN: left
+}
+TABLE.problemset TR TD.source {
+	TEXT-ALIGN: left; FONT-SIZE: 0.81em
+}
+TABLE.problemset_footer {
+	MARGIN-TOP: 2px; WIDTH: 843px; MARGIN-BOTTOM: 6px
+}
+TD.problemset_footer_left {
+	TEXT-ALIGN: left; PADDING-LEFT: 1px
+}
+TD.problemset_footer_right {
+	TEXT-ALIGN: right; PADDING-RIGHT: 1px
+}
+.active_filter {
+	FONT-WEIGHT: bold
+}
+TABLE.ranklist {
+	BORDER-BOTTOM: #999 1px solid; BORDER-LEFT: #999 1px solid; =
+BORDER-COLLAPSE: collapse; BORDER-TOP: #999 1px solid; BORDER-RIGHT: =
+#999 1px solid
+}
+TABLE.ranklist TR TH {
+	BORDER-BOTTOM: #999 1px solid; BORDER-LEFT: #999 1px solid; =
+PADDING-BOTTOM: 2px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BORDER-TOP: =
+#999 1px solid; BORDER-RIGHT: #999 1px solid; PADDING-TOP: 2px
+}
+TABLE.ranklist TR TD {
+	BORDER-BOTTOM: #999 1px solid; BORDER-LEFT: #999 1px solid; =
+PADDING-BOTTOM: 2px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BORDER-TOP: =
+#999 1px solid; BORDER-RIGHT: #999 1px solid; PADDING-TOP: 2px
+}
+TABLE.ranklist TR TH {
+	TEXT-ALIGN: center; BACKGROUND-COLOR: #a4c6ff; COLOR: black
+}
+TABLE.ranklist TR TD {
+	TEXT-ALIGN: center; BACKGROUND-COLOR: #c6c6c6; COLOR: black
+}
+TABLE.ranklist TR TD.name {
+	TEXT-ALIGN: left
+}
+TABLE.ranklist TR TD.first {
+	FONT: bold 1.3em Arial, Helvetica, sans-serif
+}
+TABLE.ranklist TR.current TD {
+	BACKGROUND-COLOR: #d4d4d4
+}
+.monitor_page {
+=09
+}
+.monitor_header {
+	TEXT-ALIGN: center; MARGIN-BOTTOM: 1em; FONT-WEIGHT: bold
+}
+.monitor_footer {
+	TEXT-ALIGN: center; FONT-STYLE: italic; MARGIN-TOP: 1em; FONT-FAMILY: =
+Arial,Helvetica,sans-serif; FONT-SIZE: 0.81em
+}
+TABLE.monitor {
+	BORDER-COLLAPSE: collapse
+}
+TABLE.monitor TR TD {
+	BORDER-BOTTOM: #bbb 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #bbb =
+1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; =
+FONT-FAMILY: Arial,Helvetica,sans-serif; BORDER-TOP: #bbb 1px solid; =
+BORDER-RIGHT: #bbb 1px solid; PADDING-TOP: 2px
+}
+TABLE.monitor TR TH {
+	BORDER-BOTTOM: #bbb 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #bbb =
+1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; =
+FONT-FAMILY: Arial,Helvetica,sans-serif; BORDER-TOP: #bbb 1px solid; =
+BORDER-RIGHT: #bbb 1px solid; PADDING-TOP: 2px
+}
+TABLE.monitor TR TD {
+	FONT-SIZE: 0.88em
+}
+TABLE.monitor TR TH {
+	LINE-HEIGHT: 2em; FONT-SIZE: 0.81em
+}
+TABLE.monitor TR TD.author {
+	TEXT-ALIGN: left
+}
+TABLE.monitor TR TD I {
+	FONT-STYLE: normal; FONT-SIZE: 0.71em
+}
+TABLE.monitor TR TD.acc {
+	FONT-FAMILY: Verdana,Geneva,'Bitstream Vera Sans','DejaVu =
+Sans',sans-serif
+}
+TABLE.monitor TR TD.acb {
+	FONT-FAMILY: Verdana,Geneva,'Bitstream Vera Sans','DejaVu =
+Sans',sans-serif
+}
+TABLE.monitor TR TD.rej {
+	FONT-FAMILY: Verdana,Geneva,'Bitstream Vera Sans','DejaVu =
+Sans',sans-serif
+}
+TABLE.monitor TR TD.snt {
+	FONT-FAMILY: Verdana,Geneva,'Bitstream Vera Sans','DejaVu =
+Sans',sans-serif
+}
+TABLE.monitor TR TD.acc {
+	COLOR: #070
+}
+TABLE.monitor TR TD.acb {
+	COLOR: #070; FONT-WEIGHT: bold
+}
+TABLE.monitor TR TD.rej {
+	COLOR: #b00
+}
+TABLE.monitor TR TD.snt {
+	COLOR: #f60
+}
+TABLE.monitor TR.stat_row TD {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; FONT-STYLE: italic; FONT-SIZE: =
+0.81em; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+TABLE.monitor TR.stat_row TD.stat_caption {
+	TEXT-ALIGN: right
+}
+TABLE.monitor TR.hlauthor TD {
+	BACKGROUND-COLOR: #f8f8f8
+}
+TABLE.gray {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; =
+BORDER-COLLAPSE: collapse; BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: =
+#ccc 1px solid
+}
+TABLE.gray TR TD {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; =
+FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 0.81em; =
+VERTICAL-ALIGN: middle; BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc =
+1px solid
+}
+TABLE.gray TR TH {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; =
+FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 0.81em; =
+VERTICAL-ALIGN: middle; BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc =
+1px solid
+}
+TABLE.gray TR TD {
+	BACKGROUND-COLOR: #f8f8f8
+}
+TABLE.gray TR TH {
+	BACKGROUND-COLOR: #ececec
+}
+TABLE.watch {
+	BORDER-BOTTOM: #999 1px solid; BORDER-LEFT: #999 1px solid; =
+BORDER-COLLAPSE: collapse; BORDER-TOP: #999 1px solid; BORDER-RIGHT: =
+#999 1px solid
+}
+TABLE.watch TR TD {
+	BORDER-BOTTOM: #999 1px solid; BORDER-LEFT: #999 1px solid; =
+PADDING-BOTTOM: 0px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; FONT-FAMILY: =
+Arial, Helvetica, sans-serif; FONT-SIZE: 0.81em; VERTICAL-ALIGN: middle; =
+BORDER-TOP: #999 1px solid; BORDER-RIGHT: #999 1px solid; PADDING-TOP: =
+0px
+}
+TABLE.watch TR TH {
+	BORDER-BOTTOM: #999 1px solid; BORDER-LEFT: #999 1px solid; =
+PADDING-BOTTOM: 0px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; FONT-FAMILY: =
+Arial, Helvetica, sans-serif; FONT-SIZE: 0.81em; VERTICAL-ALIGN: middle; =
+BORDER-TOP: #999 1px solid; BORDER-RIGHT: #999 1px solid; PADDING-TOP: =
+0px
+}
+TABLE.horz {
+	BORDER-COLLAPSE: collapse
+}
+TABLE.horz TR TD {
+	BORDER-BOTTOM: #000 1px solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; =
+PADDING-RIGHT: 5px; PADDING-TOP: 5px
+}
+TABLE.horz TR TH {
+	BORDER-BOTTOM: #000 1px solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; =
+PADDING-RIGHT: 5px; PADDING-TOP: 5px
+}
+TABLE.horz2 {
+	BORDER-BOTTOM: #000 2px solid; BORDER-COLLAPSE: collapse; BORDER-TOP: =
+#000 2px solid
+}
+TABLE.horz2 TR TD {
+	BORDER-BOTTOM: #000 1px solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; =
+PADDING-RIGHT: 5px; PADDING-TOP: 5px
+}
+TABLE.spaces TR TD.header {
+	BORDER-BOTTOM: silver 1px solid; FONT: bold 1.2em Arial, Helvetica, =
+sans-serif; PADDING-TOP: 0.7em
+}
+TABLE.spaces .spaceem {
+	FONT-STYLE: italic; COLOR: #999
+}
+IMG.runpic {
+	BORDER-BOTTOM: 0px; POSITION: relative; BORDER-LEFT: 0px; BORDER-TOP: =
+0px; TOP: 1px; BORDER-RIGHT: 0px
+}
+TABLE.source_code {
+	BORDER-BOTTOM: #ddd 3px solid; BORDER-LEFT: #ddd 3px solid; =
+BACKGROUND-COLOR: #ddd; BORDER-TOP: #ddd 3px solid; BORDER-RIGHT: #ddd =
+3px solid
+}
+TABLE.source_code TR TD {
+	PADDING-BOTTOM: 1px; MARGIN: 0px; PADDING-LEFT: 3px; PADDING-RIGHT: =
+3px; VERTICAL-ALIGN: top; PADDING-TOP: 1px
+}
+TD.source_code_td PRE {
+	MARGIN: 0px; FONT-SIZE: 1em
+}
+TD.source_lines_td DIV {
+	FONT: 0.81em monospace, "monospace for firefox"
+}
+TD.source_code_td PRE CODE {
+	FONT: 0.81em monospace, "monospace for firefox"
+}
+TD.source_lines_td {
+	WIDTH: 30px; COLOR: #777; BORDER-RIGHT: #ccc 2px solid
+}
+DIV.source_code_div {
+	OVERFLOW-X: auto; WIDTH: 640px
+}
+#errorMessageBox {
+	TEXT-ALIGN: left; MAX-WIDTH: 800px
+}
+#errorMessage {
+	COLOR: red
+}
+#errorDetailsSwitch {
+	MARGIN-TOP: 1em; MARGIN-BOTTOM: 2px
+}
+#errorDetailsSwitch A {
+	BORDER-BOTTOM: gray 1px dashed; COLOR: black; TEXT-DECORATION: none
+}
+#errorDetails {
+	MARGIN-TOP: 0.5em; DISPLAY: none; FONT: 0.81em monospace, "monospace =
+for firefox"; WHITE-SPACE: pre-wrap
+}
+A.dashedLink {
+	BORDER-BOTTOM: gray 1px dashed; MARGIN-BOTTOM: 1px; TEXT-DECORATION: =
+none
+}
+.formSection {
+	TEXT-ALIGN: left; WIDTH: 700px; MARGIN-BOTTOM: 5px
+}
+.fullWidth {
+	WIDTH: 100%
+}
+A.printout:link {
+	COLOR: #1a5cc8
+}
+A.printout:visited {
+	COLOR: maroon
+}
+TABLE.rulers {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-COLLAPSE: collapse; BORDER-TOP: =
+#ccc 1px solid
+}
+TABLE.rulers TR TD {
+	PADDING-BOTTOM: 3px; PADDING-LEFT: 8px; PADDING-RIGHT: 8px; =
+FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 0.81em; =
+VERTICAL-ALIGN: middle; PADDING-TOP: 3px
+}
+TABLE.rulers TR TH {
+	PADDING-BOTTOM: 3px; PADDING-LEFT: 8px; PADDING-RIGHT: 8px; =
+FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 0.81em; =
+VERTICAL-ALIGN: middle; PADDING-TOP: 3px
+}
+TABLE.rulers TR TH {
+	BORDER-BOTTOM: #ccc 1px solid
+}
+TABLE.stats {
+	BORDER-RIGHT-WIDTH: 0px; BORDER-COLLAPSE: collapse; BORDER-TOP-WIDTH: =
+0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+TABLE.stats TR TD {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; =
+VERTICAL-ALIGN: middle; PADDING-TOP: 2px
+}
+TABLE.stats TR TD.name {
+	TEXT-ALIGN: left; WIDTH: 170px; FONT: 1.13em Arial, Helvetica, =
+sans-serif
+}
+TABLE.stats TR TD.value {
+	TEXT-ALIGN: right; WIDTH: 80px; FONT: 1.19em monospace, "monospace for =
+firefox"
+}
+TABLE.stats TR TD.valueWide {
+	TEXT-ALIGN: right; WIDTH: 200px; FONT: 1.19em monospace, "monospace for =
+firefox"
+}
+DIV.news_block {
+	MARGIN: 1.2em 0em
+}
+DIV.news_caption {
+	BORDER-BOTTOM: silver 1px dashed; MARGIN-BOTTOM: 0.3em; FONT-SIZE: =
+1.19em; FONT-WEIGHT: bold
+}
+TABLE.team_person TR TD {
+	PADDING-BOTTOM: 7px; BACKGROUND-COLOR: #eee; PADDING-LEFT: 7px; WIDTH: =
+370px; PADDING-RIGHT: 7px; HEIGHT: 130px; VERTICAL-ALIGN: top; =
+PADDING-TOP: 7px
+}
+TABLE.team_person TR TD IMG.photo {
+	MARGIN: 0px 7px 0px 0px; FLOAT: left
+}
+TABLE.team_person TR TD DIV.name {
+	MARGIN-BOTTOM: 0.3em; FONT-SIZE: 1.3em
+}
+.board {
+	FONT: 14px Arial, Helvetica, sans-serif
+}
+.board A:link {
+	COLOR: #1a5cc8; TEXT-DECORATION: none
+}
+.board A:visited {
+	COLOR: #404040; TEXT-DECORATION: none
+}
+.board A:hover {
+	TEXT-DECORATION: underline
+}
+.forum0 {
+	BACKGROUND-COLOR: #ececec
+}
+.forum1 {
+	BACKGROUND-COLOR: #f8f8f8
+}
+.pages {
+	BORDER-BOTTOM: #b0b0b0 1px solid; TEXT-ALIGN: center; COLOR: #404040; =
+BORDER-TOP: #b0b0b0 1px solid
+}
+.beforepages {
+	TEXT-ALIGN: center; MARGIN-BOTTOM: 5px; COLOR: #545454
+}
+.afterpages {
+	TEXT-ALIGN: center; COLOR: #545454; BORDER-TOP: #b0b0b0 1px solid; =
+PADDING-TOP: 5px
+}
+.thread {
+	BORDER-BOTTOM: #c0c0c0 1px solid; COLOR: #404040
+}
+.treedate {
+	FONT: 12px Arial, Helvetica, sans-serif; COLOR: #808080
+}
+.message {
+	FONT: 14px monospace, "monospace for firefox"
+}
+.subject {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #c0dbff; =
+MARGIN: 3px 0px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; PADDING-TOP: 3px
+}
+.subject {
+	FONT: bold 17px Arial, Helvetica, sans-serif
+}
+.forum_plus {
+	PADDING-LEFT: 18px; BACKGROUND: url(images/forum/plus.gif) no-repeat =
+0px 2px
+}
+.forum_minus {
+	PADDING-LEFT: 18px; BACKGROUND: url(images/forum/minus.gif) no-repeat =
+0px 2px
+}
+.forum_msg_plus {
+	PADDING-LEFT: 20px; BACKGROUND: url(images/forum/msg_plus.gif) =
+no-repeat 0px 2px
+}
+.forum_msg_minus {
+	PADDING-LEFT: 20px; BACKGROUND: url(images/forum/msg_minus.gif) =
+no-repeat 0px 2px
+}
+.forum_shift_right {
+	MARGIN: 5px 0px 5px 25px
+}
+.forum_message_box {
+	PADDING-BOTTOM: 2px; BACKGROUND-COLOR: #f8f8f8; PADDING-LEFT: 2px; =
+PADDING-RIGHT: 2px; PADDING-TOP: 2px
+}
+.forum_quote_header {
+	PADDING-BOTTOM: 0px; MARGIN: 2px 0px 0px 25px; PADDING-LEFT: 2px; =
+PADDING-RIGHT: 2px; FONT: 14px Arial, Helvetica, sans-serif; =
+PADDING-TOP: 0px
+}
+.forum_quote {
+	PADDING-BOTTOM: 2px; MARGIN: 2px 0px 2px 25px; PADDING-LEFT: 2px; =
+PADDING-RIGHT: 2px; PADDING-TOP: 2px
+}
+.forum_quote {
+	BACKGROUND-COLOR: #f0f0f0
+}
+.forum_quote .forum_quote {
+	BACKGROUND-COLOR: #e8e8e8
+}
+.forum_quote .forum_quote .forum_quote {
+	BACKGROUND-COLOR: #e0e0e0
+}
+.forum_quote .forum_quote .forum_quote .forum_quote {
+	BACKGROUND-COLOR: #d8d8d8
+}
+.forum_quote .forum_quote .forum_quote .forum_quote .forum_quote {
+	BACKGROUND-COLOR: #d0d0d0
+}
+.forum_quote .forum_quote .forum_quote .forum_quote .forum_quote =
+.forum_quote {
+	BACKGROUND-COLOR: #c8c8c8
+}
+.forum_quote .forum_quote .forum_quote .forum_quote .forum_quote =
+.forum_quote .forum_quote {
+	BACKGROUND-COLOR: #c0c0c0
+}
+TABLE.attempt_list TR TD {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; =
+PADDING-TOP: 0px
+}
+TABLE.attempt_list TR TD.accepted {
+	BACKGROUND-COLOR: #90ff90
+}
+TABLE.attempt_list TR TD.both {
+	BACKGROUND-COLOR: #e0f8e0
+}
+TABLE.attempt_list TR TD.cmpac {
+	BACKGROUND-COLOR: #ffc8e0
+}
+TABLE.attempt_list TR TD.empty A {
+	COLOR: #b0b0b0
+}
+TABLE.attempt_list TR TD.empty A:hover {
+	COLOR: #b0b0b0
+}
+TABLE.attempt_list TR TD.empty A:visited {
+	COLOR: #b0b0b0
+}
+.author_motto {
+	TEXT-ALIGN: center; BACKGROUND-COLOR: #d4d4d4; FONT-STYLE: italic; =
+MARGIN-BOTTOM: 1em; border-radius: 6px
+}
+H2.author_name {
+	TEXT-ALIGN: center; MARGIN-BOTTOM: 6px; COLOR: #1a5cc8; FONT-SIZE: 2em; =
+FONT-WEIGHT: normal
+}
+.author_flag {
+	MARGIN-BOTTOM: 1em
+}
+.author_stats {
+	MARGIN-BOTTOM: 1em
+}
+.author_links {
+	MARGIN-BOTTOM: 1em
+}
+.author_submitted {
+	MARGIN-BOTTOM: 1em
+}
+.author_solved {
+	MARGIN-BOTTOM: 1em
+}
+.author_none_solved {
+	MARGIN-BOTTOM: 1em
+}
+.author_comparison {
+	MARGIN-BOTTOM: 1em
+}
+TABLE.author_comparison_legend TR TD {
+	VERTICAL-ALIGN: top
+}
+TABLE.author_comparison_legend TR TD.padright {
+	PADDING-RIGHT: 5px
+}
+.solved_map_links {
+	MARGIN-BOTTOM: 4px
+}
+
+------=_NextPart_000_0000_01CC7565.4567D0C0--

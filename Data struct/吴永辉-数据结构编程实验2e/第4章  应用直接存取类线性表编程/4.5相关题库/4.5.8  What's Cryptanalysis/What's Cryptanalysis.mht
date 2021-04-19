@@ -1,0 +1,106 @@
+From: =?iso-8859-1?B?08kgV2luZG93cyBJbnRlcm5ldCBFeHBsb3JlciA4ILGjtOY=?=
+Subject: What's Cryptanalysis?
+Date: Sun, 18 Sep 2011 15:21:56 +0800
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://C:\Users\WU YONGHUI\AppData\Local\Temp\Rar$EX00.603\10008.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.17609
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--Converted with LaTeX2HTML 98.1 release (February 19th, 1998)=0A=
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of =
+Leeds=0A=
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan=0A=
+* with significant contributions from:=0A=
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others =
+--><HTML><HEAD><TITLE>What's Cryptanalysis?</TITLE>
+<META name=3Ddescription content=3D"Problem A: What's Cryptanalysis?">
+<META name=3Dkeywords content=3Dhtmlatex>
+<META name=3Dresource-type content=3Ddocument>
+<META name=3Ddistribution content=3Dglobal>
+<META content=3D"text/html; charset=3Diso-8859-1" =
+http-equiv=3DContent-Type><LINK=20
+rel=3DSTYLESHEET href=3D"htmlatex.css">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7601.17655"></HEAD>
+<BODY lang=3DEN bgColor=3D#ffffff>
+<H1><BR clear=3Dall>
+<CENTER>
+<TABLE bgColor=3D#0060f0>
+  <TBODY>
+  <TR>
+    <TD><B><FONT color=3D#c0ffff size=3D5>&nbsp;<A=20
+      name=3DSECTION0001000000000000000000> What's=20
+      =
+Cryptanalysis?</A>&nbsp;</FONT></B></TR></TBODY></TABLE></CENTER></H1>Cry=
+ptanalysis=20
+is the process of breaking someone else's cryptographic writing. This =
+sometimes=20
+involves some kind of statistical analysis of a passage of (encrypted) =
+text.=20
+Your task is to write a program which performs a simple analysis of a =
+given=20
+text.=20
+<H2><FONT color=3D#0070e8><A=20
+name=3DSECTION0001001000000000000000>Input</A>&nbsp;</FONT> </H2>The =
+first line of=20
+input contains a single positive decimal integer <I>n</I>. This is the =
+number of=20
+lines which follow in the input. The next <I>n</I> lines will contain =
+zero or=20
+more characters (possibly including whitespace). This is the text which =
+must be=20
+analyzed.=20
+<H2><FONT color=3D#0070e8><A=20
+name=3DSECTION0001002000000000000000>Output</A>&nbsp;</FONT> </H2>Each =
+line of=20
+output contains a single uppercase letter, followed by a single space, =
+then=20
+followed by a positive decimal integer. The integer indicates how many =
+times the=20
+corresponding letter appears in the input text. Upper and lower case =
+letters in=20
+the input are to be considered the same. No other characters must be =
+counted.=20
+The output must be sorted in descending count order; that is, the most =
+frequent=20
+letter is on the first output line, and the last line of output =
+indicates the=20
+least frequent letter. If two letters have the same frequency, then the =
+letter=20
+which comes first in the alphabet must appear first in the output. If a =
+letter=20
+does not appear in the text, then that letter must not appear in the =
+output.=20
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001003000000000000000>Sample =
+
+Input</A>&nbsp;</FONT> </H2><PRE>
+3
+This is a test.
+Count me 1 2 3 4 5.
+Wow!!!!  Is this question easy?
+</PRE>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001004000000000000000>Sample =
+
+Output</A>&nbsp;</FONT> </H2><PRE>
+S 7
+T 6
+I 5
+E 4
+O 3
+A 2
+H 2
+N 2
+U 2
+W 2
+C 1
+M 1
+Q 1
+Y 1
+</PRE>
+<P><BR>
+<HR>
+
+<ADDRESS><I>Miguel Revilla</I> <BR><I>2000-08-22</I> =
+</ADDRESS></BODY></HTML>

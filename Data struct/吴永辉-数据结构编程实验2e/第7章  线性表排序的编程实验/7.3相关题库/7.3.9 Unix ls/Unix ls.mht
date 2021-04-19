@@ -1,0 +1,179 @@
+From: =?gb2312?B?08kgV2luZG93cyBJbnRlcm5ldCBFeHBsb3JlciA4ILGjtOY=?=
+Subject: Unix ls
+Date: Thu, 23 Jun 2011 09:39:07 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CC3189.65E21E20"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7600.16807
+
+这是 MIME 格式的多方邮件。
+
+------=_NextPart_000_0000_01CC3189.65E21E20
+Content-Type: text/html;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://C:\Users\WU YONGHUI\AppData\Local\Temp\Rar$EX00.449\400.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos =
+(nikos@cbl.leeds.ac.uk), CBLU, University of Leeds =
+--><HTML><HEAD><TITLE>Unix ls</TITLE>
+<META content=3D"text/html; charset=3Dgb2312" http-equiv=3DContent-Type>
+<META name=3Ddescription content=3D"Unix ls">
+<META name=3Dkeywords content=3Dhtmlatex>
+<META name=3Dresource-type content=3Ddocument>
+<META name=3Ddistribution content=3Dglobal><LINK rel=3DSTYLESHEET =
+href=3D"htmlatex.css">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7600.16821"></HEAD>
+<BODY lang=3DEN bgColor=3D#ffffff>
+<H1><BR clear=3Dall>
+<CENTER>
+<TABLE bgColor=3D#0060f0>
+  <TBODY>
+  <TR>
+    <TD><B><FONT color=3D#c0ffff size=3D5>&nbsp;<A=20
+      name=3DSECTION0001000000000000000000>Unix=20
+ls</A></FONT>&nbsp;</B></TR></TBODY></TABLE></CENTER></H1>
+<P>The computer company you work for is introducing a brand new computer =
+line=20
+and is developing a new Unix-like operating system to be introduced =
+along with=20
+the new computer. Your assignment is to write the formatter for the =
+<TT>ls</TT>=20
+function.=20
+<P>
+<P>Your program will eventually read input from a pipe (although for now =
+your=20
+program will read from the input file). Input to your program will =
+consist of a=20
+list of (<I>F</I>) filenames that you will sort (ascending based on the =
+ASCII=20
+character values) and format into (<I>C</I>) columns based on the length =
+
+(<I>L</I>) of the longest filename. Filenames will be between 1 and 60=20
+(inclusive) characters in length and will be formatted into =
+left-justified=20
+columns. The rightmost column will be the width of the longest filename =
+and all=20
+other columns will be the width of the longest filename plus 2. There =
+will be as=20
+many columns as will fit in 60 characters. Your program should use as =
+few rows=20
+(<I>R</I>) as possible with rows being filled to capacity from left to =
+right.=20
+<P>
+<H2><FONT color=3D#0070e8><A=20
+name=3DSECTION0001001000000000000000>Input</A></FONT></H2>
+<P>The input file will contain an indefinite number of lists of =
+filenames. Each=20
+list will begin with a line containing a single integer ( <IMG=20
+alt=3Dtex2html_wrap_inline41 align=3Dmiddle=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.449/400i=
+mg1.gif"=20
+width=3D95 height=3D26> ). There will then be <I>N</I> lines each =
+containing one=20
+left-justified filename and the entire line's contents (between 1 and 60 =
+
+characters) are considered to be part of the filename. Allowable =
+characters are=20
+alphanumeric (<TT>a</TT> to <TT>z</TT>, <TT>A</TT> to <TT>Z</TT>, and =
+<TT>0</TT>=20
+to <TT>9</TT>) and from the following set <CODE>{ ._- }</CODE> (not =
+including=20
+the curly braces). There will be no illegal characters in any of the =
+filenames=20
+and no line will be completely empty.=20
+<P>Immediately following the last filename will be the <I>N</I> for the =
+next set=20
+or the end of file. You should read and format all sets in the input =
+file.=20
+<P>
+<H2><FONT color=3D#0070e8><A=20
+name=3DSECTION0001002000000000000000>Output</A></FONT></H2>
+<P>For each set of filenames you should print a line of exactly 60 =
+dashes=20
+(<TT>-</TT>) followed by the formatted columns of filenames. The sorted=20
+filenames 1 to <I>R</I> will be listed down column 1; filenames =
+<I>R</I>+1 to=20
+2<I>R</I> listed down column 2; etc.=20
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001003000000000000000>Sample =
+
+Input</A></FONT></H2>
+<P><PRE>10
+tiny
+2short4me
+very_long_file_name
+shorter
+size-1
+size2
+size3
+much_longer_name
+12345678.123
+mid_size_name
+12
+Weaser
+Alfalfa
+Stimey
+Buckwheat
+Porky
+Joe
+Darla
+Cotton
+Butch
+Froggy
+Mrs_Crabapple
+P.D.
+19
+Mr._French
+Jody
+Buffy
+Sissy
+Keith
+Danny
+Lori
+Chris
+Shirley
+Marsha
+Jan
+Cindy
+Carol
+Mike
+Greg
+Peter
+Bobby
+Alice
+Ruben</PRE>
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001004000000000000000>Sample =
+
+Output</A></FONT></H2>
+<P><PRE>------------------------------------------------------------
+12345678.123         size-1              =20
+2short4me            size2               =20
+mid_size_name        size3               =20
+much_longer_name     tiny                =20
+shorter              very_long_file_name =20
+------------------------------------------------------------
+Alfalfa        Cotton         Joe            Porky         =20
+Buckwheat      Darla          Mrs_Crabapple  Stimey        =20
+Butch          Froggy         P.D.           Weaser        =20
+------------------------------------------------------------
+Alice       Chris       Jan         Marsha      Ruben      =20
+Bobby       Cindy       Jody        Mike        Shirley    =20
+Buffy       Danny       Keith       Mr._French  Sissy      =20
+Carol       Greg        Lori        Peter</PRE>
+<P></P></BODY></HTML>
+
+------=_NextPart_000_0000_01CC3189.65E21E20
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.449/400img1.gif
+
+R0lGODlhXwAaAIAAAAAAAP///yH5BAEAAAEALAAAAABfABoAAAK3jGGpy50A0Yuu2iAXVTvmO33O
+doAcNJITlqHoYx7vhcxYrFbi7LYtLrLUeCYbTeNjrUo041HJ1DmFyBXvJw2CJC9tKMapyqBkL2sq
+5LqyZp1YeYWl24zPeg6OjsdxfRp3QncCtpPUdwNEZ4SWIoi4BJfkt8UYxJj1BNlj5eEoV6dySdVI
+ssnnmZeqqpqTs/oKGyvbSSuLROtqq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NDVsAADs=
+
+------=_NextPart_000_0000_01CC3189.65E21E20--

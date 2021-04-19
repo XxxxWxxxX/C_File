@@ -1,0 +1,145 @@
+From: =?iso-8859-1?B?08kgV2luZG93cyBJbnRlcm5ldCBFeHBsb3JlciA4ILGjtOY=?=
+Subject: The Net
+Date: Fri, 16 Sep 2011 20:03:37 +0800
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://C:\Users\WU YONGHUI\AppData\Local\Temp\Rar$EX00.040\627.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.17609
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--Converted with LaTeX2HTML 98.1 release (February 19th, 1998)=0A=
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of =
+Leeds=0A=
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan=0A=
+* with significant contributions from:=0A=
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others =
+--><HTML><HEAD><TITLE>The Net</TITLE>
+<META name=3Ddescription content=3D"The Net">
+<META name=3Dkeywords content=3Dhtmlatex>
+<META name=3Dresource-type content=3Ddocument>
+<META name=3Ddistribution content=3Dglobal>
+<META content=3D"text/html; charset=3Diso-8859-1" =
+http-equiv=3DContent-Type><LINK=20
+rel=3DSTYLESHEET href=3D"htmlatex.css">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7601.17655"></HEAD>
+<BODY lang=3DEN bgColor=3D#ffffff>
+<H1><BR clear=3Dall>
+<CENTER>
+<TABLE bgColor=3D#0060f0>
+  <TBODY>
+  <TR>
+    <TD><B><FONT color=3D#c0ffff size=3D5>&nbsp;<A=20
+      name=3DSECTION0001000000000000000000> The=20
+Net</A>&nbsp;</FONT></B></TR></TBODY></TABLE></CENTER></H1>
+<P>Taking into account the present interest in the Internet, a smart =
+information=20
+routing becomes a must. This job is done by routers situated in the =
+nodes of the=20
+network. Each router has its own list of routers which are visible for =
+him (so=20
+called ``routing table"). It is obvious that the information should be =
+directed=20
+in the way which minimizes number of routers it has to pass (so called =
+``hop=20
+count").=20
+<P>
+<P><BR>Your task is to find an optimal route (minimal hop count) for the =
+given=20
+network form the source of the information to its destination.=20
+<P>
+<H2><FONT color=3D#0070e8><A=20
+name=3DSECTION0001001000000000000000>Input</A>&nbsp;</FONT> </H2>First =
+line=20
+contains number of routers in the network (<I>n</I>). Next <I>n</I> =
+lines=20
+contain description of the network. Each line contains router <I>ID</I>, =
+
+followed by a hyphen and comma separated list of <I>ID</I>s of visible =
+routers.=20
+The list is sorted in ascending order. Next line contains a number of =
+routes=20
+(<I>m</I>) you should determine. The consecutive <I>m</I> lines contain =
+starting=20
+and ending routers for the route separated by a single space.=20
+<P>Input data may contain descriptions of many networks.=20
+<P>
+<H2><FONT color=3D#0070e8><A=20
+name=3DSECTION0001002000000000000000>Output</A>&nbsp;</FONT> </H2>For =
+each network=20
+you should output a line with 5 hyphens and then, for each route, a list =
+of=20
+routers passed by information sent from starting to destination routers. =
+
+<P>In case passing of information is impossible (no connection exists) =
+you=20
+should output a string ``<TT>connection impossible</TT>". In case of =
+multiple=20
+routes with the same `hop count' the one with lower <I>ID</I>s should be =
+
+outputted (in case of route form router 1 to 2 as 1 3 2 and 1 4 2 the 1 =
+3 2=20
+should be outputted).=20
+<P>
+<P>
+<P><BR><B>Assumptions:</B> A number of routers is not greater than 300 =
+and there=20
+are at least 2 routers in the network. Each routers ``sees" no more than =
+50=20
+routers.=20
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001003000000000000000>Sample =
+
+Input</A>&nbsp;</FONT> </H2>
+<P><PRE>6
+1-2,3,4
+2-1,3
+3-1,2,5,6
+4-1,5
+5-3,4,6
+6-3,5
+6
+1 6
+1 5
+2 4
+2 5
+3 6
+2 1
+10
+1-2
+2-
+3-4
+4-8
+5-1
+6-2
+7-3,9
+8-10
+9-5,6,7
+10-8
+3
+9 10
+5 9
+9 2
+</PRE>
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001004000000000000000>Sample =
+
+Output</A>&nbsp;</FONT> </H2><PRE>-----
+1 3 6
+1 3 5
+2 1 4
+2 3 5
+3 6
+2 1
+-----
+9 7 3 4 8 10
+connection impossible
+9 6 2
+</PRE>
+<P>
+<P><BR>
+<HR>
+
+<ADDRESS><I>Miguel A. Revilla</I> <BR><I>2000-01-10</I> =
+</ADDRESS></BODY></HTML>

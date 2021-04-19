@@ -1,0 +1,59 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+int sort_function(const void *a,const void *b)  
+{ 
+        return(strcmp((char*)a,(char*)b));  
+}   
+
+int main()
+{
+	long n,i,j,k,leng;
+	char ch[100],num[10],ccc[100001][10];
+	int flag;
+	scanf("%ld",&n);
+	getchar();
+	for(i=0;i<n;i++)
+	{
+		gets(ch);
+		leng=strlen(ch);
+		for(j=0,k=0;j<leng;j++)
+		{
+			if(ch[j]=='A'||ch[j]=='B'||ch[j]=='C')			num[k++]='2';
+			if(ch[j]=='D'||ch[j]=='E'||ch[j]=='F')			num[k++]='3';	
+			if(ch[j]=='G'||ch[j]=='H'||ch[j]=='I')			num[k++]='4';
+			if(ch[j]=='J'||ch[j]=='K'||ch[j]=='L')			num[k++]='5';
+			if(ch[j]=='M'||ch[j]=='N'||ch[j]=='O')			num[k++]='6';
+			if(ch[j]=='P'||ch[j]=='R'||ch[j]=='S')			num[k++]='7';
+			if(ch[j]=='T'||ch[j]=='U'||ch[j]=='V')			num[k++]='8';
+			if(ch[j]=='W'||ch[j]=='X'||ch[j]=='Y')			num[k++]='9';
+			if(ch[j]=='-')									continue;
+			if(ch[j]>='0'&&ch[j]<='9')						num[k++]=ch[j]; 
+			if(k==3)										num[k++]='-';
+			if(k==8)										break;
+		}
+		num[k]='\0';
+		strcpy(ccc[i],num);
+	}
+
+	qsort((void*)ccc, n, sizeof(ccc[0]), sort_function);
+
+	flag=0;
+	for(i=0;i<n;i=j)
+	{
+		for(j=i+1;j<n;j++)
+		{
+			if(strcmp(ccc[j],ccc[i])!=0)
+				break;
+		}
+		if(j-i!=1)
+		{
+			printf("%s %d\n",ccc[i],j-i);
+			flag=1;
+		}
+	}
+	if(flag==0)
+		printf("No duplicates.\n");
+	return 0;
+}

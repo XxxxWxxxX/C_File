@@ -1,0 +1,149 @@
+<pre>
+<tt>
+<b><font color=#000080>#include</font></b> <font color=#FF0000>&lt;iostream&gt;</font>
+
+<i><font color=#9A1900>/*</font></i>
+<i><font color=#9A1900> * This solution implements a brute force approach which generates every</font></i>
+<i><font color=#9A1900> * possible substring for the first sequence, and then for each one of these</font></i>
+<i><font color=#9A1900> * substrings, it does a string::find() operation against the remaining</font></i>
+<i><font color=#9A1900> * sequences. The solution runs in O(N^3) time where N is the total length</font></i>
+<i><font color=#9A1900> * of all sequences.</font></i>
+<i><font color=#9A1900> *</font></i>
+<i><font color=#9A1900> * The most optimal solution would be to use suffix trees which can be built</font></i>
+<i><font color=#9A1900> * and operated on in O(N) time.</font></i>
+<i><font color=#9A1900> */</font></i>
+
+<b><font color=#0000FF>using</font></b> <b><font color=#0000FF>namespace</font></b> std<font color=#990000>;</font>
+
+<i><font color=#9A1900>/* Maximum number of sequences to compare in each data set */</font></i>
+<b><font color=#000080>#define</font></b> MAXSEQ <font color=#993399>10</font>
+
+<i><font color=#9A1900>/* Minimum length of common subsequences still considered "significant" */</font></i>
+<b><font color=#000080>#define</font></b> MINSUBLEN <font color=#993399>3</font>
+
+<i><font color=#9A1900>/*</font></i>
+<i><font color=#9A1900> * Check if the subseq appears as a substring in any of the sequences in str[].</font></i>
+<i><font color=#9A1900> * Since subseq is originally generated from str[0], it is not necessary to</font></i>
+<i><font color=#9A1900> * check for a substring match on str[0]. Returns true if the subseq appears</font></i>
+<i><font color=#9A1900> * in all sequences.</font></i>
+<i><font color=#9A1900> */</font></i>
+<font color=#009900>bool</font> <b><font color=#000000>compare</font></b><font color=#990000>(</font>string <b><font color=#0000FF>const</font></b> str<font color=#990000>[</font>MAXSEQ<font color=#990000>]</font><font color=#990000>,</font> <font color=#009900>int</font> str_num<font color=#990000>,</font> string <b><font color=#0000FF>const</font></b> <font color=#990000>&amp;</font>subseq<font color=#990000>)</font>
+<font color=#FF0000>{</font>
+    <font color=#009900>int</font> str_idx<font color=#990000>;</font>
+
+    <i><font color=#9A1900>/* Perform a substring match against remaining sequences */</font></i>
+    <b><font color=#0000FF>for</font></b><font color=#990000>(</font>str_idx <font color=#990000>=</font> <font color=#993399>1</font><font color=#990000>;</font> str_idx <font color=#990000>&lt;</font> str_num<font color=#990000>;</font> str_idx<font color=#990000>+</font><font color=#990000>+</font><font color=#990000>)</font> <font color=#FF0000>{</font>
+    
+        <i><font color=#9A1900>/* Return false as soon as a substring search fails for any sequence */</font></i>
+        <b><font color=#0000FF>if</font></b><font color=#990000>(</font>str<font color=#990000>[</font>str_idx<font color=#990000>]</font><font color=#990000>.</font><b><font color=#000000>find</font></b><font color=#990000>(</font>subseq<font color=#990000>)</font> <font color=#990000>=</font><font color=#990000>=</font> string<font color=#990000>:</font><font color=#990000>:</font>npos<font color=#990000>)</font> <font color=#FF0000>{</font>
+            <b><font color=#0000FF>return</font></b> <b><font color=#0000FF>false</font></b><font color=#990000>;</font>
+        <font color=#FF0000>}</font>
+    <font color=#FF0000>}</font>
+    
+    <i><font color=#9A1900>/* The subsequence must appear in all sequence strings */</font></i>
+    <b><font color=#0000FF>return</font></b> <b><font color=#0000FF>true</font></b><font color=#990000>;</font>
+<font color=#FF0000>}</font>
+
+<i><font color=#9A1900>/*</font></i>
+<i><font color=#9A1900> * Generate every possible subsequence of str[0] and call compare() with each</font></i>
+<i><font color=#9A1900> * subsequence to compare it against the remaining sequences in str[].</font></i>
+<i><font color=#9A1900> */</font></i>
+string <b><font color=#000000>generate</font></b><font color=#990000>(</font>string <b><font color=#0000FF>const</font></b> str<font color=#990000>[</font>MAXSEQ<font color=#990000>]</font><font color=#990000>,</font> <font color=#009900>int</font> str_num<font color=#990000>)</font>
+<font color=#FF0000>{</font>
+    string<font color=#990000>:</font><font color=#990000>:</font>size_type <b><font color=#0000FF>const</font></b> size <font color=#990000>=</font> str<font color=#990000>[</font><font color=#993399>0</font><font color=#990000>]</font><font color=#990000>.</font><b><font color=#000000>size</font></b><font color=#990000>(</font><font color=#990000>)</font><font color=#990000>;</font>
+    string longest<font color=#990000>;</font>
+    
+    <i><font color=#9A1900>/*</font></i>
+<i><font color=#9A1900>     * Iterate over every possible substring length, including the full</font></i>
+<i><font color=#9A1900>     * string. Once we get under MINSUBLEN, we don't have to generate any</font></i>
+<i><font color=#9A1900>     * more substrings since any matches would not be considered relevant.</font></i>
+<i><font color=#9A1900>     */</font></i>
+    <b><font color=#0000FF>for</font></b><font color=#990000>(</font>string<font color=#990000>:</font><font color=#990000>:</font>size_type len <font color=#990000>=</font> size<font color=#990000>;</font> len <font color=#990000>&gt;</font><font color=#990000>=</font> MINSUBLEN<font color=#990000>;</font> len<font color=#990000>-</font><font color=#990000>-</font><font color=#990000>)</font> <font color=#FF0000>{</font>
+    
+        <i><font color=#9A1900>/*</font></i>
+<i><font color=#9A1900>         * Iterate over every possible position in str[0] from which we can</font></i>
+<i><font color=#9A1900>         * generate a different substring of the given "len"</font></i>
+<i><font color=#9A1900>         */</font></i>
+        <b><font color=#0000FF>for</font></b><font color=#990000>(</font>string<font color=#990000>:</font><font color=#990000>:</font>size_type pos <font color=#990000>=</font> <font color=#993399>0</font><font color=#990000>;</font> pos <font color=#990000>&lt;</font><font color=#990000>=</font> size <font color=#990000>-</font> len<font color=#990000>;</font> pos<font color=#990000>+</font><font color=#990000>+</font><font color=#990000>)</font> <font color=#FF0000>{</font>
+
+            <i><font color=#9A1900>/* Current subsequence being considered */</font></i>
+            string <b><font color=#000000>subseq</font></b><font color=#990000>(</font> str<font color=#990000>[</font><font color=#993399>0</font><font color=#990000>]</font><font color=#990000>.</font><b><font color=#000000>substr</font></b><font color=#990000>(</font>pos<font color=#990000>,</font> len<font color=#990000>)</font> <font color=#990000>)</font><font color=#990000>;</font>
+        
+            <i><font color=#9A1900>/* Check if this subsequence is common across all sequences */</font></i>
+            <b><font color=#0000FF>if</font></b><font color=#990000>(</font><b><font color=#000000>compare</font></b><font color=#990000>(</font>str<font color=#990000>,</font> str_num<font color=#990000>,</font> subseq<font color=#990000>)</font><font color=#990000>)</font> <font color=#FF0000>{</font>
+            
+                <i><font color=#9A1900>/* If this is the longest subsequence found so far */</font></i>
+                <b><font color=#0000FF>if</font></b><font color=#990000>(</font>subseq<font color=#990000>.</font><b><font color=#000000>size</font></b><font color=#990000>(</font><font color=#990000>)</font> <font color=#990000>&gt;</font> longest<font color=#990000>.</font><b><font color=#000000>size</font></b><font color=#990000>(</font><font color=#990000>)</font><font color=#990000>)</font> <font color=#FF0000>{</font>
+                    longest <font color=#990000>=</font> subseq<font color=#990000>;</font>
+                <font color=#FF0000>}</font>
+                
+                <i><font color=#9A1900>/* Or if the same length but alphabetically comes first */</font></i>
+                <b><font color=#0000FF>else</font></b> <b><font color=#0000FF>if</font></b><font color=#990000>(</font>subseq<font color=#990000>.</font><b><font color=#000000>size</font></b><font color=#990000>(</font><font color=#990000>)</font> <font color=#990000>=</font><font color=#990000>=</font> longest<font color=#990000>.</font><b><font color=#000000>size</font></b><font color=#990000>(</font><font color=#990000>)</font> <font color=#990000>&amp;</font><font color=#990000>&amp;</font> subseq <font color=#990000>&lt;</font> longest<font color=#990000>)</font> <font color=#FF0000>{</font>
+                    longest <font color=#990000>=</font> subseq<font color=#990000>;</font>
+                <font color=#FF0000>}</font>
+            <font color=#FF0000>}</font>
+        <font color=#FF0000>}</font>
+    <font color=#FF0000>}</font>
+    
+    <i><font color=#9A1900>/* Return the longest subsequence found */</font></i>
+    <b><font color=#0000FF>return</font></b> longest<font color=#990000>;</font>
+<font color=#FF0000>}</font>
+
+<i><font color=#9A1900>/* Main body of program */</font></i>
+<font color=#009900>void</font> <b><font color=#000000>process</font></b><font color=#990000>(</font><font color=#009900>void</font><font color=#990000>)</font>
+<font color=#FF0000>{</font>
+    string str<font color=#990000>[</font>MAXSEQ<font color=#990000>]</font><font color=#990000>;</font>
+    <font color=#009900>int</font> data_num<font color=#990000>,</font> data_idx<font color=#990000>;</font>
+
+    <i><font color=#9A1900>/* Read how many data sets to process */</font></i>
+    cin <font color=#990000>&gt;</font><font color=#990000>&gt;</font> data_num<font color=#990000>;</font>
+    
+    <i><font color=#9A1900>/* Process each data set separately */</font></i>
+    <b><font color=#0000FF>for</font></b><font color=#990000>(</font>data_idx <font color=#990000>=</font> <font color=#993399>0</font><font color=#990000>;</font> data_idx <font color=#990000>&lt;</font> data_num<font color=#990000>;</font> data_idx<font color=#990000>+</font><font color=#990000>+</font><font color=#990000>)</font> <font color=#FF0000>{</font>
+        <font color=#009900>int</font> str_num<font color=#990000>,</font> str_idx<font color=#990000>;</font>
+    
+        <i><font color=#9A1900>/* Read how many DNA sequences to parse */</font></i>
+        cin <font color=#990000>&gt;</font><font color=#990000>&gt;</font> str_num<font color=#990000>;</font>
+
+        <i><font color=#9A1900>/* Read in each DNA sequence into string array */</font></i>
+        <b><font color=#0000FF>for</font></b><font color=#990000>(</font>str_idx <font color=#990000>=</font> <font color=#993399>0</font><font color=#990000>;</font> str_idx <font color=#990000>&lt;</font> str_num<font color=#990000>;</font> str_idx<font color=#990000>+</font><font color=#990000>+</font><font color=#990000>)</font> <font color=#FF0000>{</font>
+            cin <font color=#990000>&gt;</font><font color=#990000>&gt;</font> str<font color=#990000>[</font>str_idx<font color=#990000>]</font><font color=#990000>;</font>
+        <font color=#FF0000>}</font>
+
+        <i><font color=#9A1900>/* Search for the longest common subsequence */</font></i>
+        string <b><font color=#000000>subseq</font></b><font color=#990000>(</font> <b><font color=#000000>generate</font></b><font color=#990000>(</font>str<font color=#990000>,</font> str_num<font color=#990000>)</font> <font color=#990000>)</font><font color=#990000>;</font>
+
+        <i><font color=#9A1900>/* Print the longest subsequence if found */</font></i>
+        <b><font color=#0000FF>if</font></b><font color=#990000>(</font>subseq<font color=#990000>.</font><b><font color=#000000>size</font></b><font color=#990000>(</font><font color=#990000>)</font><font color=#990000>)</font> <font color=#FF0000>{</font>
+            cout <font color=#990000>&lt;</font><font color=#990000>&lt;</font> subseq <font color=#990000>&lt;</font><font color=#990000>&lt;</font> endl<font color=#990000>;</font>
+        <font color=#FF0000>}</font> <b><font color=#0000FF>else</font></b> <font color=#FF0000>{</font>
+            cout <font color=#990000>&lt;</font><font color=#990000>&lt;</font> <font color=#FF0000>"no significant commonalities"</font> <font color=#990000>&lt;</font><font color=#990000>&lt;</font> endl<font color=#990000>;</font>
+        <font color=#FF0000>}</font>
+    <font color=#FF0000>}</font>
+<font color=#FF0000>}</font>
+
+<i><font color=#9A1900>/* Run program and print out any exceptions that occur */</font></i>
+<font color=#009900>int</font> <b><font color=#000000>main</font></b><font color=#990000>(</font><font color=#009900>void</font><font color=#990000>)</font>
+<font color=#FF0000>{</font>
+    <i><font color=#9A1900>/* Throw exceptions on EOF or failed data extraction in &gt;&gt; operator */</font></i>
+    cin<font color=#990000>.</font><b><font color=#000000>exceptions</font></b><font color=#990000>(</font>ios<font color=#990000>:</font><font color=#990000>:</font>eofbit <font color=#990000>|</font> ios<font color=#990000>:</font><font color=#990000>:</font>failbit<font color=#990000>)</font><font color=#990000>;</font>
+
+    <i><font color=#9A1900>/* Run main body of code */</font></i>
+    <b><font color=#0000FF>try</font></b> <font color=#FF0000>{</font>
+        <b><font color=#000000>process</font></b><font color=#990000>(</font><font color=#990000>)</font><font color=#990000>;</font>
+    <font color=#FF0000>}</font>
+    
+    <i><font color=#9A1900>/* Catch any internally generated exceptions */</font></i>
+    <b><font color=#0000FF>catch</font></b><font color=#990000>(</font><font color=#009900>char</font> <b><font color=#0000FF>const</font></b> <font color=#990000>*</font>e<font color=#990000>)</font> <font color=#FF0000>{</font>
+        cerr <font color=#990000>&lt;</font><font color=#990000>&lt;</font> <font color=#FF0000>"Exception: "</font> <font color=#990000>&lt;</font><font color=#990000>&lt;</font> e <font color=#990000>&lt;</font><font color=#990000>&lt;</font> endl<font color=#990000>;</font>
+    <font color=#FF0000>}</font>
+    
+    <i><font color=#9A1900>/* Catch unexpected EOF or bad input data */</font></i>
+    <b><font color=#0000FF>catch</font></b><font color=#990000>(</font>ios<font color=#990000>:</font><font color=#990000>:</font>failure <b><font color=#0000FF>const</font></b> <font color=#990000>&amp;</font>e<font color=#990000>)</font> <font color=#FF0000>{</font>
+        cerr <font color=#990000>&lt;</font><font color=#990000>&lt;</font> <font color=#FF0000>"Unexpected EOF or data type mismatch on input"</font> <font color=#990000>&lt;</font><font color=#990000>&lt;</font> endl<font color=#990000>;</font>
+    <font color=#FF0000>}</font>
+
+    <b><font color=#0000FF>return</font></b> <font color=#993399>0</font><font color=#990000>;</font>
+<font color=#FF0000>}</font>
+</tt>
+</pre>

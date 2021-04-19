@@ -1,0 +1,296 @@
+From: =?gb2312?B?08kgV2luZG93cyBJbnRlcm5ldCBFeHBsb3JlciA4ILGjtOY=?=
+Subject: Crimewave
+Date: Sat, 17 Sep 2011 18:40:42 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CC7569.4DFE0250"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.17609
+
+这是 MIME 格式的多方邮件。
+
+------=_NextPart_000_0000_01CC7569.4DFE0250
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://C:\Users\WU YONGHUI\AppData\Local\Temp\Rar$EX00.826\563.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--Converted with LaTeX2HTML 98.1 release (February 19th, 1998)=0A=
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of =
+Leeds=0A=
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan=0A=
+* with significant contributions from:=0A=
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others =
+--><HTML><HEAD><TITLE>Crimewave</TITLE>
+<META name=3Ddescription content=3DCrimewave>
+<META name=3Dkeywords content=3Dhtmlatex>
+<META name=3Dresource-type content=3Ddocument>
+<META name=3Ddistribution content=3Dglobal>
+<META content=3D"text/html; charset=3Diso-8859-1" =
+http-equiv=3DContent-Type><LINK=20
+rel=3DSTYLESHEET href=3D"htmlatex.css">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7601.17655"></HEAD>
+<BODY lang=3DEN bgColor=3D#ffffff>
+<H1><BR clear=3Dall>
+<CENTER>
+<TABLE bgColor=3D#0060f0>
+  <TBODY>
+  <TR>
+    <TD><B><FONT color=3D#c0ffff size=3D5>&nbsp;<A=20
+      name=3DSECTION0001000000000000000000>=20
+Crimewave</A>&nbsp;</FONT></B></TR></TBODY></TABLE></CENTER></H1>
+<P>Nieuw Knollendam is a very modern town. This becomes clear already =
+when=20
+looking at the layout of its map, which is just a rectangular grid of =
+streets=20
+and avenues. Being an important trade centre, Nieuw Knollendam also has =
+a lot of=20
+banks. Almost on every crossing a bank is found (although there are =
+never two=20
+banks at the same crossing). Unfortunately this has attracted a lot of=20
+criminals. Bank hold-ups are quite common, and often on one day several =
+banks=20
+are robbed. This has grown into a problem, not only to the banks, but to =
+the=20
+criminals as well. After robbing a bank the robber tries to leave the =
+town as=20
+soon as possible, most of the times chased at high speed by the police.=20
+Sometimes two running criminals pass the same crossing, causing several =
+risks:=20
+collisions, crowds of police at one place and a larger risk to be =
+caught.=20
+<P>
+<P><BR>To prevent these unpleasant situations the robbers agreed to =
+consult=20
+together. Every Saturday night they meet and make a schedule for the =
+week to=20
+come: who is going to rob which bank on which day? For every day they =
+try to=20
+plan the get-away routes, such that no two routes use the same crossing. =
+
+Sometimes they do not succeed in planning the routes according to this=20
+condition, although they believe that such a planning should exist.=20
+<P>
+<P><BR>Given a grid of <!-- MATH: $(s \times a)$ --><IMG border=3D0=20
+alt=3D"$(s \times a)$" align=3Dmiddle=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.826/563i=
+mg1.gif"=20
+width=3D57 height=3D34> and the crossings where the banks to be robbed =
+are located,=20
+find out whether or not it is possible to plan a get-away route from =
+every=20
+robbed bank to the city-bounds, without using a crossing more than once. =
+
+<P>
+<H2><FONT color=3D#0070e8><A=20
+name=3DSECTION0001001000000000000000>Input</A>&nbsp;</FONT> </H2>The =
+first line of=20
+the input contains the number of problems <I>p</I> to be solved.=20
+<P>
+<UL>
+  <LI>The first line of every problem contains the number <I>s</I> of =
+streets ( <!-- MATH: $1 \le s \le 50$ --><IMG border=3D0 alt=3D"$1 \le s =
+\le 50$"=20
+  align=3Dmiddle=20
+  =
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.826/563i=
+mg2.gif"=20
+  width=3D85 height=3D30>), followed by the number <I>a</I> of avenues ( =
+<!-- MATH: $1 \le a \le 50$ --><IMG border=3D0 alt=3D"$1 \le a \le 50$"=20
+  align=3Dmiddle=20
+  =
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.826/563i=
+mg3.gif"=20
+  width=3D86 height=3D30>), followed by the number <I>b</I> (<IMG =
+border=3D0=20
+  alt=3D"$b \ge 1$" align=3Dmiddle=20
+  =
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.826/563i=
+mg4.gif"=20
+  width=3D44 height=3D32>) of banks to be robbed.=20
+  <P></P>
+  <LI>Then <I>b</I> lines follow, each containing the location of a bank =
+in the=20
+  form of two numbers <I>x</I> (the number of the street) and <I>y</I> =
+(the=20
+  number of the avenue). Evidently <!-- MATH: $1 \le x \le s$ --><IMG =
+border=3D0=20
+  alt=3D"$1 \le x \le s$" align=3Dmiddle=20
+  =
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.826/563i=
+mg5.gif"=20
+  width=3D78 height=3D30> and <!-- MATH: $1 \le y \le a$ --><IMG =
+border=3D0=20
+  alt=3D"$1 \le y \le a$" align=3Dmiddle=20
+  =
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.826/563i=
+mg6.gif"=20
+  width=3D78 height=3D30>. </LI></UL>
+<P>
+<H2><FONT color=3D#0070e8><A=20
+name=3DSECTION0001002000000000000000>Output</A>&nbsp;</FONT> </H2>The =
+output file=20
+consists of <I>p</I> lines. Each line contains the text =
+<TT>possible</TT> or=20
+<TT>not possible</TT>. If it is possible to plan non-crossing get-away =
+routes,=20
+this line should contain the word: <TT>possible</TT>. If this is not =
+possible,=20
+the line should contain the words <TT>not possible</TT>.=20
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001003000000000000000>Sample =
+
+Input</A>&nbsp;</FONT> </H2>
+<P><PRE>2
+6 6 10
+4 1
+3 2
+4 2
+5 2
+3 4
+4 4
+5 4
+3 6
+4 6
+5 6
+5 5 5
+3 2
+2 3
+3 3
+4 3
+3 4
+</PRE>
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001004000000000000000>Sample =
+
+Output</A>&nbsp;</FONT> </H2>
+<P><PRE>possible
+not possible
+</PRE>
+<P>
+<DIV align=3Dcenter><IMG=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.826/p563=
+.gif">=20
+</DIV>
+<P>
+<P><BR>
+<HR>
+
+<ADDRESS><I>Miguel A. Revilla</I> <BR><I>1998-03-10</I> =
+</ADDRESS></BODY></HTML>
+
+------=_NextPart_000_0000_01CC7569.4DFE0250
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.826/563img1.gif
+
+R0lGODlhOQAiAIAAAAAAAP///yH5BAEAAAEALAAAAAA5ACIAQAKAjI+py+0LwJuUyXZN1Fnt8yFh
+NHbViabqyrYuFXLaQ5piFsee/cL9Dwz2dEIL75aoYTpE0IZ5JCod091F15QVK8et9wsOi8fkVvbb
+FZWT6bPRo2qzZ0st5Ap939xOKm5+hxTg9tFUMtinNyhxJnVXk4exJug3yTeJmam5ydk5VgAAOw==
+
+------=_NextPart_000_0000_01CC7569.4DFE0250
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.826/563img2.gif
+
+R0lGODlhVQAeAIAAAAAAAP///yH5BAEAAAEALAAAAABVAB4AQAKijI+py+0PIwBuzmhuoMpyaG2c
+ln3Yiabqyrbu463ke8y192k2slfhojM1YsDcyEhLKpfMpvMJhQl9U9eP0TP1RKBt51qsSrm3LxFV
+vXiH4WtoHY3L5/S6/Y4H5lNvLfjLBxcodlZSVtQlWOJViAU2s7X2N7YRdkKi5ueIMdkmJXbIBUkI
+OpR1dJnFg2q4t3T6giPLIovjeoubq7vL2+v7y1sAADs=
+
+------=_NextPart_000_0000_01CC7569.4DFE0250
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.826/563img3.gif
+
+R0lGODlhVgAeAIAAAAAAAP///yH5BAEAAAEALAAAAABWAB4AQAKnjI+py+0PYwCgUSoNnlXdDl2c
+Bo7ZiabqyrauJ6Lbm8zIN292XT4fk6v0Fj8iSHcc0pbMpvMJjUZ3FuorBlSWrKaq0nj4ksTVrnmM
+lXxxXIuxyBGSpfS6/Y7P6/c+fkpkAweWkbZUGFYYlOVz6DXhNRe3NbmYFXmT9EaYGbh22YjZ0YY4
+p9hZuamVNBpKhEmC6OdkxcrIBqp2iyvL2+v7CxwsPEzsWwAAOw==
+
+------=_NextPart_000_0000_01CC7569.4DFE0250
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.826/563img4.gif
+
+R0lGODlhLAAgAIAAAAAAAP///yH5BAEAAAEALAAAAAAsACAAQAJcjI+py30AozNywomz3pzXjgGN
+SJHMZ5ngyrbu66kLGsrIVWZ0gs+lvau1IkQi7IhMKpfMpqunCI6kuZrtdP0FoA7qNvvVdrkzsIks
+1qB/aPDU6IzL5/S6/Y5nFgAAOw==
+
+------=_NextPart_000_0000_01CC7569.4DFE0250
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.826/563img5.gif
+
+R0lGODlhTgAeAIAAAAAAAP///yH5BAEAAAEALAAAAABOAB4AQAKIjI+py+0PFQBtzmiuvdLiwFHf
+SJbmiabYVnLq4prxw9KHSHuwOL/+DwwKh8QWLncE6lS9xHKV3EUZtU51Jd1MbR3QtggOi8fkspn4
+PSvTVnRz9L49HZ454kq3yytxWIbSpMeXMQghuAPF9hfXJ4UYoig3BalW+aGFyYSJZ9np+QkaKjpK
+WopQAAA7
+
+------=_NextPart_000_0000_01CC7569.4DFE0250
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.826/563img6.gif
+
+R0lGODlhTgAeAIAAAAAAAP///yH5BAEAAAEALAAAAABOAB4AQAKRjI+py+0PFQBuzhgoNTfZHXUd
+RjIiWKbqyrbIt46uh8b1Ay+j3OT0cbnNhsSi8YhMDnkV5sxSdNKEuo00c32BqJ+syeQjCbveI1SJ
+TqvX7LYb+G6Xp8izqxwGb7l2XLBHxTGHtXPT5wcUOHhYJegXSOgIqMKIJYnBWDhoBhmnRVYZpAha
+6Wl6ipqqusra6jpTAAA7
+
+------=_NextPart_000_0000_01CC7569.4DFE0250
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.826/p563.gif
+
+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
+
+------=_NextPart_000_0000_01CC7569.4DFE0250--

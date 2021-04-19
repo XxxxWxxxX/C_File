@@ -1,0 +1,144 @@
+From: =?iso-8859-1?B?08kgV2luZG93cyBJbnRlcm5ldCBFeHBsb3JlciA4ILGjtOY=?=
+Subject: 487-3279
+Date: Thu, 23 Jun 2011 09:35:08 +0800
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://C:\Users\WU YONGHUI\AppData\Local\Temp\Rar$EX06.621\755.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7600.16807
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--Converted with LaTeX2HTML 98.1 release (February 19th, 1998)=0A=
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of =
+Leeds=0A=
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan=0A=
+* with significant contributions from:=0A=
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others =
+--><HTML><HEAD><TITLE>487-3279</TITLE>
+<META name=3Ddescription content=3D487-3279>
+<META name=3Dkeywords content=3Dhtmlatex>
+<META name=3Dresource-type content=3Ddocument>
+<META name=3Ddistribution content=3Dglobal>
+<META content=3D"text/html; charset=3Diso-8859-1" =
+http-equiv=3DContent-Type><LINK=20
+rel=3DSTYLESHEET href=3D"htmlatex.css">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7600.16821"></HEAD>
+<BODY lang=3DEN bgColor=3D#ffffff>
+<H1><BR clear=3Dall>
+<CENTER>
+<TABLE bgColor=3D#0060f0>
+  <TBODY>
+  <TR>
+    <TD><B><FONT color=3D#c0ffff size=3D5>&nbsp;<A=20
+      name=3DSECTION0001000000000000000000>=20
+487-3279</A>&nbsp;</FONT></B></TR></TBODY></TABLE></CENTER></H1>
+<P>Businesses like to have memorable telephone numbers. One way to make =
+a=20
+telephone number memorable is to have it spell a memorable word or =
+phrase. For=20
+example, you can call the University of Waterloo by dialing the =
+memorable=20
+TUT-GLOP. Sometimes only part of the number is used to spell a word. =
+When you=20
+get back to your hotel tonight you can order a pizza from Gino's by =
+dialing=20
+310-GINO. Another way to make a telephone number memorable is to group =
+the=20
+digits in a memorable way. You could order your pizza from Pizza Hut by =
+calling=20
+their ``three tens'' number 3-10-10-10.=20
+<P>
+<P><BR>The standard form of a telephone number is seven decimal digits =
+with a=20
+hyphen between the third and fourth digits (e.g. 888-1200). The keypad =
+of a=20
+phone supplies the mapping of letters to numbers, as follows:=20
+<P>
+<P><BR>A, B, and C map to 2=20
+<P>D, E, and F map to 3=20
+<P>G, H, and I map to 4=20
+<P>J, K, and L map to 5=20
+<P>M, N, and O map to 6=20
+<P>P, R, and S map to 7=20
+<P>T, U, and V map to 8=20
+<P>W, X, and Y map to 9=20
+<P>
+<P><BR>There is no mapping for Q or Z. Hyphens are not dialed, and can =
+be added=20
+and removed as necessary. The standard form of TUT-GLOP is 888-4567, the =
+
+standard form of 310-GINO is 310-4466, and the standard form of =
+3-10-10-10 is=20
+310-1010.=20
+<P>
+<P><BR>Two telephone numbers are equivalent if they have the same =
+standard form.=20
+(They dial the same number.)=20
+<P>
+<P><BR>Your company is compiling a directory of telephone numbers from =
+local=20
+businesses. As part of the quality control process you want to check =
+that no two=20
+(or more) businesses in the directory have the same telephone number.=20
+<P>
+<H2><FONT color=3D#0070e8><A=20
+name=3DSECTION0001001000000000000000>Input</A>&nbsp;</FONT> </H2>The =
+input will=20
+consist of one case. The first line of the input specifies the number of =
+
+telephone numbers in the directory (up to 100,000) as a positive integer =
+alone=20
+on the line. The remaining lines list the telephone numbers in the =
+directory,=20
+with each number alone on a line. Each telephone number consists of a =
+string=20
+composed of decimal digits, uppercase letters (excluding Q and Z) and =
+hyphens.=20
+Exactly seven of the characters in the string will be digits or letters. =
+
+<P>
+<H2><FONT color=3D#0070e8><A=20
+name=3DSECTION0001002000000000000000>Output</A>&nbsp;</FONT> =
+</H2>Generate a line=20
+of output for each telephone number that appears more than once in any =
+form. The=20
+line should give the telephone number in standard form, followed by a =
+space,=20
+followed by the number of times the telephone number appears in the =
+directory.=20
+Arrange the output lines by telephone number in ascending =
+lexicographical order.=20
+If there are no duplicates in the input print the line:=20
+<P><PRE>No duplicates.
+</PRE>
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001003000000000000000>Sample =
+
+Input</A>&nbsp;</FONT> </H2><PRE>12
+4873279
+ITS-EASY
+888-4567
+3-10-10-10
+888-GLOP
+TUT-GLOP
+967-11-11
+310-GINO
+F101010
+888-1200
+-4-8-7-3-2-7-9-
+487-3279
+</PRE>
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001004000000000000000>Sample =
+
+Output</A>&nbsp;</FONT> </H2><PRE>310-1010 2
+487-3279 4
+888-4567 3
+</PRE>
+<P>
+<P><BR>
+<HR>
+
+<ADDRESS><I>Miguel A. Revilla</I> <BR><I>2000-02-09</I> =
+</ADDRESS></BODY></HTML>

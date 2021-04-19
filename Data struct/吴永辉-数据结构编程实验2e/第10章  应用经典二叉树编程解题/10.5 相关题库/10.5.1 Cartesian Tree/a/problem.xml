@@ -1,0 +1,24 @@
+<problem
+    id = "a"
+>
+    <judging>
+        <script id = "%icpc">
+            <testset
+                test-count  = "24" 
+                input-href  = "tests/##"
+                answer-href = "tests/##.a"
+            
+                input-name  = "tree.in"
+                output-name = "tree.out"
+
+                time-limit  = "2s"
+                memory-limit = "67108864"
+            />
+            <verifier 
+                type = "%testlib" 
+                executable-id = "x86.exe.win32" 
+                binaries = "checka.exe" 
+            />
+        </script>
+    </judging>
+</problem>

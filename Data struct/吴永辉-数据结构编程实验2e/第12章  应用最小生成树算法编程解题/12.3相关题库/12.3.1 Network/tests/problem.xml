@@ -1,0 +1,24 @@
+<problem
+    id = "c"
+>
+    <testers>
+        <acm-tester
+            tests   = "13" 
+            inputs  = "tests/{test##}"
+            answers = "tests/{test##}.a"
+            
+            input-names   = "input.txt"
+            output-names  = "output.txt"
+
+            time-limit    = "2000"
+        >
+            <checker
+                class   = "pcms2.testlib.Checker"
+                program = "checkc.exe"
+                command = "{exec:!/!.!} {input} {output} {answer} result.xml -appes"
+                exec-id = "bin.x86.exe.win32"
+                result  = "result.xml"
+            />
+        </acm-tester>
+    </testers>
+</problem>

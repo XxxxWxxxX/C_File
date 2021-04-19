@@ -1,0 +1,115 @@
+From: =?gb2312?B?08kgV2luZG93cyBJbnRlcm5ldCBFeHBsb3JlciA4ILGjtOY=?=
+Subject: Software Allocation
+Date: Sat, 17 Sep 2011 18:38:48 +0800
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://C:\Users\WU YONGHUI\AppData\Local\Temp\Rar$EX00.289\259.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.17609
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos =
+(nikos@cbl.leeds.ac.uk), CBLU, University of Leeds =
+--><HTML><HEAD><TITLE>Software Allocation</TITLE>
+<META content=3D"text/html; charset=3Dgb2312" http-equiv=3DContent-Type>
+<META name=3Ddescription content=3D"Software Allocation">
+<META name=3Dkeywords content=3Dhtmlatex>
+<META name=3Dresource-type content=3Ddocument>
+<META name=3Ddistribution content=3Dglobal><LINK rel=3DSTYLESHEET =
+href=3D"htmlatex.css">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7601.17655"></HEAD>
+<BODY lang=3DEN bgColor=3D#ffffff>
+<H1><BR clear=3Dall>
+<CENTER>
+<TABLE bgColor=3D#0060f0>
+  <TBODY>
+  <TR>
+    <TD><B><FONT color=3D#c0ffff size=3D5>&nbsp;<A=20
+      name=3DSECTION0001000000000000000000>Software=20
+  Allocation</A></FONT>&nbsp;</B></TR></TBODY></TABLE></CENTER></H1>
+<P>A computing center has ten different computers (numbered 0 to 9) on =
+which=20
+applications can run. The computers are not multi-tasking, so each =
+machine can=20
+run only one application at any time. There are 26 applications, named A =
+to Z.=20
+Whether an application can run on a particular computer can be found in =
+a job=20
+description (see below).=20
+<P>
+<P>Every morning, the users bring in their applications for that day. It =
+is=20
+possible that two users bring in the same application; in that case two=20
+different, independent computers will be allocated for that application. =
+
+<P>
+<P>A clerk collects the applications, and for each different application =
+he=20
+makes a list of computers on which the application could run. Then, he =
+assigns=20
+each application to a computer. Remember: the computers are <I>not</I>=20
+multi-tasking, so each computer must handle at most one application in =
+total.=20
+(An application takes a day to complete, so that sequencing i.e. one =
+application=20
+after another on the same machine is not possible.)=20
+<P>A job description consists of=20
+<P>
+<OL>
+  <LI>one upper case letter <TT>A...Z</TT>, indicating the application.
+  <LI>one digit <TT>1...9</TT>, indicating the number of users who =
+brought in=20
+  the application.
+  <LI>a blank (space character.)
+  <LI>one or more different digits <TT>0...9</TT>, indicating the =
+computers on=20
+  which the application can run.
+  <LI>a terminating semicolon `<TT>;</TT>'.
+  <LI>an end-of-line. </LI></OL>
+<H2><FONT color=3D#0070e8><A=20
+name=3DSECTION0001001000000000000000>Input</A></FONT></H2>
+<P>The input for your program is a textfile. For each day it contains =
+one or=20
+more job descriptions, separated by a line containing only the =
+end-of-line=20
+marker. The input file ends with the standard end-of-flle marker. For =
+each day=20
+your program determines whether an allocation of applications to =
+computers can=20
+be done, and if so, generates a possible allocation.=20
+<P>
+<H2><FONT color=3D#0070e8><A=20
+name=3DSECTION0001002000000000000000>Output</A></FONT></H2>
+<P>The output is also a textfile. For each day it consists of one of the =
+
+following:=20
+<P>
+<UL>
+  <LI>ten characters from the set {`<TT>A</TT>'...`<TT>Z</TT>' , =
+`<TT>_</TT>'},=20
+  indicating the applications allocated to computers 0 to 9 respectively =
+if an=20
+  allocation was possible. An underscore `<TT>_</TT>' means that no =
+application=20
+  is allocated to the corresponding computer.
+  <LI>a single character `<TT>!</TT>', if no allocation was possible. =
+</LI></UL>
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001003000000000000000>Sample =
+
+Input</A></FONT></H2>
+<P><PRE>A4 01234;
+Q1 5;
+P4 56789;
+
+A4 01234;
+Q1 5;
+P5 56789;</PRE>
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001004000000000000000>Sample =
+
+Output</A></FONT></H2>
+<P><PRE>AAAA_QPPPP
+!</PRE>
+<P></P></BODY></HTML>

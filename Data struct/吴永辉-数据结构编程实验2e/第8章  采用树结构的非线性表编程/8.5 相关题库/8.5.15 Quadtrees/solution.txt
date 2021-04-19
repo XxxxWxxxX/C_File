@@ -1,0 +1,162 @@
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#define MAXN 2000
+
+typedef struct quadrant{
+    char value;
+    struct quadrant *rightup, *leftup, *leftdown, *rightdown;
+}quadrant, *Quadtree;
+
+Quadtree leftTree = NULL, rightTree = NULL, temp = NULL;
+
+/*
+void print(Quadtree Tree)
+{
+    if(Tree != NULL)
+    {
+        printf("%c", Tree->value);
+        print(Tree->leftup);
+        print(Tree->rightup);
+        print(Tree->rightdown);
+        print(Tree->leftdown);
+    }
+    
+    return;
+}
+*/
+
+void BuilTree(Quadtree& Tree, char *base, int& current, int len)
+{
+    Tree = (Quadtree)malloc(sizeof(quadrant));
+    Tree->value = base[current];
+    Tree->rightdown = Tree->leftup = Tree->leftdown = Tree->rightup = NULL;
+    if(base[current] == 'p')
+    {
+        BuilTree(Tree->leftup, base, ++current, len);
+        BuilTree(Tree->rightup, base, ++current, len);
+        BuilTree(Tree->rightdown, base, ++current, len);
+        BuilTree(Tree->leftdown, base, ++current, len);
+    }
+    return;
+}
+
+void CompareTree(Quadtree left, Quadtree right, int& ans, int level)
+{
+    switch(left->value)
+    {
+        case 'p' :
+            {
+                switch(right->value)
+                {
+                    case 'p' :
+                        {
+                            CompareTree(left->leftup, right->leftup, ans, level/2);
+                            CompareTree(left->rightup, right->rightup, ans, level/2);
+                            CompareTree(left->rightdown, right->rightdown, ans, level/2);
+                            CompareTree(left->leftdown, right->leftdown, ans, level/2);
+                            
+                            break;
+                        }
+                    case 'f' :
+                        {
+                            ans += level*level;
+                            break;
+                        }
+                    case 'e' :
+                        {
+                            CompareTree(left->leftup, temp, ans, level/2);
+                            CompareTree(left->rightup, temp, ans, level/2);
+                            CompareTree(left->rightdown, temp, ans, level/2);
+                            CompareTree(left->leftdown, temp, ans, level/2);
+                            
+                            break;
+                        }
+                }
+                break;        
+            }
+            
+        case 'e' :
+            {
+                switch(right->value)
+                {
+                    case 'p' :
+                        {
+                            CompareTree(temp, right->leftup, ans, level/2);
+                            CompareTree(temp, right->rightup, ans, level/2);
+                            CompareTree(temp, right->rightdown, ans, level/2);
+                            CompareTree(temp, right->leftdown, ans, level/2);
+                            
+                            break;
+                        }
+                    case 'f' :
+                        {
+                            ans += level*level;
+                            break;
+                        }
+                    case 'e' :
+                        {    
+                            break;
+                        }
+                }
+                break;
+            }
+        case 'f' :
+        {
+            ans += level*level;
+            break;
+        }
+        
+    }
+    return;
+}
+
+void deleteTree(Quadtree& Tree)
+{
+        if(Tree != NULL)
+    {
+        if(Tree->value == 'p')
+        {
+            deleteTree(Tree->leftup);
+            deleteTree(Tree->rightup);
+            deleteTree(Tree->rightdown);
+            deleteTree(Tree->leftdown);
+        }
+        
+        free(Tree);    
+    }
+    
+    return;
+}
+
+int main()
+{
+
+    char left[MAXN], right[MAXN];
+    int T;
+    temp = (Quadtree)malloc(sizeof(quadrant));
+    temp->value = 'e', temp->rightdown = temp->leftup = temp->leftdown = temp->rightup = NULL;
+    scanf("%d", &T);
+    while(T--)
+    {
+        scanf("%s%s", left, right);
+        int leftlen = strlen(left), rightlen = strlen(right);
+        if((leftlen == 1 && left[leftlen-1] == 'f') || (rightlen == 1 && right[rightlen-1] == 'f'))
+        {
+            printf("There are 1024 black pixels.\n");
+            continue;
+        }
+
+        int current = 0;
+        BuilTree(leftTree, left, current, leftlen);
+        current = 0;
+        BuilTree(rightTree, right, current, rightlen);
+        int cnt = 0;
+        CompareTree(leftTree, rightTree, cnt, 32);
+        printf("There are %d black pixels.\n", cnt);
+        deleteTree(leftTree);
+        deleteTree(rightTree);
+    }
+    return 0;
+}

@@ -1,0 +1,59 @@
+<problem id='disktree' version='1.0'>
+  <judge time-limit='15'>
+
+    <test id='01'>
+      <file to='input'  href='disktree.01'  />
+      <file to='answer' href='disktree.01a' />
+    </test>
+    <test id='02'>
+      <file to='input'  href='disktree.02'  />
+      <file to='answer' href='disktree.02a' />
+    </test>
+    <test id='03'>
+      <file to='input'  href='disktree.03'  />
+      <file to='answer' href='disktree.03a' />
+    </test>
+    <test id='04'>
+      <file to='input'  href='disktree.04'  />
+      <file to='answer' href='disktree.04a' />
+    </test>
+    <test id='05'>
+      <file to='input'  href='disktree.05'  />
+      <file to='answer' href='disktree.05a' />
+    </test>
+    <test id='06'>
+      <file to='input'  href='disktree.06'  />
+      <file to='answer' href='disktree.06a' />
+    </test>
+    <test id='07'>
+      <file to='input'  href='disktree.07'  />
+      <file to='answer' href='disktree.07a' />
+    </test>
+    <test id='08'>
+      <file to='input'  href='disktree.08'  />
+      <file to='answer' href='disktree.08a' />
+    </test>
+    <test id='09'>
+      <file to='input'  href='disktree.09'  />
+      <file to='answer' href='disktree.09a' />
+    </test>
+    <test id='10'>
+      <file to='input'  href='disktree.10'  />
+      <file to='answer' href='disktree.10a' />
+    </test>
+
+    <do read='input' write='output' />
+
+    <program id='verify' language='pascal.borland.7.0' read='input output answer' write='result'>
+      <argument path-of='input'  />
+      <argument path-of='output' />
+      <argument path-of='answer' />
+      <argument path-of='result' />
+      <argument>-appes</argument>
+      <source name='disktree.pas' href='CHECK/disktree.pas' />
+      <header name='testlib.pas' href='/scripts/testlib.pas' />
+      <header name='symbols.pas' href='/scripts/symbols.pas' />
+    </program>
+
+  </judge>
+</problem>

@@ -1,0 +1,158 @@
+From: =?gb2312?B?08kgV2luZG93cyBJbnRlcm5ldCBFeHBsb3JlciA4ILGjtOY=?=
+Subject: The Dole Queue
+Date: Sun, 18 Sep 2011 15:44:56 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CC7619.EA459370"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.17609
+
+这是 MIME 格式的多方邮件。
+
+------=_NextPart_000_0000_01CC7619.EA459370
+Content-Type: text/html;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://C:\Users\WU YONGHUI\AppData\Local\Temp\Rar$EX00.333\133.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos =
+(nikos@cbl.leeds.ac.uk), CBLU, University of Leeds =
+--><HTML><HEAD><TITLE>The Dole Queue</TITLE>
+<META content=3D"text/html; charset=3Dgb2312" http-equiv=3DContent-Type>
+<META name=3Ddescription content=3D"The Dole Queue">
+<META name=3Dkeywords content=3Dhtmlatex>
+<META name=3Dresource-type content=3Ddocument>
+<META name=3Ddistribution content=3Dglobal><LINK rel=3DSTYLESHEET =
+href=3D"htmlatex.css">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7601.17655"></HEAD>
+<BODY lang=3DEN bgColor=3D#ffffff>
+<H1><BR clear=3Dall>
+<CENTER>
+<TABLE bgColor=3D#0060f0>
+  <TBODY>
+  <TR>
+    <TD><B><FONT color=3D#c0ffff size=3D5>&nbsp;<A=20
+      name=3DSECTION0001000000000000000000>The Dole=20
+  Queue</A></FONT>&nbsp;</B></TR></TBODY></TABLE></CENTER></H1>
+<P>In a serious attempt to downsize (reduce) the dole queue, The New =
+National=20
+Green Labour Rhinoceros Party has decided on the following strategy. =
+Every day=20
+all dole applicants will be placed in a large circle, facing inwards. =
+Someone is=20
+arbitrarily chosen as number 1, and the rest are numbered =
+counter-clockwise up=20
+to N (who will be standing on 1's left). Starting from 1 and moving=20
+counter-clockwise, one labour official counts off k applicants, while =
+another=20
+official starts from N and moves clockwise, counting m applicants. The =
+two who=20
+are chosen are then sent off for retraining; if both officials pick the =
+same=20
+person she (he) is sent off to become a politician. Each official then =
+starts=20
+counting again at the next available person and the process continues =
+until=20
+no-one is left. Note that the two victims (sorry, trainees) leave the =
+ring=20
+simultaneously, so it is possible for one official to count a person =
+already=20
+selected by the other official.=20
+<P>
+<H2><FONT color=3D#0070e8><A=20
+name=3DSECTION0001001000000000000000>Input</A></FONT></H2>
+<P>Write a program that will successively read in (in that order) the =
+three=20
+numbers (N, k and m; k, m &gt; 0, 0 &lt; N &lt; 20) and determine the =
+order in=20
+which the applicants are sent off for retraining. Each set of three =
+numbers will=20
+be on a separate line and the end of data will be signalled by three =
+zeroes (0 0=20
+0).=20
+<P>
+<H2><FONT color=3D#0070e8><A=20
+name=3DSECTION0001002000000000000000>Output</A></FONT></H2>
+<P>For each triplet, output a single line of numbers specifying the =
+order in=20
+which people are chosen. Each number should be in a field of 3 =
+characters. For=20
+pairs of numbers list the person chosen by the counter-clockwise =
+official first.=20
+Separate successive pairs (or singletons) by commas (but there should =
+not be a=20
+trailing comma).=20
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001003000000000000000>Sample =
+
+input</A></FONT></H2>
+<P><PRE>10 4 3
+0 0 0</PRE>
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001004000000000000000>Sample =
+
+output</A></FONT></H2>
+<P><TT><IMG alt=3Dtex2html_wrap_inline34 align=3Dmiddle=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.333/133i=
+mg1.gif"=20
+width=3D29 height=3D21> 4 <IMG alt=3Dtex2html_wrap_inline34 =
+align=3Dmiddle=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.333/133i=
+mg1.gif"=20
+width=3D29 height=3D21> 8, <IMG alt=3Dtex2html_wrap_inline34 =
+align=3Dmiddle=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.333/133i=
+mg1.gif"=20
+width=3D29 height=3D21> 9 <IMG alt=3Dtex2html_wrap_inline34 =
+align=3Dmiddle=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.333/133i=
+mg1.gif"=20
+width=3D29 height=3D21> 5, <IMG alt=3Dtex2html_wrap_inline34 =
+align=3Dmiddle=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.333/133i=
+mg1.gif"=20
+width=3D29 height=3D21> 3 <IMG alt=3Dtex2html_wrap_inline34 =
+align=3Dmiddle=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.333/133i=
+mg1.gif"=20
+width=3D29 height=3D21> 1, <IMG alt=3Dtex2html_wrap_inline34 =
+align=3Dmiddle=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.333/133i=
+mg1.gif"=20
+width=3D29 height=3D21> 2 <IMG alt=3Dtex2html_wrap_inline34 =
+align=3Dmiddle=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.333/133i=
+mg1.gif"=20
+width=3D29 height=3D21> 6, <IMG alt=3Dtex2html_wrap_inline50 =
+align=3Dmiddle=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.333/133i=
+mg2.gif"=20
+width=3D13 height=3D21> 10, <IMG alt=3Dtex2html_wrap_inline34 =
+align=3Dmiddle=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.333/133i=
+mg1.gif"=20
+width=3D29 height=3D21> 7 </TT>
+<P>where <TT><IMG alt=3Dtex2html_wrap_inline50 align=3Dmiddle=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.333/133i=
+mg2.gif"=20
+width=3D13 height=3D21> </TT>represents a space.=20
+<P></P></BODY></HTML>
+
+------=_NextPart_000_0000_01CC7619.EA459370
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.333/133img1.gif
+
+R0lGODlhHQAVAIAAAAAAAP///yH5BAEAAAEALAAAAAAdABUAAAJCjA+ni8yQ3IsSUmksDgnuzF0K
+JT6NQ5YjUnoneonuOplsvcx3WOUqB6rEMJYfL2MsKpespfIDjUqn1Kr1is1qt58CADs=
+
+------=_NextPart_000_0000_01CC7619.EA459370
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.333/133img2.gif
+
+R0lGODlhDQAVAIAAAAAAAP///yH5BAEAAAEALAAAAAANABUAAAIjjA+nC7na3DOpzSAlQ5rqbm3c
+E4YkdWFRGrXumsbyTNf2fRQAOw==
+
+------=_NextPart_000_0000_01CC7619.EA459370--

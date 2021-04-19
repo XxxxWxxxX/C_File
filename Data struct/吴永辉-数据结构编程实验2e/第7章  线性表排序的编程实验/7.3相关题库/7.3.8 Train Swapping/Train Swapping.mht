@@ -1,0 +1,130 @@
+From: =?gb2312?B?08kgV2luZG93cyBJbnRlcm5ldCBFeHBsb3JlciA4ILGjtOY=?=
+Subject: Train Swapping
+Date: Thu, 23 Jun 2011 09:32:57 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CC3188.896F7C80"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7600.16807
+
+这是 MIME 格式的多方邮件。
+
+------=_NextPart_000_0000_01CC3188.896F7C80
+Content-Type: text/html;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://C:\Users\WU YONGHUI\AppData\Local\Temp\Rar$EX01.654\299.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos =
+(nikos@cbl.leeds.ac.uk), CBLU, University of Leeds =
+--><HTML><HEAD><TITLE>Train Swapping</TITLE>
+<META content=3D"text/html; charset=3Dgb2312" http-equiv=3DContent-Type>
+<META name=3Ddescription content=3D"Train Swapping">
+<META name=3Dkeywords content=3Dhtmlatex>
+<META name=3Dresource-type content=3Ddocument>
+<META name=3Ddistribution content=3Dglobal><LINK rel=3DSTYLESHEET =
+href=3D"htmlatex.css">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7600.16821"></HEAD>
+<BODY lang=3DEN bgColor=3D#ffffff>
+<H1><BR clear=3Dall>
+<CENTER>
+<TABLE bgColor=3D#0060f0>
+  <TBODY>
+  <TR>
+    <TD><B><FONT color=3D#c0ffff size=3D5>&nbsp;<A=20
+      name=3DSECTION0001000000000000000000>Train=20
+  Swapping</A></FONT>&nbsp;</B></TR></TBODY></TABLE></CENTER></H1>
+<P>At an old railway station, you may still encounter one of the last =
+remaining=20
+``train swappers''. A train swapper is an employee of the railroad, =
+whose sole=20
+job it is to rearrange the carriages of trains.=20
+<P>Once the carriages are arranged in the optimal order, all the train =
+driver=20
+has to do, is drop the carriages off, one by one, at the stations for =
+which the=20
+load is meant.=20
+<P>
+<P>The title ``train swapper'' stems from the first person who performed =
+this=20
+task, at a station close to a railway bridge. Instead of opening up =
+vertically,=20
+the bridge rotated around a pillar in the center of the river. After =
+rotating=20
+the bridge 90 degrees, boats could pass left or right.=20
+<P>The first train swapper had discovered that the bridge could be =
+operated with=20
+at most two carriages on it. By rotating the bridge 180 degrees, the =
+carriages=20
+switched place, allowing him to rearrange the carriages (as a side =
+effect, the=20
+carriages then faced the opposite direction, but train carriages can =
+move either=20
+way, so who cares).=20
+<P>Now that almost all train swappers have died out, the railway company =
+would=20
+like to automate their operation. Part of the program to be developed, =
+is a=20
+routine which decides for a given train the least number of swaps of two =
+
+adjacent carriages necessary to order the train. Your assignment is to =
+create=20
+that routine.=20
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001001000000000000000>Input=20
+Specification</A></FONT></H2>
+<P>The input contains on the first line the number of test cases =
+(<I>N</I>).=20
+Each test case consists of two input lines. The first line of a test =
+case=20
+contains an integer <I>L</I>, determining the length of the train ( <IMG =
+
+alt=3Dtex2html_wrap_inline30 align=3Dmiddle=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX01.654/299i=
+mg1.gif"=20
+width=3D83 height=3D26> ). The second line of a test case contains a =
+permutation of=20
+the numbers 1 through <I>L</I>, indicating the current order of the =
+carriages.=20
+The carriages should be ordered such that carriage 1 comes first, then =
+2, etc.=20
+with carriage <I>L</I> coming last.=20
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001002000000000000000>Output =
+
+Specification</A></FONT></H2>
+<P>For each test case output the sentence: '<TT>Optimal train swapping =
+takes=20
+<I>S</I> swaps.</TT>' where <I>S</I> is an integer.=20
+<P>
+<H2><FONT color=3D#0070e8><A =
+name=3DSECTION0001003000000000000000>Example=20
+Input</A></FONT></H2>
+<P><PRE>3
+3
+1 3 2
+4
+4 3 2 1
+2
+2 1</PRE>
+<P>
+<H2><FONT color=3D#0070e8><A =
+name=3DSECTION0001004000000000000000>Example=20
+Output</A></FONT></H2>
+<P><PRE>Optimal train swapping takes 1 swaps.
+Optimal train swapping takes 6 swaps.
+Optimal train swapping takes 1 swaps.</PRE>
+<P></P></BODY></HTML>
+
+------=_NextPart_000_0000_01CC3188.896F7C80
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX01.654/299img1.gif
+
+R0lGODlhUwAaAIAAAAAAAP///yH5BAEAAAEALAAAAABTABoAAAKiTICmy+2GIni0HjVXxDNZnlXe
+x2yOFB7dyn2mNZJQ3KTtPNK1LfKwXzqFJDch8KGjvERC0NC3lCV3x52qSJxRq0ZXlKm94p7IaVmm
+4jbFaXJPalObw+Lca477pfD5c9huB3e0pKaRtJcRmMAXZIRS2Fiygsj2hXaJqXTImNnp+en4CKkn
+Ogp6ipqqusra6voKGys7S1tre4ubq7vL2+v7i1oAADs=
+
+------=_NextPart_000_0000_01CC3188.896F7C80--

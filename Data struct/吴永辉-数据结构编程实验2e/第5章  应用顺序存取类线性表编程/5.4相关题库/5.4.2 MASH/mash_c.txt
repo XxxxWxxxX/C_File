@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int cards[20], participants, lucky, sim_count;
+FILE *inp, *outp;
+	
+void find_positions(void)
+{ int positions[50], i, j, k, num_left;
+
+	for (i=0; i<50; i++)
+	{ positions[i] = 1; }
+
+	for (i = 0, num_left = participants; num_left > lucky; i++)
+	{ k = 0;
+		for (j = 0; (j < participants) && num_left > lucky; j++)
+		{ if (positions[j])
+			{ if (++k == cards[i])
+				{ num_left--;
+					k = 0;
+					positions[j] = 0;
+				}
+			}
+		}
+	}
+
+	fprintf(outp, "Selection #%1d\n", ++sim_count);
+	for (i = 0; i<participants; i++)
+	{ if (positions[i])
+		fprintf(outp, "%1d ", i+1);
+	}
+  fprintf(outp, "\n");
+}
+
+void main(void)
+{ int i;
+
+	inp  = fopen("mash.in",  "r");
+	outp = fopen("mash.out", "w");
+	sim_count = 0;
+
+	while (!feof(inp))
+	{ fscanf(inp, "%d %d", &participants, &lucky);
+		for (i=0; i<20; i++)
+		{ fscanf(inp, "%d", &cards[i]); }
+		fscanf(inp, "\n");
+
+		find_positions();
+	}
+	fclose(inp);
+	fclose(outp);
+}
+
+

@@ -1,0 +1,13 @@
+#!/bin/csh -f
+
+if ( ! -e spreadsheet.out ) then
+   echo File \"spreadsheet.out\" not found.
+   exit 1
+endif
+
+if ( { diff -w spreadsheet.out spreadsheet.sol } ) then
+   echo "PROGRAM ACCEPTED."
+else
+   echo "WRONG OUTPUT."
+endif
+

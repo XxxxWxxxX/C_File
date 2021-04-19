@@ -1,0 +1,226 @@
+From: =?gb2312?B?08kgV2luZG93cyBJbnRlcm5ldCBFeHBsb3JlciA4ILGjtOY=?=
+Subject: Minimum Transport Cost
+Date: Sat, 17 Sep 2011 17:59:45 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CC7563.9585D590"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.17609
+
+这是 MIME 格式的多方邮件。
+
+------=_NextPart_000_0000_01CC7563.9585D590
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://C:\Users\WU YONGHUI\AppData\Local\Temp\Rar$EX00.084\523.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--Converted with LaTeX2HTML 98.1 release (February 19th, 1998)=0A=
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of =
+Leeds=0A=
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan=0A=
+* with significant contributions from:=0A=
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others =
+--><HTML><HEAD><TITLE>Minimum Transport Cost</TITLE>
+<META name=3Ddescription content=3D"Minimum Transport Cost">
+<META name=3Dkeywords content=3Dhtmlatex>
+<META name=3Dresource-type content=3Ddocument>
+<META name=3Ddistribution content=3Dglobal>
+<META content=3D"text/html; charset=3Diso-8859-1" =
+http-equiv=3DContent-Type><LINK=20
+rel=3DSTYLESHEET href=3D"htmlatex.css">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7601.17655"></HEAD>
+<BODY lang=3DEN bgColor=3D#ffffff>
+<H1><BR clear=3Dall>
+<CENTER>
+<TABLE bgColor=3D#0060f0>
+  <TBODY>
+  <TR>
+    <TD><B><FONT color=3D#c0ffff size=3D5>&nbsp;<A=20
+      name=3DSECTION0001000000000000000000> Minimum Transport=20
+      Cost</A>&nbsp;</FONT></B></TR></TBODY></TABLE></CENTER></H1>
+<P>There are <I>N</I> cities in Spring country. Between each pair of =
+cities=20
+there may be one transportation track or none. Now there is some cargo =
+that=20
+should be delivered from one city to another. The transportation fee =
+consists of=20
+two parts:=20
+<P>
+<DL compact>
+  <DT>1.=20
+  <DD>the cost of the transportation on the path between these cities, =
+and=20
+  <DT>2.=20
+  <DD>a certain tax which will be charged whenever any cargo passing =
+through one=20
+  city, except for the source and the destination cities. </DD></DL>
+<P>You must write a program to find the route which has the minimum =
+cost.=20
+<P>
+<H2><FONT color=3D#0070e8><A=20
+name=3DSECTION0001001000000000000000>Input</A>&nbsp;</FONT> </H2>The =
+data of path=20
+cost, city tax, source and destination cities are given in the input =
+file, which=20
+is of the form:=20
+<P><BR>
+<P></P>
+<DIV align=3Dcenter><!-- MATH: \begin{displaymath}=0A=
+\begin{array}{cccc}=0A=
+a_{11} & a_{12} & \dots & a_{1N} \\=0A=
+a_{21} & a_{22} & \dots & a_{2N} \\=0A=
+\dots & \dots & \ddots & \dots \\=0A=
+a_{N1} & a_{N2} & \dots & a_{NN} \\=0A=
+b_1 & b_2 & \dots & b_N \\=0A=
+c & d & & \\=0A=
+e & f & & \\=0A=
+\dots & \dots & & \\=0A=
+g & h & &=0A=
+\end{array}=0A=
+\end{displaymath} --><IMG=20
+alt=3D"\begin{displaymath}\begin{array}{cccc}&#10;a_{11} &amp; a_{12} =
+&amp; \dots &amp; a_{1N} \\&#10;a_{2...&#10;...&amp; \\&#10;e &amp; f =
+&amp; &amp; \\&#10;\dots &amp; \dots &amp; &amp; \\&#10;g &amp; h &amp; =
+&amp;&#10;\end{array}\end{displaymath}"=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.084/523i=
+mg1.gif"=20
+width=3D160 height=3D211> </DIV><BR clear=3Dall>
+<P></P>
+<P>where <I>a</I><SUB><I>ij</I></SUB> is the transport cost from city =
+<I>i</I>=20
+to city <I>j</I>, <!-- MATH: $a_{ij} =3D -1$ =
+--><I>a</I><SUB><I>ij</I></SUB> =3D -1=20
+indicates there is no direct path between city <I>i</I> and city =
+<I>j</I>.=20
+<I>b</I><SUB><I>i</I></SUB> represents the tax of passing through city =
+<I>i</I>.=20
+And the cargo is to be delivered from city <I>c</I> to city <I>d</I>, =
+city=20
+<I>e</I> to city <I>f</I>, ..., and city <I>g</I> to city <I>h</I>.=20
+<P>
+<H2><FONT color=3D#0070e8><A=20
+name=3DSECTION0001002000000000000000>Output</A>&nbsp;</FONT> </H2>You =
+must output=20
+the sequence of cities passed by and the total cost, which is of the =
+form:=20
+<P>
+<P>
+<P><BR><TT>From </TT><I>c</I><TT> to </TT><I>d</I><TT> :</TT>=20
+<P><TT>Path:</TT> =
+<I>c</I><TT>-&gt;</TT><I>c</I><SUB>1</SUB><TT>-&gt;</TT><IMG=20
+border=3D0 alt=3D$\dots$ align=3Dbottom=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.084/523i=
+mg2.gif"=20
+width=3D25=20
+height=3D15><TT>-&gt;</TT><I>c</I><SUB><I>k</I></SUB><TT>-&gt;</TT><I>d</=
+I>=20
+<P><TT>Total cost :</TT> <IMG border=3D0 alt=3D$\dots$ align=3Dbottom=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.084/523i=
+mg2.gif"=20
+width=3D25 height=3D15>=20
+<P>
+<P>
+<P><BR><IMG border=3D0 alt=3D$\dots$ align=3Dbottom=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.084/523i=
+mg2.gif"=20
+width=3D25 height=3D15>=20
+<P>
+<P>
+<P><BR><TT>From </TT><I>e</I><TT> to </TT><I>f</I><TT> :</TT>=20
+<P><TT>Path:</TT> =
+<I>e</I><TT>-&gt;</TT><I>e</I><SUB>1</SUB><TT>-&gt;</TT><IMG=20
+border=3D0 alt=3D$\dots$ align=3Dbottom=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.084/523i=
+mg2.gif"=20
+width=3D25=20
+height=3D15><TT>-&gt;</TT><I>e</I><SUB><I>k</I></SUB><TT>-&gt;</TT><I>f</=
+I>=20
+<P><TT>Total cost :</TT> <IMG border=3D0 alt=3D$\dots$ align=3Dbottom=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.084/523i=
+mg2.gif"=20
+width=3D25 height=3D15>=20
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001003000000000000000>Sample =
+
+Input</A>&nbsp;</FONT> </H2><PRE>0 3 22 -1 4
+3 0 5 -1 -1
+22 5 0 9 20
+-1 -1 9 0 4
+4 -1 20 4 0
+5 17 8 3 1
+1 3
+3 5
+2 4
+</PRE>
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001004000000000000000>Sample =
+
+Output</A>&nbsp;</FONT> </H2><PRE>From 1 to 3 :
+Path: 1--&gt;5--&gt;4--&gt;3
+Total cost : 21
+
+From 3 to 5 :
+Path: 3--&gt;4--&gt;5
+Total cost : 16
+
+From 2 to 4 :
+Path: 2--&gt;1--&gt;5--&gt;4
+Total cost : 17
+</PRE>
+<P>
+<P><BR>
+<HR>
+
+<ADDRESS><I>Miguel A. Revilla</I> <BR><I>1999-01-11</I> =
+</ADDRESS></BODY></HTML>
+
+------=_NextPart_000_0000_01CC7563.9585D590
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.084/523img1.gif
+
+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
+Ow==
+
+------=_NextPart_000_0000_01CC7563.9585D590
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.084/523img2.gif
+
+R0lGODlhGQAPAMIAAAAAAHd3d8zMzBEREWZmZv///7u7uwAAACH5BAEAAAUALAAAAAAZAA8AQAMf
+WLrc/jDKSau9OGtIgGndt4RbaZ5oqi7BIDTty7pLAgA7
+
+------=_NextPart_000_0000_01CC7563.9585D590--

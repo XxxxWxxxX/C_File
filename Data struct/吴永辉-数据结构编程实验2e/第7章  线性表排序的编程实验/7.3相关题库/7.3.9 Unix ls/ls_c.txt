@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <string.h>
+
+char filenames[100][61];
+
+int L, maxlen;
+FILE *fp, *outfp;
+
+void readfiles(void)
+{ int i;
+	fscanf(fp, "%d\n", &L);
+	for (i=0; i<L; i++)
+	{ fscanf(fp, "%s\n", &filenames[i]); }
+}
+
+void sortfiles(void)
+{ int  i,j;
+	char holder[61];
+
+	for (i=0; i<L-1; i++)
+	{ for (j=i+1; j<L; j++)
+		{ if (strcmp(filenames[i], filenames[j]) > 0)
+			{ strcpy(holder, filenames[j]);
+				strcpy(filenames[j], filenames[i]);
+				strcpy(filenames[i], holder);
+			}
+		}
+	}
+}
+
+void format_columns(void)
+{ int ncols, nrows, i, j, k;
+  unsigned widest;
+  
+	widest=0;
+	for (i=0; i<L; i++)
+	{ if (strlen(filenames[i]) > widest)
+		{ widest = strlen(filenames[i]); }
+	}
+
+	ncols = 62/(widest+2);
+	nrows = L/ncols;
+	if ((L % ncols) > 0)
+	{ nrows++; }
+
+	fprintf(outfp, "------------------------------------------------------------\n");
+	for (i=0; i<nrows; i++)
+	{ for (j=0; (j<ncols) && (j*nrows + i) < L; j++)
+		{ fprintf(outfp, "%s", filenames[j*nrows + i]);
+			for (k=widest+2-strlen(filenames[j*nrows + i]); k>0; k--)
+			{ fprintf(outfp, " "); }
+		}
+		fprintf(outfp, "\n");
+	}
+}
+
+void main(void)
+{
+	fp = fopen("ls.in", "r");
+	outfp = fopen("ls.out", "w");
+
+	while(!feof(fp))
+	{ readfiles();
+		sortfiles();
+		format_columns();
+	}
+
+	fclose(fp);
+	fclose(outfp);
+}
+
+

@@ -1,0 +1,225 @@
+From: =?gb2312?B?08kgV2luZG93cyBJbnRlcm5ldCBFeHBsb3JlciA4ILGjtOY=?=
+Subject: A Plug for UNIX
+Date: Sat, 17 Sep 2011 18:25:55 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CC7567.3D5B59E0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.17609
+
+这是 MIME 格式的多方邮件。
+
+------=_NextPart_000_0000_01CC7567.3D5B59E0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://C:\Users\WU YONGHUI\AppData\Local\Temp\Rar$EX00.283\753.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--Converted with LaTeX2HTML 98.1 release (February 19th, 1998)=0A=
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of =
+Leeds=0A=
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan=0A=
+* with significant contributions from:=0A=
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others =
+--><HTML><HEAD><TITLE>A Plug for UNIX</TITLE>
+<META name=3Ddescription content=3D"A Plug for UNIX">
+<META name=3Dkeywords content=3Dhtmlatex>
+<META name=3Dresource-type content=3Ddocument>
+<META name=3Ddistribution content=3Dglobal>
+<META content=3D"text/html; charset=3Diso-8859-1" =
+http-equiv=3DContent-Type><LINK=20
+rel=3DSTYLESHEET href=3D"htmlatex.css">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7601.17655"></HEAD>
+<BODY lang=3DEN bgColor=3D#ffffff>
+<H1><BR clear=3Dall>
+<CENTER>
+<TABLE bgColor=3D#0060f0>
+  <TBODY>
+  <TR>
+    <TD><B><FONT color=3D#c0ffff size=3D5>&nbsp;<A=20
+      name=3DSECTION0001000000000000000000> A Plug for=20
+  UNIX</A>&nbsp;</FONT></B></TR></TBODY></TABLE></CENTER></H1>
+<P>You are in charge of setting up the press room for the inaugural =
+meeting of=20
+the United Nations Internet eXecutive (UNIX), which has an international =
+mandate=20
+to make the free flow of information and ideas on the Internet as =
+cumbersome and=20
+bureaucratic as possible.=20
+<P>
+<P><BR>Since the room was designed to accommodate reporters and =
+journalists from=20
+around the world, it is equipped with electrical receptacles to suit the =
+
+different shapes of plugs and voltages used by appliances in all of the=20
+countries that existed when the room was built. Unfortunately, the room =
+was=20
+built many years ago when reporters used very few electric and =
+electronic=20
+devices and is equipped with only one receptacle of each type. These =
+days, like=20
+everyone else, reporters require many such devices to do their jobs: =
+laptops,=20
+cell phones, tape recorders, pagers, coffee pots, microwave ovens, blow =
+dryers,=20
+curling irons, tooth brushes, etc. Naturally, many of these devices can =
+operate=20
+on batteries, but since the meeting is likely to be long and tedious, =
+you want=20
+to be able to plug in as many as you can.=20
+<P>
+<P><BR>Before the meeting begins, you gather up all the devices that the =
+
+reporters would like to use, and attempt to set them up. You notice that =
+some of=20
+the devices use plugs for which there is no receptacle. You wonder if =
+these=20
+devices are from countries that didn't exist when the room was built. =
+For some=20
+receptacles, there are several devices that use the corresponding plug. =
+For=20
+other receptacles, there are no devices that use the corresponding plug. =
+
+<P>
+<P><BR>In order to try to solve the problem you visit a nearby parts =
+supply=20
+store. The store sells adapters that allow one type of plug to be used =
+in a=20
+different type of outlet. Moreover, adapters are allowed to be plugged =
+into=20
+other adapters. The store does not have adapters for all possible =
+combinations=20
+of plugs and receptacles, but there is essentially an unlimited supply =
+of the=20
+ones they do have.=20
+<P>
+<H2><FONT color=3D#0070e8><A=20
+name=3DSECTION0001001000000000000000>Input</A>&nbsp;</FONT> </H2>The =
+input will=20
+consist of one case. The first line contains a single positive integer =
+<I>n</I>=20
+( <!-- MATH: $1 \le=9F n \le=9F 100$ --><IMG border=3D0 alt=3D"$1 \le=9F =
+n \le=9F 100$"=20
+align=3Dmiddle=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.283/753i=
+mg1.gif"=20
+width=3D96 height=3D30>) indicating the number of receptacles in the =
+room. The next=20
+<I>n</I> lines list the receptacle types found in the room. Each =
+receptacle type=20
+consists of a string of at most 24 alphanumeric characters. The next =
+line=20
+contains a single positive integer <I>m</I> (=20
+<!-- MATH: $1 \le=9F m \le=9F 100$ --><IMG border=3D0 alt=3D"$1 \le=9F m =
+\le=9F 100$"=20
+align=3Dmiddle=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.283/753i=
+mg2.gif"=20
+width=3D101 height=3D30>) indicating the number of devices you would =
+like to plug=20
+in. Each of the next <I>m</I> lines lists the name of a device followed =
+by the=20
+type of plug it uses (which is identical to the type of receptacle it =
+requires).=20
+A device name is a string of at most 24 alphanumeric characters. No two =
+devices=20
+will have exactly the same name. The plug type is separated from the =
+device name=20
+by a space. The next line contains a single positive integer <I>k</I> ( =
+<!-- MATH: $1 \le=9F k \le=9F 100$ --><IMG border=3D0 alt=3D"$1 \le=9F k =
+\le=9F 100$"=20
+align=3Dmiddle=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.283/753i=
+mg3.gif"=20
+width=3D96 height=3D32>) indicating the number of different varieties of =
+adapters=20
+that are available. Each of the next <I>k</I> lines describes a variety =
+of=20
+adapter, giving the type of receptacle provided by the adapter, followed =
+by a=20
+space, followed by the type of plug.=20
+<P>
+<H2><FONT color=3D#0070e8><A=20
+name=3DSECTION0001002000000000000000>Output</A>&nbsp;</FONT> </H2>A line =
+
+containing a single non-negative integer indicating the smallest number =
+of=20
+devices that cannot be plugged in.=20
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001003000000000000000>Sample =
+
+Input</A>&nbsp;</FONT> </H2><PRE>4
+A
+B
+C
+D
+5
+laptop B
+phone C
+pager B
+clock B
+comb X
+3
+B X
+X A
+X D
+</PRE>
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001004000000000000000>Sample =
+
+Output</A>&nbsp;</FONT> </H2><PRE>1
+</PRE>
+<P>
+<P><BR>
+<HR>
+
+<ADDRESS><I>Miguel A. Revilla</I> <BR><I>2000-02-09</I> =
+</ADDRESS></BODY></HTML>
+
+------=_NextPart_000_0000_01CC7567.3D5B59E0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.283/753img1.gif
+
+R0lGODlhYAAeAOMAAAAAAJmZmXd3d1VVVe7u7jMzM8zMzBEREaqqqoiIiGZmZv///0RERN3d3SIi
+Iru7uyH5BAEAAAsALAAAAABgAB4AQAT+cMlJq7046837FkD2MIzhNQLiKM0iKNdYehJIgc/EhLge
+0pPGY0gsAi/CovLIbDqf0OND4fjRpo5W1ILVUrBWCaJAWAQYk3H5nLF5AoUZ5gHQChyLBAcux7gl
+DQB6EgcwgYMLhVuLjI2Oj5CRkpMfYSIMBYiNI5kcfwsGAAgTBQOgoqSmF58XCaVeGQYEBQITDpoV
+rgOwGp89EjsuADnAlgsPAgUACgK8GyYXDrUSAwIMZTTQFcjKzFoNDg8EzEHh49OU6err7O3u7/Dx
+Fg0wTNqQ9xX0XAICCdgSkPkDaIGVBgMDDox6hFBhL0sH0KFKJHFhQWMVxjAI0KGfgQaCCfoRzBiH
+Y8cwAYbpwJOS2AIGeFZhlBAgojM/CEBgs3ahZjMgvlQWE+YymMyODvpgCESMjks/SfMdndBypRmh
+L2NePKJi16oCOgQg9ND1prAK0iQQEJp2wdqnlBoQFJeOQACxFezidWKNhN+/Zj30/QtYnuHDiBMr
+Xsy4sePHkGlEAAA7
+
+------=_NextPart_000_0000_01CC7567.3D5B59E0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.283/753img2.gif
+
+R0lGODlhZQAeAOMAAAAAAJmZmXd3d1VVVe7u7jMzM8zMzBEREaqqqoiIiGZmZv///0RERN3d3SIi
+Iru7uyH5BAEAAAsALAAAAABlAB4AQAT+cMlJq7046827lwKgPQxjdI2AOEqzCMxALEVwkeYHivsz
+MaKQTwLUURqPpHJp1CCX0KZ0Sq1adQ+Fg4fVuq6ZrONbEXMXiMIswJik121MSBco5G6ALyJPVBAE
+HHV3GXMSDQAJEwcKC4eJEotgkpOUlZaXmJmaOoUcJAWPmJ+hGp0GAAgTBQMLp6kSq3JnGAmrZBgG
+BAWAEg68hye0th+dQj9BAEMLRWUCBQAKArcdwRW+E9eQzkbVzc/RLg0ODwTRE+Lk5pvr7O3u7/Dx
+8vNGDYxS3Zn5FfbNAgkzJjwQ8C/ghU7UBhx4hcmAQoayKBzgtQCVtgkWD866kIaBjQ2PBA00SECQ
+QAqCGjp+7NApQLIfDha4VMYgpkYNASZOk4MgRECfsChSyCnNSLGXRJDR3LjDgwAHgy4cGnJqyB4O
+T6MS4jITpkyky2xaQOhhxYCd2yQoKIARAcmyDs5upZCNANK6YDc1MLh3AgFlmQgEEJBPMOEqMEoo
+XrxzSuLFjOlJnky5suXLmDNr3sw5UwQAOw==
+
+------=_NextPart_000_0000_01CC7567.3D5B59E0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.283/753img3.gif
+
+R0lGODlhYAAgAOMAAAAAAJmZmXd3d1VVVe7u7jMzM8zMzBEREaqqqoiIiGZmZv///0RERN3d3SIi
+Iru7uyH5BAEAAAsALAAAAABgACAAQAT+cMlJq7046837FsCGFEzgBSGRKAg2lt4CTugzMc5S33ns
+X4YJIfgrEgICohCpLDqf0CiloXA2KwJHr3itUCsPgSBBoITH5cyMk2V0K4lDA9dpvy1rHcAmoe/6
+W1KCg4SFhoeIiYpOeRwGAwctGgcJPo+RHyETBwITAJKcnpIXjRUBnA0xBAAJA6kBfBSnAqk+eSCx
+DCG4N5qkvh4IDq4XAJ0PAAQKdxbCxBiNDp0Lq3zSEtVPAgzc3d61jN7iDOCL5ufo6err7O3u7/Dx
+GA8KDsAd9A7lFQoMRfn7JOQDNqJMAH8SCupACO3ePAYFKm1AFvBhxDq+DHyaUGDAAo2GozqqcTjh
+ATdmFwYMUNbAAcOSJ3/c2tNLBs0+JCWUspCgY0ULyA7EytDzGcYJvHDazJXTZowAJJgVqFItAEoJ
+UN1kmtCA1aYqXSUuOFAFqIACABTQsnShq7UAHtleCINWbaqWD5RNW4BXL5QGDwILHhwF8ODD8hIr
+Xsy4sePHkCNLnkw5UQQAOw==
+
+------=_NextPart_000_0000_01CC7567.3D5B59E0--

@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+
+int num_props;
+float x, y;
+int i;
+double calc;
+int years;
+
+void main(void)
+{
+	scanf("%d", &num_props);
+	for (i = 1; i <= num_props; i++)
+	{
+		scanf("%f %f", &x, &y);
+		calc = (x*x + y*y)* M_PI / 2 / 50;
+		years = ceil(calc);
+		printf("Property %d: This property will begin eroding in year %d.\n", i, years);
+	}
+	printf("END OF OUTPUT.\n");
+}
+

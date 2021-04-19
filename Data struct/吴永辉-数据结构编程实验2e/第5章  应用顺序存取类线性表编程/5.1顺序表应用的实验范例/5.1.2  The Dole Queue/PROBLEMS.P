@@ -1,0 +1,52 @@
+PROGRAM dolequeue;
+TYPE next = ^workseeker;
+     workseeker = record
+                    id: integer;
+                    left, right: next;
+                    end;
+VAR  clock, anti, p1, q1, p2, q2: next;
+     i, N, m, k, count, dead: integer;
+
+begin
+readln(N, k, m);
+while N > 0 do begin
+  new(anti); p1 := anti; anti^.id := 1;
+  for i := 2 to N do begin
+    new(q1); q1^.id := i; q1^.left := p1;
+    p1^.right := q1; p1 := q1 end;
+
+  clock := p1; p1^.right := anti; anti^.left := p1;
+  count := N;
+
+{Setup over - now start eliminating}
+  while count > 0 do begin
+    for i := 1 to k-1 do anti := anti^.right;
+    for i := 1 to m-1 do clock := clock^.left;
+
+    if clock = anti then begin {Only one chosen - politician}
+      write(anti^.id : 3); dead := 1;
+      anti^.right^.left := anti^.left;
+      anti^.left^.right := anti^.right;
+      anti := anti^.right; clock := clock^.left;
+      end
+    else begin
+      write(anti^.id : 3); write(clock^.id : 3); dead := 2;
+      p1 := anti^.right; if p1 = clock then p1 := p1^.right;
+      q1 := anti^.left; if q1 = clock then q1 := q1^.left;
+      p1^.left := q1; q1^.right := p1;
+
+      p2 := clock^.right; if p2 = anti then p2 := p2^.right;
+      q2 := clock^.left; if q2 = anti then q2 := q2^.left;
+      p2^.left := q2; q2^.right := p2;
+
+      anti := p1; clock := q2 end;
+
+    count := count - dead;
+    if count > 0 then
+      write(',');
+    end;
+
+  writeln;
+  readln(N, k, m);
+  end;
+end.

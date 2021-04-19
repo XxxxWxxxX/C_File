@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0065)http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2724 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="PRAGMA" content="NO-CACHE">
+        <meta http-equiv="EXPIRES" content="0">
+        <meta content="ZOJ is an online judge system maintained by Zhejiang University ACM/ICPC Team. It allows people to solve algorithm problems online." name="description">
+        <meta name="keywords" content="programming, language, algorithm, contest, java, scheme, php, pascal, c, c++, python, perl, online, judge, problem, problemset, acm, zoj, zhejiang, university, zju">
+
+        <title>ZOJ :: Problems :: Show Problem</title>
+        <link rel="stylesheet" href="./ZOJ  2724_files/zoj.css" type="text/css">
+        <script language="javascript" src="./ZOJ  2724_files/zoj.js"></script>
+    </head>
+
+    <body id="page">
+        <div id="container">
+            <div id="header">
+<img src="./ZOJ  2724_files/banner.jpg" width="770"></div>
+            <div id="loginbar">
+                
+
+
+
+                <div class="welcome_msg">Welcome to ZOJ</div>
+                <div class="login_info">
+                    
+                        <a href="http://acm.zju.edu.cn/onlinejudge/login.do">Login</a> 
+                        
+                        | <a href="http://acm.zju.edu.cn/onlinejudge/register.do">Register</a>
+                                            	
+                    
+                    
+                </div>
+
+            </div>
+            <div id="minibar">
+                
+
+
+
+
+
+
+
+
+                <div id="menus">
+                <a href="http://acm.zju.edu.cn/onlinejudge/">Home</a>
+                
+                | <a href="http://acm.zju.edu.cn/onlinejudge/showContests.do">Contests</a>
+                
+                
+                | <a class="selected" href="http://acm.zju.edu.cn/onlinejudge/showProblemsets.do">Problems</a>
+                
+                | <a href="http://acm.zju.edu.cn/forum/">Forum</a> 
+                | <a href="http://acm.zju.edu.cn/donation/">Donation</a> 
+                
+                
+                
+                
+                </div>
+
+
+            </div>
+            <table id="main">
+                <tbody><tr>
+                <td width="169" height="100%" style="vertical-align:top">
+                    <table id="leftnav" cellspacing="1" height="100%">
+                       
+
+
+
+
+                <tbody><tr><td class="nav_header">
+                    <img src="./ZOJ  2724_files/arrow_sub2.gif"><div><a href="http://acm.zju.edu.cn/onlinejudge/showProblemsets.do">Problem Sets</a></div>
+                </td></tr>
+                
+                
+                    
+                
+                <tr><td class="item">
+                    <a href="http://acm.zju.edu.cn/onlinejudge/problemsetInfo.do?contestId=1">Information</a>
+                </td></tr>
+                <tr><td class="item">
+                    <a href="http://acm.zju.edu.cn/onlinejudge/showProblems.do?contestId=1">Select Problem</a>
+                </td></tr>
+                <!--
+                <tr><td class="item">
+                    <a href="/onlinejudge/searchProblem.do?contestId=1">Search Problem</a>
+                </td></tr>
+                -->
+                <tr><td class="item">
+                    <a href="http://acm.zju.edu.cn/onlinejudge/showRuns.do?contestId=1">Runs</a>
+                </td></tr>
+                <tr><td class="item">
+                    <a href="http://acm.zju.edu.cn/onlinejudge/showRankList.do?contestId=1&amp;from=0&amp;order=AC">Ranklist</a>
+                </td></tr>
+                <!--
+                <tr><td class="item">
+                    <a href="/onlinejudge/clarification.do?contestId=1">Clarification</a>
+                </td></tr>
+                -->
+                
+                   
+                
+                
+
+                <tr><td class="icpc_logo"><img src="./ZOJ  2724_files/cpc_acm.jpg"></td></tr>
+
+                    </tbody></table>
+                </td>
+                <td id="content" style="vertical-align:top">
+                    
+
+
+
+
+
+
+
+
+
+        
+        
+        <div id="content_title">ZOJ Problem Set - 2724</div>
+        <div id="content_body">
+            <center><span class="bigProblemTitle">Windows Message Queue</span></center>
+            <hr>
+            <center>
+                <font color="green">Time Limit: </font> 2 Seconds
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <font color="green">Memory Limit: </font> 65536 KB
+                
+            </center>
+            <hr>
+            <p>Message queue is the basic fundamental of windows system. For each process, the system maintains a message queue. If something happens to this process, such as mouse click, text change, the system will add a message to the queue. Meanwhile, the process will do a loop for getting message from the queue according to the priority value if it is not empty. Note that the less priority value means the higher priority. In this problem, you are asked to simulate the message queue for putting messages to and getting message from the message queue.</p>
+
+<p><b>Input</b></p>
+<p>There's only one test case in the input. Each line is a command, "GET" or "PUT", which means getting message or putting message. If the command is "PUT", there're one string means the message name and two integer means the parameter and priority followed by. There will be at most 60000 command. Note that one message can appear twice or more and if two messages have the same priority, the one comes first will be processed first.(i.e., FIFO for the same priority.) Process to the end-of-file.</p>
+
+<p><b>Output</b></p>
+<p>For each "GET" command, output the command getting from the message queue with the name and parameter in one line. If there's no message in the queue, output "EMPTY QUEUE!". There's no output for "PUT" command.</p>
+
+<p><b>Sample Input</b></p>
+<pre>GET
+PUT msg1 10 5
+PUT msg2 10 4
+GET
+GET
+GET
+</pre>
+
+<p><b>Sample Output</b></p>
+<pre>EMPTY QUEUE!
+msg2 10
+msg1 10
+EMPTY QUEUE!
+</pre>
+
+<br>
+
+            <hr>
+            
+                Author: <strong>ZHOU, Ran</strong><br>
+            
+            
+                Source: <strong>Zhejiang University Local Contest 2006, Preliminary</strong><br>
+            
+            
+            <center>
+                <a href="http://acm.zju.edu.cn/onlinejudge/submit.do?problemId=1724"><font color="blue">Submit</font></a>
+                
+                &nbsp;&nbsp;
+                <a href="http://acm.zju.edu.cn/onlinejudge/showProblemStatus.do?problemId=1724"><font color="blue">Status</font></a>
+                
+                
+            </center>
+        </div>
+        
+
+
+                </td>
+                </tr>
+            </tbody></table>
+            <div id="footer">
+                
+
+                <hr width="100%/">
+                <p>Copyright @ 2001-2016, Zhejiang University ACM/ICPC Team, All rights reserved.</p>
+
+            </div>
+        </div>
+    
+
+
+
+</body></html>

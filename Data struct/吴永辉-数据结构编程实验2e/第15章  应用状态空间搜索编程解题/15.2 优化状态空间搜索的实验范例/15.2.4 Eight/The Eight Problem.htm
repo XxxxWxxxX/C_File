@@ -1,0 +1,407 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" ""><!-- saved from url=(0074)http://www.acm.inf.ethz.ch/ProblemSetArchive/B_US_SouthCen/1998/eight.html --><HTML><HEAD><META 
+content="IE=5.0000" http-equiv="X-UA-Compatible">
+<TITLE>The Eight Problem</TITLE> 
+<META http-equiv="Content-Type" content="text/html; charset=gb2312"> 
+<META name="GENERATOR" content="MSHTML 11.00.9600.18283"> 
+<META name="Author" content="Doug Moore"> 
+<META name="Description" content="Contest Homepage"></HEAD> 
+<BODY text="#000000" bgcolor="#ffffff" link="#0000ef" alink="#ff0000" vlink="#51188e">&nbsp; 
+
+<CENTER>
+<TABLE>
+  <TBODY>
+  <TR valign="top">
+    <TD><IMG width="100" height="89" 
+      src="The%20Eight%20Problem_files/la.gif"><A 
+      href="http://www.rice.edu/"><IMG width="136" height="92" src="The%20Eight%20Problem_files/96kidowl.gif" 
+      border="0"></A><IMG width="100" height="97" src="The%20Eight%20Problem_files/tx.gif"></TD>
+    <TD><A href="http://www.acm.org/"><IMG width="78" height="85" src="The%20Eight%20Problem_files/acmlogo.gif" 
+      border="0"></A><IMG width="101" height="50" src="The%20Eight%20Problem_files/ok.gif"></TD></TR></TBODY></TABLE></CENTER>
+<CENTER><I><FONT color="#b22222"><FONT size="+3">1998 ACM South Central USA 
+ Collegiate Programming Contest</FONT></FONT></I> <BR><I><FONT 
+color="#b22222"><FONT size="+3">Rice University</FONT></FONT></I> 
+<P><I><FONT color="#b22222"><FONT size="+3">Eight</FONT></FONT></I> 
+<P><I><FONT color="#000000"><FONT size="+1"><A href="http://www.acm.inf.ethz.ch/ProblemSetArchive/B_US_SouthCen/1998/eight.html#Solution">Solution</A>&nbsp; 
+<A href="http://www.acm.inf.ethz.ch/ProblemSetArchive/B_US_SouthCen/1998/eight.html#Judge's Input">Judge's 
+ input</A>&nbsp;&nbsp;&nbsp;&nbsp; <A href="http://www.acm.inf.ethz.ch/ProblemSetArchive/B_US_SouthCen/1998/eight.html#Judge's Output">Judge's 
+ output</A>&nbsp;&nbsp; <A href="http://www.acm.inf.ethz.ch/ProblemSetArchive/B_US_SouthCen/1998/eight.html#Clarifications">Clarifications</A>&nbsp;&nbsp; 
+<A href="http://www.acm.inf.ethz.ch/ProblemSetArchive/B_US_SouthCen/1998/eight.html#Comments">Comments</A></FONT></FONT></I></P></CENTER>
+<H1><TT><FONT size="+1">Scenario</FONT></TT></H1>The 15-puzzle has been around 
+for  over 100 years; even if you don't know it by that name, you've seen 
+it.&nbsp; It  is constructed with 15 sliding tiles, each with a number from 1 to 
+15 on it, and  all packed into a 4 by 4 frame with one tile missing.&nbsp; Let's 
+call the  missing tile 'x'; the object of the puzzle is to arrange the tiles so 
+that they  are ordered as:  
+<P><FONT face="Courier New,Courier">&nbsp;1&nbsp; 2&nbsp; 3&nbsp; 4</FONT> 
+<BR><FONT face="Courier New,Courier">&nbsp;5&nbsp; 6&nbsp; 7&nbsp; 8</FONT> 
+<BR><FONT face="Courier New,Courier">&nbsp;9 10 11 12</FONT> <BR><FONT face="Courier New,Courier">13 
+14 15&nbsp; x</FONT> 
+<P>where the only legal operation is to exchange 'x' with one of the tiles with 
+ which it shares an edge.&nbsp; As an example, the following sequence of moves 
+ solves a slightly scrambled puzzle:  
+<P><FONT face="Courier New,Courier">&nbsp;1&nbsp; 2&nbsp; 3&nbsp; 
+ 4&nbsp;&nbsp;&nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 4&nbsp;&nbsp;&nbsp; 1&nbsp; 2&nbsp; 
+ 3&nbsp; 4&nbsp;&nbsp;&nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 4</FONT> <BR><FONT face="Courier New,Courier">&nbsp;5&nbsp; 
+6&nbsp; 7&nbsp; 8&nbsp;&nbsp;&nbsp;  5&nbsp; 6&nbsp; 7&nbsp; 8&nbsp;&nbsp;&nbsp; 
+5&nbsp; 6&nbsp; 7&nbsp;  8&nbsp;&nbsp;&nbsp; 5&nbsp; 6&nbsp; 7&nbsp; 8</FONT> 
+<BR><FONT face="Courier New,Courier">&nbsp;9&nbsp; x 10 12&nbsp;&nbsp;&nbsp; 9 
+10&nbsp; x  12&nbsp;&nbsp;&nbsp; 9 10 11 12&nbsp;&nbsp;&nbsp; 9 10 11 12</FONT> 
+<BR><FONT face="Courier New,Courier">13 14 11 15&nbsp;&nbsp; 13 14 11 
+15&nbsp;&nbsp; 13  14&nbsp; x 15&nbsp;&nbsp; 13 14 15&nbsp; x</FONT> <BR><FONT 
+face="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+r-&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ d-&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+r-&gt;</FONT> 
+<P>The letters in the previous row indicate which neighbor of the 'x' tile is 
+ swapped with the 'x' tile at each step; legal values are 'r','l','u' and 'd', 
+ for right, left, up, and down, respectively.  
+<P>Not all puzzles can be solved; in 1870, a man named Sam Loyd was famous for 
+ distributing an unsolvable version of the puzzle, and <BR>frustrating many 
+ people.&nbsp; In fact, all you have to do to make a regular puzzle into an 
+ unsolvable one is to swap two tiles (not counting the missing 'x' tile, of 
+ course).  
+<P>In this problem, you will write a program for solving the less well-known 
+ 8-puzzle, composed of tiles on a three by three <BR>arrangement.  
+<H1><TT><FONT size="+1">Input</FONT></TT></H1>You will receive, in 
+``eight.inp'',  a description of a configuration of the 8 puzzle.&nbsp; The 
+description is just  a list of the tiles in their initial positions, with the 
+rows listed from top to  bottom, and the tiles listed from left to right within 
+a row, where the tiles  are represented by numbers 1 to 8, plus 'x'.&nbsp; For 
+example, this puzzle  
+<P><FONT face="Courier New,Courier">&nbsp;1&nbsp; 2&nbsp; 3</FONT> <BR><FONT 
+face="Courier New,Courier">&nbsp;x&nbsp; 4&nbsp; 6</FONT> <BR><FONT face="Courier New,Courier">&nbsp;7&nbsp; 
+5&nbsp; 8</FONT> 
+<P>is described by this list:  
+<P><FONT face="Courier New,Courier">&nbsp;1 2 3 x 4 6 7 5 8</FONT> 
+<H1><TT><FONT size="+1">Output</FONT></TT></H1>You will print to standard output 
+ either the word ``unsolvable'', if the puzzle has no solution, or a string 
+ consisting entirely of the letters 'r', 'l', 'u' and 'd' that describes a 
+series  of moves that produce a solution.&nbsp; The string should include no 
+spaces and  start at the beginning of the line.  
+<H1><TT><FONT size="+1">Sample Input</FONT></TT></H1><FONT face="Courier New,Courier">&nbsp;2&nbsp; 
+3&nbsp; 4&nbsp; 1&nbsp; 5&nbsp; x&nbsp;  7&nbsp; 6&nbsp; 8</FONT> 
+<H1><TT><FONT size="+0">Sample Output</FONT></TT></H1><FONT face="Courier New,Courier">ullddrurdllurdruldr</FONT> 
+
+<HR width="100%">
+<BR>&nbsp; 
+<H4><A name="Solution"></A><FONT face="Courier New,Courier"><FONT 
+size="+1">Solution</FONT></FONT></H4><FONT face="Courier New,Courier"><FONT 
+size="+1">#include &lt;iostream.h&gt;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">#include &lt; fstream.h&gt;</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT size="+1">#define BITS_PER_WORD 
+ (8*sizeof(unsigned))</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT size="+1">#define ROW_SIZE 
+ 3</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT size="+1">#define 
+ PERM_SIZE (ROW_SIZE*ROW_SIZE)</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT size="+1">template &lt;class 
+ T&gt;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT size="+1">inline 
+ void swap (T&amp; a,&nbsp; T&amp; b)</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">{ T t = a; a = b; b = t;  }</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT size="+1">void itop(unsigned perm[], 
+ unsigned n)</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">{</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp; perm[0] = 0;</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT size="+1">&nbsp; for (unsigned i = 1; i &lt; 
+ PERM_SIZE; ++i)</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT size="+1">&nbsp;&nbsp;&nbsp; 
+{</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; unsigned  p = i - n % 
+(i+1);</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; perm[i] = perm[p];</FONT></FONT> 
+<BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; perm[p] = i;</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; n /= 
+ i+1;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp; }</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">}</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT size="+1">unsigned ptoi(unsigned const 
+ perm[])</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">{</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp; unsigned n = 0;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp; unsigned i, pcpy[PERM_SIZE],  invp[PERM_SIZE];</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; for (i = 0; i &lt; 
+ PERM_SIZE; ++i)</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT size="+1">&nbsp;&nbsp;&nbsp; 
+{</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pcpy[i]  = perm[i];</FONT></FONT> 
+<BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; invp[perm[i]] = i;</FONT></FONT> 
+<BR><FONT face="Courier New,Courier"><FONT size="+1">&nbsp;&nbsp;&nbsp; 
+}</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; for (i = PERM_SIZE-1; 
+i &gt; 0; --i)</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT size="+1">&nbsp;&nbsp;&nbsp; 
+{</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; unsigned  p = invp[i];</FONT></FONT> 
+<BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pcpy[p] = pcpy[i];</FONT></FONT> 
+<BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pcpy[i] = i;</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+invp[pcpy[p]] = p;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; invp[i] = i;</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; n *= 
+ i+1;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; n += i - p;</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT size="+1">&nbsp;&nbsp;&nbsp; }</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; return 
+n;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">}</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT size="+1">struct 
+ Arrangement</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">{</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp; unsigned permCode;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp; unsigned parent;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">};</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT size="+1">void addToQueue(unsigned 
+ parent, unsigned perm[],</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+unsigned bitset[],</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Arrangement permBuffer[], unsigned&amp; last)</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">{</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp; unsigned code =  ptoi(perm);</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp; unsigned m = code/BITS_PER_WORD;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp; unsigned n =  code%BITS_PER_WORD;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp; if ( (bitset[m] &gt;&gt; n) &amp; 1)</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT size="+1">&nbsp;&nbsp;&nbsp; 
+return;</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; bitset[m] |= 1 
+&lt;&lt;  n;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp; permBuffer[last].parent = parent;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp; permBuffer[last++].permCode =  code;</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT size="+1">}</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT size="+1">int main()</FONT></FONT> 
+<BR><FONT face="Courier New,Courier"><FONT size="+1">{</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT size="+1">&nbsp; ifstream 
+ in("eight.inp");</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; 
+unsigned initperm[PERM_SIZE];</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT size="+1">&nbsp; unsigned factorial = 
+ 1;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; 
+unsigned i;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp; for (i = 0; i &lt; PERM_SIZE; ++i)</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT size="+1">&nbsp;&nbsp;&nbsp; {</FONT></FONT> 
+<BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; unsigned n;</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; in 
+&gt;&gt; n;</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (in.good())</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; initperm[i] = 
+ n-1;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; initperm[i] = 
+ PERM_SIZE-1;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+in.clear();</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char 
+ x;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+in.get(x);</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+factorial *= i+1;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT size="+1">&nbsp;&nbsp;&nbsp; 
+}</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; unsigned initcode = 
+ ptoi(initperm);</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; unsigned maskSize = 
+ (factorial + BITS_PER_WORD - 1) / BITS_PER_WORD;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp; unsigned* bitset = new  unsigned[maskSize];</FONT></FONT> 
+<BR><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; for (i = 0; i &lt; 
+maskSize; ++i)</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT size="+1">&nbsp;&nbsp;&nbsp; 
+bitset[i] =  0;</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; 
+bitset[initcode/BITS_PER_WORD] |= 1 &lt;&lt; (initcode % 
+ BITS_PER_WORD);</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; unsigned first = 
+ 0;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; 
+unsigned last = 0;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp; Arrangement* permBuffer = new Arrangement 
+ [factorial/2];</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; 
+permBuffer[last].parent = -1;</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT size="+1">&nbsp; permBuffer[last++].permCode = 
+ initcode;</FONT></FONT> <BR>&nbsp; 
+<P><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; unsigned 
+ code;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; 
+while ((code = permBuffer[first].permCode) &gt; 1 &amp;&amp;</FONT></FONT> 
+<BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; first &lt; 
+ factorial/2)</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp; {</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; unsigned 
+ perm[PERM_SIZE];</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+itop(perm, code);</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // find the blank</FONT></FONT> 
+<BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; unsigned i;</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (i 
+=  0; perm[i] != PERM_SIZE-1 &amp;&amp; i &lt; PERM_SIZE; ++i)</FONT></FONT> 
+<BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {}</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; unsigned blank_row = i / 
+ROW_SIZE;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; unsigned  blank_col = i % 
+ROW_SIZE;</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (blank_row &gt; 0)</FONT></FONT> 
+<BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; swap (perm[i], 
+ perm[i-ROW_SIZE]);</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+addToQueue(first,  perm, bitset, permBuffer, last);</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; swap (perm[i], 
+ perm[i-ROW_SIZE]);</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (blank_row &lt; 
+ROW_SIZE-1)</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; swap (perm[i], 
+ perm[i+ROW_SIZE]);</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+addToQueue(first,  perm, bitset, permBuffer, last);</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; swap (perm[i], 
+ perm[i+ROW_SIZE]);</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (blank_col &gt; 0)</FONT></FONT> 
+<BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; swap (perm[i], 
+ perm[i-1]);</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+addToQueue(first,  perm, bitset, permBuffer, last);</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; swap (perm[i], 
+ perm[i-1]);</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (blank_col &lt; 
+ROW_SIZE-1)</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; swap (perm[i], 
+ perm[i+1]);</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+addToQueue(first,  perm, bitset, permBuffer, last);</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; swap (perm[i], 
+ perm[i+1]);</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+++first;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp; }</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; if 
+ (permBuffer[first].permCode == 1)</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp; {</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt; 
+ "unsolvable\n";</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+return 0;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp; }</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; char 
+ revpath[1000];</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; 
+unsigned nextChar = 0;</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; unsigned 
+ p;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; 
+unsigned* perm = new unsigned[PERM_SIZE];</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp; itop(perm,  permBuffer[first].permCode);</FONT></FONT> 
+<BR><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; unsigned 
+blank;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; 
+for (blank = 0;  perm[blank] != PERM_SIZE-1; ++blank)</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT size="+1">&nbsp;&nbsp;&nbsp; {}</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; unsigned* par_perm = 
+ new unsigned[PERM_SIZE];</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT size="+1">&nbsp; while ((p = 
+ permBuffer[first].parent) != -1)</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp; {</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; itop(par_perm, 
+ permBuffer[p].permCode);</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; unsigned par_blank;</FONT></FONT> 
+<BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (par_blank = 0; par_perm[par_blank] 
+ != PERM_SIZE-1; ++par_blank)</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {}</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char c;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (par_blank &gt; blank)</FONT></FONT> 
+<BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (par_blank ==&nbsp; 
+blank  + ROW_SIZE)</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c = 
+ 'u';</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else</FONT></FONT> 
+<BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c = 
+ 'l';</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (par_blank == blank - 
+ ROW_SIZE)</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c = 
+ 'd';</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else</FONT></FONT> 
+<BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c = 
+ 'r';</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; revpath[nextChar++] = c;</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; swap(perm, par_perm);</FONT></FONT> 
+<BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; blank = par_blank;</FONT></FONT> 
+<BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; first = p;</FONT></FONT> <BR><FONT 
+face="Courier New,Courier"><FONT size="+1">&nbsp;&nbsp;&nbsp; }</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; while 
+ (nextChar--)</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">&nbsp;&nbsp;&nbsp; cout &lt;&lt; revpath[nextChar];</FONT></FONT> 
+<BR><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; cout &lt;&lt; 
+ "\n";</FONT></FONT> 
+<P><FONT face="Courier New,Courier"><FONT size="+1">&nbsp; return 
+0;</FONT></FONT> <BR><FONT face="Courier New,Courier"><FONT 
+size="+1">}</FONT></FONT> <BR>&nbsp; 
+<H4><A name="Judge's Input"></A><FONT face="Courier New,Courier"><FONT 
+size="+1">Judge's Input</FONT></FONT></H4>6 4 7 8 5 x 3 2 1  
+<H4><A name="Judge's Output"></A><FONT face="Courier New,Courier"><FONT size="+1">Judge's 
+Output</FONT></FONT></H4><FONT 
+face="Courier New,Courier">uldldrurdluulddrurulldrrulldrdr</FONT> 
+<H4><A name="Clarifications"></A><FONT face="Courier New,Courier"><FONT size="+1">Clarifications</FONT></FONT></H4>The 
+primary clarification we had to  make on this problem concerned the format of 
+the input: 3 lines or one  line.&nbsp; This is another case where I&nbsp;failed 
+to realize how important  this was to the Pascal programmers.  
+<H4><A name="Comments"></A><FONT face="Courier New,Courier"><FONT 
+size="+1">Comments</FONT></FONT></H4>The solution above essentially implements a 
+ breadth-first search to find a shortest solution to the problem.&nbsp; The fact 
+ that the number of puzzle configurations is not too large (eight factorial) 
+ means that there is enough storage for both the queue used in the search and 
+the  bitset used to identify configurations already searched.&nbsp; Such a 
+solution  would not work for the 15-puzzle, which I&nbsp;originally intended to 
+use for  this problem, because there would not be enough memory to handle the 
+data  structures.  
+<P>The judge's test case requires 31 moves to solve.&nbsp; This test case was 
+ generated by starting the breadth first search from the solution and working 
+ backwards until every legal configuration had been explored; this is the last 
+of  those configurations.  
+<P>The most creative solution used randomness to search blindly for either the 
+ solution or a particular infeasible configuration.&nbsp; There was some 
+ discussion about whether this answer should be accepted, even if it worked, 
+ because it might not work on some case.&nbsp; We searched but never found the 
+ case that could whip it - that is, make it run beyond 30 seconds.&nbsp; It's 
+ interesting to consider whether a hybrid approach, that used both memory and 
+ randomness, could solve the 15 puzzle in a reasonable time.  
+<P>In case you wondered, the generalized 15-puzzle (that is, the n-puzzle, where 
+ n is one less than some perfect square) is very hard, as proven in a paper: D. 
+ Ratner and M. Warmuth, Finding a shortest solution for the N*N-extension of the 
+ 15-puzzle is intractable, J. Symb. Comp. 10 (1990) 111-137 <BR>&nbsp; 
+</P></BODY></HTML>

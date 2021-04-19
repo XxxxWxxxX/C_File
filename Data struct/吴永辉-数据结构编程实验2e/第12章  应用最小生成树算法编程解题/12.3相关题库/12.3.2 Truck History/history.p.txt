@@ -1,0 +1,66 @@
+program history;
+const MAX=2048;
+var N: integer;
+    codes: array[1..MAX] of string[7];
+    dist: array[1..MAX] of array [1..MAX] of byte;
+type pair=record
+            x,y:integer;
+	  end;
+
+var dfu:array[1..MAX] of integer;  
+
+procedure init_dfu(p: integer);
+  begin
+    while p>0 do
+      begin
+        dfu[p]:=p;
+	dec(p)
+      end
+  end;
+
+function repr(p:integer):integer;
+  begin
+    if dfu[p]=p then
+      repr:=p
+    else
+      begin
+        dfu[p]:=repr(dfu[p]);
+        repr:=dfu[p]
+      end
+  end;   
+
+function union(p,q:integer):boolean;
+  begin
+    if repr(p)=repr(q) then
+      union:=false
+    else
+      begin
+        union:=true;
+	dfu[repr(q)]:=repr(p)
+      end;
+  end;
+
+var i,j,k,sum_dist:longint;
+begin
+  while true do
+    begin
+      readln(N);
+      if N=0 then break;
+      for i:=1 to N do readln(codes[i]);
+      for i:=1 to N do
+        for j:=i to N do
+	  begin
+            dist[i][j]:=0;
+	    for k:=1 to 7 do if codes[i][k]<>codes[j][k] then inc(dist[i][j]);
+	    dist[j][i]:=dist[i][j];
+	  end;
+      init_dfu(N);
+      sum_dist:=0;
+      for k:=0 to 7 do
+        for i:=1 to N do
+	  for j:=i+1 to N do
+            if (dist[i][j]=k) and union(i,j) then
+	      sum_dist:=sum_dist+dist[i][j];
+      writeln('The highest possible quality is 1/',sum_dist:1,'.');
+    end;
+end.

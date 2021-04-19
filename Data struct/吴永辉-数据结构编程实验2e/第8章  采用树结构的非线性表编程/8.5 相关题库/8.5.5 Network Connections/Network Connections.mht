@@ -1,0 +1,170 @@
+From: =?gb2312?B?08kgV2luZG93cyBJbnRlcm5ldCBFeHBsb3JlciA4ILGjtOY=?=
+Subject: Network Connections
+Date: Thu, 15 Sep 2011 13:40:42 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CC73AD.0FF1C0E0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.17609
+
+这是 MIME 格式的多方邮件。
+
+------=_NextPart_000_0000_01CC73AD.0FF1C0E0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://C:\Users\WU YONGHUI\AppData\Local\Temp\Rar$EX01.417\793.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--Converted with LaTeX2HTML 98.1 release (February 19th, 1998)=0A=
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of =
+Leeds=0A=
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan=0A=
+* with significant contributions from:=0A=
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others =
+--><HTML><HEAD><TITLE>Network Connections</TITLE>
+<META name=3Ddescription content=3D"Network Connections">
+<META name=3Dkeywords content=3Dhtmlatex>
+<META name=3Dresource-type content=3Ddocument>
+<META name=3Ddistribution content=3Dglobal>
+<META content=3D"text/html; charset=3Diso-8859-1" =
+http-equiv=3DContent-Type><LINK=20
+rel=3DSTYLESHEET href=3D"htmlatex.css">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7601.17655"></HEAD>
+<BODY lang=3DEN bgColor=3D#ffffff>
+<H1><BR clear=3Dall>
+<CENTER>
+<TABLE bgColor=3D#0060f0>
+  <TBODY>
+  <TR>
+    <TD><B><FONT color=3D#c0ffff size=3D5>&nbsp;<A=20
+      name=3DSECTION0001000000000000000000> Network=20
+      =
+Connections</A>&nbsp;</FONT></B></TR></TBODY></TABLE></CENTER></H1>
+<P>Bob, who is a network administrator, supervises a network of =
+computers. He is=20
+keeping a log connections between the computers in the network. Each =
+connection=20
+is bi-directional. Two computers are interconnected if they are directly =
+
+connected or if they are interconnected with the same computer. =
+Occasionally,=20
+Bob has to decide, quickly, whether two given computers are connected, =
+directly=20
+or indirectly, according to the log information.=20
+<P>
+<P><BR>Write a program which based on information input from a text file =
+counts=20
+the number of successful and the number of unsuccessful answers to the =
+questions=20
+of the kind :=20
+<P>
+<P><BR>is <!-- MATH: $computer_i$ --><I>computer</I><SUB><I>i</I></SUB>=20
+interconnected with=20
+<!-- MATH: $computer_j$ --><I>computer</I><SUB><I>j</I></SUB> ?=20
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001001000000000000000>Input =
+and=20
+Output</A>&nbsp;</FONT> </H2>The program reads data from a text file, as =
+
+follows:=20
+<DL compact>
+  <DT>1.=20
+  <DD>The number of computers in the network (a strictly positive =
+integer);=20
+  <DT>2.=20
+  <DD>A list of pairs of the form:=20
+  <DL compact>
+    <DT>(a)=20
+    <DD><TT>c</TT> <!-- MATH: $computer_i$ =
+--><I>computer</I><SUB><I>i</I></SUB>=20
+<!-- MATH: $computer_j$ --><I>computer</I><SUB><I>j</I></SUB>, where =
+<!-- MATH: $computer_i$ --><I>computer</I><SUB><I>i</I></SUB> and <!-- =
+MATH: $computer_j$ --><I>computer</I><SUB><I>j</I></SUB> are integers=20
+    from 1 to <!-- MATH: $no\_of\_computers$ --><IMG border=3D0=20
+    alt=3D$no\_of\_computers$ align=3Dmiddle=20
+    =
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX01.417/793i=
+mg1.gif"=20
+    width=3D136 height=3D32>. A pair of this form shows that <!-- MATH: =
+$computer_i$ --><I>computer</I><SUB><I>i</I></SUB> and <!-- MATH: =
+$computer_j$ --><I>computer</I><SUB><I>j</I></SUB> <B>get=20
+    interconnected</B>.=20
+    <DT>(b)=20
+    <DD><TT>q</TT> <!-- MATH: $computer_i$ =
+--><I>computer</I><SUB><I>i</I></SUB>=20
+<!-- MATH: $computer_j$ --><I>computer</I><SUB><I>j</I></SUB>, where =
+<!-- MATH: $computer_i$ --><I>computer</I><SUB><I>i</I></SUB> and <!-- =
+MATH: $computer_j$ --><I>computer</I><SUB><I>j</I></SUB> are integers=20
+    from 1 to <!-- MATH: $no\_of\_computers$ --><IMG border=3D0=20
+    alt=3D$no\_of\_computers$ align=3Dmiddle=20
+    =
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX01.417/793i=
+mg1.gif"=20
+    width=3D136 height=3D32>. A pair of this form stands for the =
+question: is <!-- MATH: $computer_i$ =
+--><I>computer</I><SUB><I>i</I></SUB>=20
+    <B>interconnected</B> with=20
+    <!-- MATH: $computer_j$ --><I>computer</I><SUB><I>j</I></SUB>?=20
+</DD></DL></DD></DL>
+<P>Each pair is on a separate line. Pairs can appear in any order, =
+regardless of=20
+their type. The log is updated after each pair of type (a) and each pair =
+of type=20
+(b) is processed according to the current network configuration.=20
+<P>
+<P><BR>For example, the input file illustrated in the sample below =
+corresponds=20
+to a network of 10 computers and 7 pairs. There are <I>N</I>1 =
+successfully=20
+answered questions and <I>N</I>2 unsuccessfully answered questions. The =
+program=20
+prints these two numbers to the standard output on the same line, in the =
+order:=20
+successful answers, unsuccessful answers, as shown in the sample output. =
+
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001002000000000000000>Sample =
+
+Input</A>&nbsp;</FONT> </H2><PRE>10
+c 1 5
+c 2 7
+q 7 1
+c 3 9
+q 9 6
+c 2 5
+q 7 5
+</PRE>
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001003000000000000000>Sample =
+
+Input</A>&nbsp;</FONT> </H2><PRE>1,2
+</PRE>
+<P>
+<P><BR>
+<HR>
+
+<ADDRESS><I>Miguel Revilla</I> <BR><I>2001-01-05</I> =
+</ADDRESS></BODY></HTML>
+
+------=_NextPart_000_0000_01CC73AD.0FF1C0E0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX01.417/793img1.gif
+
+R0lGODlhiAAgAIQAAAAAAJmZmXd3d1VVVe7u7jMzM8zMzBEREaqqqqSkpIiIiHBwcGZmZv///0RE
+RN3d3SIiIru7uwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEA
+AA0ALAAAAACIACAAQAX+YCOOZGmeaKqubOu+MKkw0aMIAkEiuKKnPIFvFBFAHILHKhgYBYeNWYRw
+yxl6o5vhShNFBgqnocFjAARNEYKBFuG2b1JRgDgRlCLCdKT/qfomAg4uenh5eyR3Iw9+eiMACg9j
+JltefgZ+DYUkjCgPiDGhoqOkpaanMQUMEJOorq8vEGFkAEoBkCMDAK0jt7MNuq0Ogyq+JMYiwSKy
+IgYAEW4QI87QUc8NDwB1wANZB0S4JdnVJQQMDgAMsOvs7e7v8PHy8/T19iqC96UHv7BoEbtEFBDg
+ppaXa4EMNgBI7hYLAQYBXlHI8F/ABhB1ELhGx0gzAAHQIABwsNrGNA3+GBz4AaEIj5VRDA2oYwBC
+JjUAfmgzwMDZNgEwKWlzExQbwhQ+cyUYijHoyB8MCjwyoCCMGR3UDpZkoOMMMEYgc40RILUEwDQ3
+6kU4EKBoPQMDWuqbS7eu3bt48+rdy7evXxaY/gomBRAiL8EM1A1egWSxHIXrzAF0oKRAGnMFdOSz
+E1UzMWwjFYAygZkAgQJTOmMcJBkA5dUDTBt8IGCtupGMYpMUwa+BgQgFHEQYY44rsBp0DqjzqkYd
+gQOHMZEVMU4T8wa3yPG5nn3E5hQbCW4Xj/2Z9LINIIgH2IyA+oMKMA3oVv4HwzwABrJpgmngCZWN
+nZBVAw6oc8NRANCYVwJE5CRIgn/4HEXAAgjSNyBuvAVAAEEYNlCATQspBFIAY6iyUAD35aEDQIaM
+0EUUn5FwzggHCBBbSsIJ4gcAPPZ4ThEOZOKQCT36KJwCA0Dzo44ufvaeCJDQB8FAAaDGR40BqLRZ
+gW3AGAGS1TxZwgAozmAPATMNQJ49HTqGyg3a1RMSDm7WaeedeOap55589unnn4CeEAIAOw==
+
+------=_NextPart_000_0000_01CC73AD.0FF1C0E0--

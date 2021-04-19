@@ -1,0 +1,126 @@
+From: =?gb2312?B?08kgV2luZG93cyBJbnRlcm5ldCBFeHBsb3JlciA4ILGjtOY=?=
+Subject: The House Of Santa Claus
+Date: Fri, 16 Sep 2011 16:59:26 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CC7491.FDB836D0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.17609
+
+这是 MIME 格式的多方邮件。
+
+------=_NextPart_000_0000_01CC7491.FDB836D0
+Content-Type: text/html;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://C:\Users\WU YONGHUI\AppData\Local\Temp\Rar$EX00.100\291.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos =
+(nikos@cbl.leeds.ac.uk), CBLU, University of Leeds =
+--><HTML><HEAD><TITLE>The House Of Santa Claus</TITLE>
+<META content=3D"text/html; charset=3Dgb2312" http-equiv=3DContent-Type>
+<META name=3Ddescription content=3D"The House Of Santa Claus">
+<META name=3Dkeywords content=3Dhtmlatex>
+<META name=3Dresource-type content=3Ddocument>
+<META name=3Ddistribution content=3Dglobal><LINK rel=3DSTYLESHEET =
+href=3D"htmlatex.css">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7601.17655"></HEAD>
+<BODY lang=3DEN bgColor=3D#ffffff>
+<H1><BR clear=3Dall>
+<CENTER>
+<TABLE bgColor=3D#0060f0>
+  <TBODY>
+  <TR>
+    <TD><B><FONT color=3D#c0ffff size=3D5>&nbsp;<A=20
+      name=3DSECTION0001000000000000000000>The House Of Santa=20
+      Claus</A></FONT>&nbsp;</B></TR></TBODY></TABLE></CENTER></H1>
+<P>In your childhood you most likely had to solve the riddle of the =
+house of=20
+Santa Claus. Do you remember that the importance was on drawing the =
+house in a=20
+stretch without lifting the pencil and not drawing a line twice? As a =
+reminder=20
+it has to look like shown in Figure 1.=20
+<P>
+<P><A name=3D30>&nbsp;</A> <IMG alt=3Dfigure20 align=3Dbottom=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.100/291i=
+mg1.gif"=20
+width=3D161 height=3D180> <BR><STRONG>Figure:</STRONG> The House of =
+Santa Claus<BR>
+<P>
+<P>Well, a couple of years later, like now, you have to ``draw'' the =
+house again=20
+but on the computer. As one possibility is not enough, we require =
+<I>all</I> the=20
+possibilities when starting in the lower left corner. Follow the example =
+in=20
+Figure 2 while defining your scetch.=20
+<P>
+<P><A name=3D51>&nbsp;</A> <IMG alt=3Dfigure33 align=3Dbottom=20
+src=3D"file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.100/291i=
+mg2.gif"=20
+width=3D158 height=3D179> <BR><STRONG>Figure:</STRONG> This Sequence =
+would give the=20
+Outputline 153125432<BR>
+<P>
+<P>All the possibilities have to be listed in the outputfile by =
+increasing=20
+order, meaning that <TT>1234...</TT> is listed before <TT>1235...</TT> . =
+
+<P>
+<H2><FONT color=3D#0070e8><A=20
+name=3DSECTION0001001000000000000000>Output</A></FONT></H2>
+<P>So, an outputfile could look like this:=20
+<P><PRE>12435123
+13245123
+...
+15123421</PRE>
+<P></P></BODY></HTML>
+
+------=_NextPart_000_0000_01CC7491.FDB836D0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.100/291img1.gif
+
+R0lGODlhoQC0AIAAAAAAAP///yH5BAEAAAEALAAAAAChALQAAAL+jI+py+0PAwCx2ouz3hxN83Xi
+SJamQiXpybbuu6rvTNdWyOD2zsNV3AsKNToIcIhMLo6RovI5ZN6g1KAzI61qS1lsdwvGfInh8uZK
+QpvXstqYHX6n4XSQnHuvC/Mnvt7m1/dXpdZTOOgGFogoskjjyCgG+TgZ+VAJaOmCucOpKeHZGYo4
+avjJUWp1KrkK2mr0epC6NftUa3uLGwuy25Br2uu7ehhMvPZ7HInMtpzWzPx8FtwIF61n3YR9rZ0z
+3cLd5s0C7iq+qU3+aZ1+2mxsjpcJv/c4j5T6bv8dyj7P2W9vUj59gBYBJCgLC0IzdwYutDLm4MMl
+DiROpIjC4sX+JSsmePwIMqTIkSRLmjyJMqXKlSxLblT28eUfCiE0ypSVAodNmTF0OLyZyMORnQid
+XCEaMIeUn0DnKK3Y1FCXQ0h3RYwYtZ6RN0yzVpSTr6qyCwPFDuLjsKvXn0zNJiNi0CtZVI7UXrRr
+V4JcYY0quVWCKa+dvYOdmfjLgx+/teNGCW71WAU+njBmIT48IzLHhZo3a03q5tdlhQVFiev8FViv
+Z6gvrd4TrXWUddhGJ7yHThM32T/+8u4NxWy631PosCN+wyby5LTKHFw+t7kiidAvWawuxtYx5Ul2
+YvcCsRrSZVW/SwtqXCxv83TPfiPlWxB8RoLZj7B/v4Nt/Pn+yei2XQ5w6gDISxOQEVggVAe+ggZ/
+jVmFwmoIhqOXhMV4NI2DlXmj4XsVWhiLTxMKFWI3IY441YnDXLWgOtEN6GJ2MMJ0xn6X+WVJhzL2
+N99MivVYh2VnqfdZekaGFiRRrB3JUBTiMYSOctdRoZGOHmhxHUBWFoZlP9x1SUg1YOrCJGDgxEfm
+PWOZidt/3a0DWZuqMDibVCAmRt5pdsqjp2mUBCTaLSMWl1ktg754TqJ3WVbKoagoillTjXqyJSE/
+OrUXpYERdtt9Ajm6YV/6cWpie+eRilGNcKGa2qo7sqogK4jCGitzAtKaDVlg4UparrDw2qt1wgLr
+aqulEnsz6lPHIptsRssyq6pnJELLhbQJUlutZFdi+yBOXHI7jregFmPHuBmC0lK66q7LbrvuolQA
+ADs=
+
+------=_NextPart_000_0000_01CC7491.FDB836D0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/WU%20YONGHUI/AppData/Local/Temp/Rar$EX00.100/291img2.gif
+
+R0lGODlhngCzAIAAAAAAAP///yH5BAEAAAEALAAAAACeALMAAAL+jI+py+3fAJy02ouznnL7D4Yi
+BXTjiaYqU5rrC8eY5Mr2jXc1zvdnadj5hsTZQVhMKhetJnIJjT6jVOW0iuU5s9yu9wsOi8fksvmM
+TqvX7Lb7DQ804/CtnM52uq548DwB1GdGE6jAJ0hlMnWImFTIwdjYEwkoWUVpaLn0qMGpmfPzOZmC
+KdpZSoJqSiKjuurgehH7iuAJY0tbMbuxK9rLm2uBq/XbVxxyXJeVnMcsMmzqjCJNRj0dbE2avbyt
+0i219m3VBt2sjCcOGpdO7FZOnvfJHuo7//FufHsEYp840nLkD7BgQWYFOoisH5dYhYDsUujFVUMa
+9wjCMqiDkCz+iGIkKgqoy2LIfRDs1GLEcZBGYQALlkyJRiCLkxMfwIxpkomiR9Bu4pRpaKfDYfhE
+RtBz1KWcnnqaOn0KNarUqVSrWm16kVJLoxlaUvyBlOtIhGDDimVF8h+homfv1Cprti2LHcfmkJWb
+iYlaoD4jRrg2F+9SWID/tuWTDPHZQ4khiSzaGG0urYU5TJZV2XE9I/Qwa1IVmXMjiZlZCmKrt3Mn
+dPxKi3aHzPWMvqeeye4aTnXsf2lC2wZbBrXk37exSPOte+EL5MAXWmNenMg26NFHtaqecNM36t4c
+acHOewg77iuE35tHfvmNfunVx1DYfvlxiPH1gbcf3nt+/fv+i5gPCk5y/nnQV33rrXbJfetpRZtb
+/QVYUhcGWkeYhApOgsR/6jxoXF5fTCjdW2GAKN1WflzoX4OGcbhMEGOQiOFJI6L4XWp+CQihjcrh
+aAViKjpInD8jdchjiJ4lWGSMXRVIY3cV5bjbOFFKyWIOdaUEY5VPDpgkfk4aqaV8rbDXJIE1Uhik
+Dej5kOWSJZ6Zpnv8XdfllHN6aac2l0xXpmU7yhlnmFR+GSg/P8pIaJ6tVZPoooK22KeO5/VWV6Rp
+qVFMmyLCo6iZBB7q5paFDreOqJ36eZqnjwIoiYYkgkoKbnVu6strp7L6Cmr1warmkKPSShBK0Wl4
+mmJF8gp65kw8IsulshwSuxlNJm7pkGDOFgSth9NaSytQT3rLLUhK8RZXuC66lW0mOZmL7R3pAnJV
+vPLOS2+9UbGL4br4jsksNvty+u97B20bcHM8FQxoQwiXt9OlC6slLpAPe/PRxAwDa/EzNfQrD10Z
+N+cgx5bssRS4H7PkRAEAOw==
+
+------=_NextPart_000_0000_01CC7491.FDB836D0--

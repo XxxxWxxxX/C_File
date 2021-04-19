@@ -1,0 +1,110 @@
+From: =?gb2312?B?08kgV2luZG93cyBJbnRlcm5ldCBFeHBsb3JlciA4ILGjtOY=?=
+Subject: Following Orders
+Date: Fri, 16 Sep 2011 17:01:30 +0800
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://C:\Users\WU YONGHUI\AppData\Local\Temp\Rar$EX00.840\124.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.17609
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos =
+(nikos@cbl.leeds.ac.uk), CBLU, University of Leeds =
+--><HTML><HEAD><TITLE>Following Orders</TITLE>
+<META content=3D"text/html; charset=3Dgb2312" http-equiv=3DContent-Type>
+<META name=3Ddescription content=3D"Following Orders">
+<META name=3Dkeywords content=3Dhtmlatex>
+<META name=3Dresource-type content=3Ddocument>
+<META name=3Ddistribution content=3Dglobal><LINK rel=3DSTYLESHEET =
+href=3D"htmlatex.css">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7601.17655"></HEAD>
+<BODY lang=3DEN bgColor=3D#ffffff>
+<H1><BR clear=3Dall>
+<CENTER>
+<TABLE bgColor=3D#0060f0>
+  <TBODY>
+  <TR>
+    <TD><B><FONT color=3D#c0ffff size=3D5>&nbsp;<A=20
+      name=3DSECTION0001000000000000000000>Following=20
+  Orders</A></FONT>&nbsp;</B></TR></TBODY></TABLE></CENTER></H1>
+<P>
+<H2><FONT color=3D#0070e8><A=20
+name=3DSECTION0001001000000000000000>Background</A></FONT></H2>
+<P>Order is an important concept in mathematics and in computer science. =
+For=20
+example, Zorn's Lemma states: ``a partially ordered set in which every =
+chain has=20
+an upper bound contains a maximal element.'' Order is also important in=20
+reasoning about the fix-point semantics of programs.=20
+<P>
+<P>This problem involves neither Zorn's Lemma nor fix-point semantics, =
+but does=20
+involve order.=20
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001002000000000000000>The=20
+Problem</A></FONT></H2>
+<P>Given a list of variable constraints of the form <CODE>x &lt; =
+y</CODE>, you=20
+are to write a program that prints all orderings of the variables that =
+are=20
+consistent with the constraints.=20
+<P>
+<P>For example, given the constraints <CODE>x &lt; y</CODE> and <CODE>x =
+&lt;=20
+z</CODE> there are two orderings of the variables x, y, and z that are=20
+consistent with these constraints: <CODE>x y z</CODE> and <CODE>x z =
+y</CODE>.=20
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001003000000000000000>The=20
+Input</A></FONT></H2>
+<P>The input consists of a sequence of constraint specifications. A=20
+specification consists of two lines: a list of variables on one line =
+followed by=20
+a list of contraints on the next line. A constraint is given by a pair =
+of=20
+variables, where <CODE>x y</CODE> indicates that <CODE>x &lt; y</CODE>.=20
+<P>
+<P>All variables are single character, lower-case letters. There will be =
+at=20
+least two variables, and no more than 20 variables in a specification. =
+There=20
+will be at least one constraint, and no more than 50 constraints in a=20
+specification. There will be at least one, and no more than 300 =
+orderings=20
+consistent with the contraints in a specification.=20
+<P>
+<P>Input is terminated by end-of-file.=20
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001004000000000000000>The=20
+Output</A></FONT></H2>
+<P>For each constraint specification, all orderings consistent with the=20
+constraints should be printed. Orderings are printed in lexicographical=20
+(alphabetical) order, one per line.=20
+<P>
+<P>Output for different constraint specifications is separated by a =
+blank line.=20
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001005000000000000000>Sample =
+
+Input</A></FONT></H2>
+<P><PRE>a b f g
+a b b f
+v w x y z
+v y x v z v w v</PRE>
+<P>
+<H2><FONT color=3D#0070e8><A name=3DSECTION0001006000000000000000>Sample =
+
+Output</A></FONT></H2>
+<P><PRE>abfg
+abgf
+agbf
+gabf
+
+wxzvy
+wzxvy
+xwzvy
+xzwvy
+zwxvy
+zxwvy</PRE>
+<P></P></BODY></HTML>
