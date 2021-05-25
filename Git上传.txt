@@ -15,3 +15,5 @@
 9.git merge origin/master
 
 10.cat tt.txt 		//使用cat查看文档
+
+温习
